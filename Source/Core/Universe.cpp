@@ -1,4 +1,4 @@
-#include <../Core/Universe.h>
+#include <Universe.h>
 
 Universe* Universe::x_instance = NULL;
 
@@ -6,7 +6,7 @@ Universe::Universe ()
 {
 	//-------Start up the Engine-------//
 	x_EngineState -> EngineState::STARTING;
-	
+
 	//---Begin Low Level Initialization---//
 	x_EngineState -> EngineState::INITIALIZING;
 

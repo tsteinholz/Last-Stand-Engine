@@ -42,10 +42,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tsteinholz/Development/C++/Engine/Source
+CMAKE_SOURCE_DIR = /home/tsteinholz/Development/C++/LastStandEngine/Source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tsteinholz/Development/C++/Engine/Build
+CMAKE_BINARY_DIR = /home/tsteinholz/Development/C++/LastStandEngine/Build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsteinholz/Development/C++/Engine/Build/CMakeFiles /home/tsteinholz/Development/C++/Engine/Build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsteinholz/Development/C++/LastStandEngine/Build/CMakeFiles /home/tsteinholz/Development/C++/LastStandEngine/Build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsteinholz/Development/C++/Engine/Build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsteinholz/Development/C++/LastStandEngine/Build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -114,29 +114,125 @@ Last_Stand_Engine/fast:
 	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/build
 .PHONY : Last_Stand_Engine/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+Core/Actor.o: Core/Actor.cpp.o
+.PHONY : Core/Actor.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/main.cpp.o
-.PHONY : main.cpp.o
+Core/Actor.cpp.o:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Actor.cpp.o
+.PHONY : Core/Actor.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+Core/Actor.i: Core/Actor.cpp.i
+.PHONY : Core/Actor.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/main.cpp.i
-.PHONY : main.cpp.i
+Core/Actor.cpp.i:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Actor.cpp.i
+.PHONY : Core/Actor.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+Core/Actor.s: Core/Actor.cpp.s
+.PHONY : Core/Actor.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/main.cpp.s
-.PHONY : main.cpp.s
+Core/Actor.cpp.s:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Actor.cpp.s
+.PHONY : Core/Actor.cpp.s
+
+Core/Camera.o: Core/Camera.cpp.o
+.PHONY : Core/Camera.o
+
+# target to build an object file
+Core/Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Camera.cpp.o
+.PHONY : Core/Camera.cpp.o
+
+Core/Camera.i: Core/Camera.cpp.i
+.PHONY : Core/Camera.i
+
+# target to preprocess a source file
+Core/Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Camera.cpp.i
+.PHONY : Core/Camera.cpp.i
+
+Core/Camera.s: Core/Camera.cpp.s
+.PHONY : Core/Camera.s
+
+# target to generate assembly for a file
+Core/Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Camera.cpp.s
+.PHONY : Core/Camera.cpp.s
+
+Core/Universe.o: Core/Universe.cpp.o
+.PHONY : Core/Universe.o
+
+# target to build an object file
+Core/Universe.cpp.o:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Universe.cpp.o
+.PHONY : Core/Universe.cpp.o
+
+Core/Universe.i: Core/Universe.cpp.i
+.PHONY : Core/Universe.i
+
+# target to preprocess a source file
+Core/Universe.cpp.i:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Universe.cpp.i
+.PHONY : Core/Universe.cpp.i
+
+Core/Universe.s: Core/Universe.cpp.s
+.PHONY : Core/Universe.s
+
+# target to generate assembly for a file
+Core/Universe.cpp.s:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Universe.cpp.s
+.PHONY : Core/Universe.cpp.s
+
+Core/Vector2.o: Core/Vector2.cpp.o
+.PHONY : Core/Vector2.o
+
+# target to build an object file
+Core/Vector2.cpp.o:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector2.cpp.o
+.PHONY : Core/Vector2.cpp.o
+
+Core/Vector2.i: Core/Vector2.cpp.i
+.PHONY : Core/Vector2.i
+
+# target to preprocess a source file
+Core/Vector2.cpp.i:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector2.cpp.i
+.PHONY : Core/Vector2.cpp.i
+
+Core/Vector2.s: Core/Vector2.cpp.s
+.PHONY : Core/Vector2.s
+
+# target to generate assembly for a file
+Core/Vector2.cpp.s:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector2.cpp.s
+.PHONY : Core/Vector2.cpp.s
+
+Core/Vector3.o: Core/Vector3.cpp.o
+.PHONY : Core/Vector3.o
+
+# target to build an object file
+Core/Vector3.cpp.o:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector3.cpp.o
+.PHONY : Core/Vector3.cpp.o
+
+Core/Vector3.i: Core/Vector3.cpp.i
+.PHONY : Core/Vector3.i
+
+# target to preprocess a source file
+Core/Vector3.cpp.i:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector3.cpp.i
+.PHONY : Core/Vector3.cpp.i
+
+Core/Vector3.s: Core/Vector3.cpp.s
+.PHONY : Core/Vector3.s
+
+# target to generate assembly for a file
+Core/Vector3.cpp.s:
+	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector3.cpp.s
+.PHONY : Core/Vector3.cpp.s
 
 # Help Target
 help:
@@ -147,9 +243,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Last_Stand_Engine"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Core/Actor.o"
+	@echo "... Core/Actor.i"
+	@echo "... Core/Actor.s"
+	@echo "... Core/Camera.o"
+	@echo "... Core/Camera.i"
+	@echo "... Core/Camera.s"
+	@echo "... Core/Universe.o"
+	@echo "... Core/Universe.i"
+	@echo "... Core/Universe.s"
+	@echo "... Core/Vector2.o"
+	@echo "... Core/Vector2.i"
+	@echo "... Core/Vector2.s"
+	@echo "... Core/Vector3.o"
+	@echo "... Core/Vector3.i"
+	@echo "... Core/Vector3.s"
 .PHONY : help
 
 
