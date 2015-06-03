@@ -1,0 +1,3 @@
+[submodule "SpaceShooter"]
+	path = SpaceShooter
+	url = https://github.com/tsteinholz/SpaceShooter.git
