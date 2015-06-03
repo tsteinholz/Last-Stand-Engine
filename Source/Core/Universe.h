@@ -1,11 +1,14 @@
 #pragma once
 
 #include <string>
+#include <../Utils/EngineState.h>
+
+#define theUniverse Universe::GetInstance()
 
 class Universe
 {
 public:
-	Universe& getInstance ();
+	Universe& GetInstance ();
 
 	bool initialize ( 
 		unsigned int windowWidth  	= 800,
@@ -15,7 +18,13 @@ public:
 		bool fullscreen 			= false, 
 		bool resizable 				= true 
 	);
+
+	
 private:
 	Universe ();
 	static Universe x_instance;
+
+	bool x_AntiAliasing;
+
+	EngineState x_EngineState;
 }
