@@ -12,9 +12,17 @@
 
 /home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Universe.cpp
 Universe.h
+/home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Universe.h
+
+/home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Universe.h
+string
 -
+../Utils/EngineState.h
+/home/tsteinholz/Development/C++/LastStandEngine/Source/Utils/EngineState.h
 
 /home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Vector2.cpp
 
 /home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Vector3.cpp
+
+/home/tsteinholz/Development/C++/LastStandEngine/Source/Utils/EngineState.h
 
