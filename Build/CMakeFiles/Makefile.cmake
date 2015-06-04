@@ -40,5 +40,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Last_Stand_Engine.dir/DependInfo.cmake"
+  "CMakeFiles/-LastStandEngine.dir/DependInfo.cmake"
   )

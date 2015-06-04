@@ -102,24 +102,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Last_Stand_Engine
+# Target rules for targets named -LastStandEngine
 
 # Build rule for target.
-Last_Stand_Engine: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Last_Stand_Engine
-.PHONY : Last_Stand_Engine
+-LastStandEngine: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 -LastStandEngine
+.PHONY : -LastStandEngine
 
 # fast build rule for target.
-Last_Stand_Engine/fast:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/build
-.PHONY : Last_Stand_Engine/fast
+-LastStandEngine/fast:
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/build
+.PHONY : -LastStandEngine/fast
 
 Core/Actor.o: Core/Actor.cpp.o
 .PHONY : Core/Actor.o
 
 # target to build an object file
 Core/Actor.cpp.o:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Actor.cpp.o
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Actor.cpp.o
 .PHONY : Core/Actor.cpp.o
 
 Core/Actor.i: Core/Actor.cpp.i
@@ -127,7 +127,7 @@ Core/Actor.i: Core/Actor.cpp.i
 
 # target to preprocess a source file
 Core/Actor.cpp.i:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Actor.cpp.i
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Actor.cpp.i
 .PHONY : Core/Actor.cpp.i
 
 Core/Actor.s: Core/Actor.cpp.s
@@ -135,7 +135,7 @@ Core/Actor.s: Core/Actor.cpp.s
 
 # target to generate assembly for a file
 Core/Actor.cpp.s:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Actor.cpp.s
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Actor.cpp.s
 .PHONY : Core/Actor.cpp.s
 
 Core/Camera.o: Core/Camera.cpp.o
@@ -143,7 +143,7 @@ Core/Camera.o: Core/Camera.cpp.o
 
 # target to build an object file
 Core/Camera.cpp.o:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Camera.cpp.o
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Camera.cpp.o
 .PHONY : Core/Camera.cpp.o
 
 Core/Camera.i: Core/Camera.cpp.i
@@ -151,7 +151,7 @@ Core/Camera.i: Core/Camera.cpp.i
 
 # target to preprocess a source file
 Core/Camera.cpp.i:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Camera.cpp.i
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Camera.cpp.i
 .PHONY : Core/Camera.cpp.i
 
 Core/Camera.s: Core/Camera.cpp.s
@@ -159,7 +159,7 @@ Core/Camera.s: Core/Camera.cpp.s
 
 # target to generate assembly for a file
 Core/Camera.cpp.s:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Camera.cpp.s
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Camera.cpp.s
 .PHONY : Core/Camera.cpp.s
 
 Core/Universe.o: Core/Universe.cpp.o
@@ -167,7 +167,7 @@ Core/Universe.o: Core/Universe.cpp.o
 
 # target to build an object file
 Core/Universe.cpp.o:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Universe.cpp.o
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Universe.cpp.o
 .PHONY : Core/Universe.cpp.o
 
 Core/Universe.i: Core/Universe.cpp.i
@@ -175,7 +175,7 @@ Core/Universe.i: Core/Universe.cpp.i
 
 # target to preprocess a source file
 Core/Universe.cpp.i:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Universe.cpp.i
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Universe.cpp.i
 .PHONY : Core/Universe.cpp.i
 
 Core/Universe.s: Core/Universe.cpp.s
@@ -183,7 +183,7 @@ Core/Universe.s: Core/Universe.cpp.s
 
 # target to generate assembly for a file
 Core/Universe.cpp.s:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Universe.cpp.s
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Universe.cpp.s
 .PHONY : Core/Universe.cpp.s
 
 Core/Vector2.o: Core/Vector2.cpp.o
@@ -191,7 +191,7 @@ Core/Vector2.o: Core/Vector2.cpp.o
 
 # target to build an object file
 Core/Vector2.cpp.o:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector2.cpp.o
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Vector2.cpp.o
 .PHONY : Core/Vector2.cpp.o
 
 Core/Vector2.i: Core/Vector2.cpp.i
@@ -199,7 +199,7 @@ Core/Vector2.i: Core/Vector2.cpp.i
 
 # target to preprocess a source file
 Core/Vector2.cpp.i:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector2.cpp.i
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Vector2.cpp.i
 .PHONY : Core/Vector2.cpp.i
 
 Core/Vector2.s: Core/Vector2.cpp.s
@@ -207,7 +207,7 @@ Core/Vector2.s: Core/Vector2.cpp.s
 
 # target to generate assembly for a file
 Core/Vector2.cpp.s:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector2.cpp.s
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Vector2.cpp.s
 .PHONY : Core/Vector2.cpp.s
 
 Core/Vector3.o: Core/Vector3.cpp.o
@@ -215,7 +215,7 @@ Core/Vector3.o: Core/Vector3.cpp.o
 
 # target to build an object file
 Core/Vector3.cpp.o:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector3.cpp.o
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.o
 .PHONY : Core/Vector3.cpp.o
 
 Core/Vector3.i: Core/Vector3.cpp.i
@@ -223,7 +223,7 @@ Core/Vector3.i: Core/Vector3.cpp.i
 
 # target to preprocess a source file
 Core/Vector3.cpp.i:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector3.cpp.i
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.i
 .PHONY : Core/Vector3.cpp.i
 
 Core/Vector3.s: Core/Vector3.cpp.s
@@ -231,7 +231,7 @@ Core/Vector3.s: Core/Vector3.cpp.s
 
 # target to generate assembly for a file
 Core/Vector3.cpp.s:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/Core/Vector3.cpp.s
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.s
 .PHONY : Core/Vector3.cpp.s
 
 # Help Target
@@ -242,7 +242,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Last_Stand_Engine"
+	@echo "... -LastStandEngine"
 	@echo "... Core/Actor.o"
 	@echo "... Core/Actor.i"
 	@echo "... Core/Actor.s"

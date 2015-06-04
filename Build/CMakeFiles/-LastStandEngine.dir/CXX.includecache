@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Actor.cpp
+
+/home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Camera.cpp
+
+/home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Universe.cpp
+Universe.h
+/home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Universe.h
+
+/home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Universe.h
+string
+-
+
+/home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Vector2.cpp
+
+/home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Vector3.cpp
+
