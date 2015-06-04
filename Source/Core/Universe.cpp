@@ -26,6 +26,8 @@ bool Universe::Initialize ( unsigned int windowWidth, unsigned int windowHeight,
 	}
 	x_EngineState = INITIALIZING;
 
+	//TODO : Create a window - Apply proper Settings.
 
 	x_EngineState = RUNNING;
+	return true;
 }
