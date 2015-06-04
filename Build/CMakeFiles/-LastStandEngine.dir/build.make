@@ -164,13 +164,37 @@ CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.o.provides: CMakeFiles/-LastSta
 
 CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.o.provides.build: CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.o
 
+CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o: CMakeFiles/-LastStandEngine.dir/flags.make
+CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o: /home/tsteinholz/Development/C++/LastStandEngine/Source/Utils/Utils.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tsteinholz/Development/C++/LastStandEngine/Build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o -c /home/tsteinholz/Development/C++/LastStandEngine/Source/Utils/Utils.cpp
+
+CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tsteinholz/Development/C++/LastStandEngine/Source/Utils/Utils.cpp > CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.i
+
+CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tsteinholz/Development/C++/LastStandEngine/Source/Utils/Utils.cpp -o CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.s
+
+CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o.requires:
+.PHONY : CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o.requires
+
+CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o.provides: CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o.requires
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o.provides.build
+.PHONY : CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o.provides
+
+CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o.provides.build: CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o
+
 # Object files for target -LastStandEngine
 __LastStandEngine_OBJECTS = \
 "CMakeFiles/-LastStandEngine.dir/Core/Actor.cpp.o" \
 "CMakeFiles/-LastStandEngine.dir/Core/Camera.cpp.o" \
 "CMakeFiles/-LastStandEngine.dir/Core/Universe.cpp.o" \
 "CMakeFiles/-LastStandEngine.dir/Core/Vector2.cpp.o" \
-"CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.o"
+"CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.o" \
+"CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o"
 
 # External object files for target -LastStandEngine
 __LastStandEngine_EXTERNAL_OBJECTS =
@@ -180,6 +204,7 @@ lib-LastStandEngine.a: CMakeFiles/-LastStandEngine.dir/Core/Camera.cpp.o
 lib-LastStandEngine.a: CMakeFiles/-LastStandEngine.dir/Core/Universe.cpp.o
 lib-LastStandEngine.a: CMakeFiles/-LastStandEngine.dir/Core/Vector2.cpp.o
 lib-LastStandEngine.a: CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.o
+lib-LastStandEngine.a: CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o
 lib-LastStandEngine.a: CMakeFiles/-LastStandEngine.dir/build.make
 lib-LastStandEngine.a: CMakeFiles/-LastStandEngine.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library lib-LastStandEngine.a"
@@ -195,6 +220,7 @@ CMakeFiles/-LastStandEngine.dir/requires: CMakeFiles/-LastStandEngine.dir/Core/C
 CMakeFiles/-LastStandEngine.dir/requires: CMakeFiles/-LastStandEngine.dir/Core/Universe.cpp.o.requires
 CMakeFiles/-LastStandEngine.dir/requires: CMakeFiles/-LastStandEngine.dir/Core/Vector2.cpp.o.requires
 CMakeFiles/-LastStandEngine.dir/requires: CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.o.requires
+CMakeFiles/-LastStandEngine.dir/requires: CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o.requires
 .PHONY : CMakeFiles/-LastStandEngine.dir/requires
 
 CMakeFiles/-LastStandEngine.dir/clean:

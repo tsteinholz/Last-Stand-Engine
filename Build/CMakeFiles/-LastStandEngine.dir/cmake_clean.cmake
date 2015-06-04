@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/-LastStandEngine.dir/Core/Universe.cpp.o"
   "CMakeFiles/-LastStandEngine.dir/Core/Vector2.cpp.o"
   "CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.o"
+  "CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o"
   "lib-LastStandEngine.pdb"
   "lib-LastStandEngine.a"
 )

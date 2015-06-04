@@ -234,6 +234,30 @@ Core/Vector3.cpp.s:
 	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.s
 .PHONY : Core/Vector3.cpp.s
 
+Utils/Utils.o: Utils/Utils.cpp.o
+.PHONY : Utils/Utils.o
+
+# target to build an object file
+Utils/Utils.cpp.o:
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o
+.PHONY : Utils/Utils.cpp.o
+
+Utils/Utils.i: Utils/Utils.cpp.i
+.PHONY : Utils/Utils.i
+
+# target to preprocess a source file
+Utils/Utils.cpp.i:
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.i
+.PHONY : Utils/Utils.cpp.i
+
+Utils/Utils.s: Utils/Utils.cpp.s
+.PHONY : Utils/Utils.s
+
+# target to generate assembly for a file
+Utils/Utils.cpp.s:
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.s
+.PHONY : Utils/Utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,6 +282,9 @@ help:
 	@echo "... Core/Vector3.o"
 	@echo "... Core/Vector3.i"
 	@echo "... Core/Vector3.s"
+	@echo "... Utils/Utils.o"
+	@echo "... Utils/Utils.i"
+	@echo "... Utils/Utils.s"
 .PHONY : help
 
 
