@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-#include <../Utils/EngineState.h>
 
 #define theUniverse Universe::GetInstance()
 
@@ -10,21 +9,30 @@ class Universe
 public:
 	Universe& GetInstance ();
 
-	bool initialize ( 
+	bool Initialize ( 
 		unsigned int windowWidth  	= 800,
 		unsigned int windowHeight 	= 600, 
-		String windowTitle 			= "Last Stand Engine", 
+		std::string windowTitle 	= "Last Stand Engine", 
 		bool antiAliasing 			= true, 
 		bool fullscreen 			= false, 
 		bool resizable 				= true 
 	);
 
-	
+
 private:
 	Universe ();
-	static Universe x_instance;
+	static Universe* x_instance;
+
+	enum EngineState
+	{
+		STARTING,
+		INITIALIZING,
+		RUNNING,
+		STOPING,
+		UNLOADING
+	};
 
 	bool x_AntiAliasing;
 
 	EngineState x_EngineState;
-}
+};

@@ -1,24 +1,31 @@
-#include <Universe.h>
+#include "Universe.h"
 
-Universe* Universe::x_instance = NULL;
+Universe* x_instance = NULL;
 
 Universe::Universe ()
 {
-	//-------Start up the Engine-------//
-	x_EngineState -> EngineState::STARTING;
+	x_EngineState = STARTING;
 
-	//---Begin Low Level Initialization---//
-	x_EngineState -> EngineState::INITIALIZING;
 
-	//Engine is ready for the game to take control
-	x_EningeState -> EngineState::RUNNING;
 }
 
 Universe& Universe::GetInstance ()
 {
-	if ( x_instance == null )
+	if ( x_instance == NULL )
 	{
-		x_instance = new Universe();
+		x_instance = new Universe ();
 	}
 	return *x_instance;
+}
+
+bool Universe::Initialize ( unsigned int windowWidth, unsigned int windowHeight, std::string windowTitle, bool antiAliasing, bool fullscreen, bool resizable)
+{
+	if (x_EngineState == RUNNING) 
+	{
+		return false;
+	}
+	x_EngineState = INITIALIZING;
+
+
+	x_EngineState = RUNNING;
 }

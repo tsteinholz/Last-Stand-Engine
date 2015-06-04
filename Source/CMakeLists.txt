@@ -4,8 +4,6 @@ project ( Last_Stand_Engine )
 set ( Last_Stand_Engine_VERSION_MAJOR 0 )
 set ( Last_Stand_Engine_VERSION_MINOR 0 )
 
-set ( CMAKE_CURRENT_SOURCE_DIR ../Source )
-
 set(SOURCE
    ${SOURCE}
 
@@ -14,9 +12,8 @@ set(SOURCE
    ${CMAKE_CURRENT_SOURCE_DIR}/Core/Universe.cpp
    ${CMAKE_CURRENT_SOURCE_DIR}/Core/Vector2.cpp
    ${CMAKE_CURRENT_SOURCE_DIR}/Core/Vector3.cpp
-
-   #PARENT_SCOPE
 )
+
 set(HEADERS
    ${HEADERS}
 
@@ -25,10 +22,7 @@ set(HEADERS
    ${CMAKE_CURRENT_SOURCE_DIR}/Core/Universe.h
    ${CMAKE_CURRENT_SOURCE_DIR}/Core/Vector2.h
    ${CMAKE_CURRENT_SOURCE_DIR}/Core/Vector3.h
-
-   ${CMAKE_CURRENT_SOURCE_DIR}/Utils/EngineState.h
-
-   #PARENT_SCOPE
+   ${CMAKE_CURRENT_SOURCE_DIR}/LSEngine.h
 )
 
-add_library ( Last_Stand_Engine ${SOURCE} ${HEADERS} )
+add_library ( -LastStandEngine ${SOURCE} ${HEADERS} )
