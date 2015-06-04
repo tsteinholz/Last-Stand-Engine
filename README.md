@@ -11,3 +11,30 @@ So far this is the Structure of the project:
 * Build - The Directory used to build the executables.
 * Libraries - The Dependencies for the Engine.
 * Source - Where all the actuall engine code is located.
+
+# Features
+#### Networking
+- Packets
+- Packet Registrys
+- Custom Handlers
+
+#### Graphics
+- OpenGL Rendering
+- Base classes
+- Layer support
+- 3D Capabilities
+
+#### Physics
+- WIP
+
+#### Mods
+- WIP
+
+#### Sound
+- Sound Manager
+- Remote (HTTP/Other) Streaming
+- Individual Sound Channels (for seperate volumes/priorities)
+
+#### Resources
+- Resource Manager
+- Repo Downloader
