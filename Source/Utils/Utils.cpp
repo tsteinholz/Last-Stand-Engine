@@ -9,8 +9,3 @@ void Utils::LogError( std::string message )
 {
 
 }
-
-std::string Utils::Time ()
-{
-
-}

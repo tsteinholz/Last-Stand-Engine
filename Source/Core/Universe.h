@@ -2,8 +2,18 @@
 
 #include <string>
 
-#define theUniverse Universe::GetInstance ();
+/**
+* The Singleton Shortcut to get the instance of the Universe
+* just by the call of 'TheUniverse'. Super convienient.
+**/
+#define TheUniverse Universe::GetInstance ();
 
+/**
+* This is the mother class of the game. This Class represnts
+* the entire game, thus its name "The Universe". Everything
+* that goes on in the game will go on in the universe (this
+* class). This makes levels and code eaier to manage.
+**/
 class Universe
 {
 public:
@@ -30,8 +40,8 @@ public:
 		unsigned int windowWidth  	= 800,
 		unsigned int windowHeight 	= 600, 
 		std::string windowTitle 	= "Last Stand Engine", 
-		bool antiAliasing 			= true, 
-		bool fullscreen 			= false, 
+		bool x_AntiAliasing 		= true, 
+		bool fullscreen				= false, 
 		bool resizable 				= true 
 	);
 
@@ -85,7 +95,13 @@ private:
 		STOPING,
 	};
 
+	/**
+	* This is the current Engine State of the Engine in 
+	* real time and will only be modified by the Universe
+	* itself.
+	**/
+	EngineState x_EngineState;
+	
 	bool x_AntiAliasing;
 
-	EngineState x_EngineState;
 };
