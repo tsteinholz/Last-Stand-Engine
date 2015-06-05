@@ -13,4 +13,5 @@ CMakeFiles/-LastStandEngine.dir/Core/Vector2.cpp.o: /home/tsteinholz/Development
 CMakeFiles/-LastStandEngine.dir/Core/Vector3.cpp.o: /home/tsteinholz/Development/C++/LastStandEngine/Source/Core/Vector3.cpp
 
 CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o: /home/tsteinholz/Development/C++/LastStandEngine/Source/Utils/Utils.cpp
+CMakeFiles/-LastStandEngine.dir/Utils/Utils.cpp.o: /home/tsteinholz/Development/C++/LastStandEngine/Source/Utils/Utils.h
 
