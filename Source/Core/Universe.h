@@ -101,7 +101,6 @@ private:
 	* itself.
 	**/
 	EngineState x_EngineState;
-	
-	bool x_AntiAliasing;
+
 
 };
