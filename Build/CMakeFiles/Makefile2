@@ -47,44 +47,44 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tsteinholz/Development/C++/Engine/Source
+CMAKE_SOURCE_DIR = /home/tsteinholz/Development/C++/LastStandEngine/Source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tsteinholz/Development/C++/Engine/Build
+CMAKE_BINARY_DIR = /home/tsteinholz/Development/C++/LastStandEngine/Build
 
 #=============================================================================
-# Target rules for target CMakeFiles/Last_Stand_Engine.dir
+# Target rules for target CMakeFiles/-LastStandEngine.dir
 
 # All Build rule for target.
-CMakeFiles/Last_Stand_Engine.dir/all:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/depend
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tsteinholz/Development/C++/Engine/Build/CMakeFiles  1
-	@echo "Built target Last_Stand_Engine"
-.PHONY : CMakeFiles/Last_Stand_Engine.dir/all
+CMakeFiles/-LastStandEngine.dir/all:
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/depend
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tsteinholz/Development/C++/LastStandEngine/Build/CMakeFiles  1 2 3 4 5 6
+	@echo "Built target -LastStandEngine"
+.PHONY : CMakeFiles/-LastStandEngine.dir/all
 
 # Include target in all.
-all: CMakeFiles/Last_Stand_Engine.dir/all
+all: CMakeFiles/-LastStandEngine.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Last_Stand_Engine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsteinholz/Development/C++/Engine/Build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Last_Stand_Engine.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsteinholz/Development/C++/Engine/Build/CMakeFiles 0
-.PHONY : CMakeFiles/Last_Stand_Engine.dir/rule
+CMakeFiles/-LastStandEngine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsteinholz/Development/C++/LastStandEngine/Build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/-LastStandEngine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsteinholz/Development/C++/LastStandEngine/Build/CMakeFiles 0
+.PHONY : CMakeFiles/-LastStandEngine.dir/rule
 
 # Convenience name for target.
-Last_Stand_Engine: CMakeFiles/Last_Stand_Engine.dir/rule
-.PHONY : Last_Stand_Engine
+-LastStandEngine: CMakeFiles/-LastStandEngine.dir/rule
+.PHONY : -LastStandEngine
 
 # clean rule for target.
-CMakeFiles/Last_Stand_Engine.dir/clean:
-	$(MAKE) -f CMakeFiles/Last_Stand_Engine.dir/build.make CMakeFiles/Last_Stand_Engine.dir/clean
-.PHONY : CMakeFiles/Last_Stand_Engine.dir/clean
+CMakeFiles/-LastStandEngine.dir/clean:
+	$(MAKE) -f CMakeFiles/-LastStandEngine.dir/build.make CMakeFiles/-LastStandEngine.dir/clean
+.PHONY : CMakeFiles/-LastStandEngine.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/Last_Stand_Engine.dir/clean
+clean: CMakeFiles/-LastStandEngine.dir/clean
 .PHONY : clean
 
 #=============================================================================

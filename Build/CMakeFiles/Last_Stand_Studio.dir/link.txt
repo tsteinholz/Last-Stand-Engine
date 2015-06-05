@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/Last_Stand_Studio.dir/main.cpp.o  -o Last_Stand_Studio -rdynamic 
