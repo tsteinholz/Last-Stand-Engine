@@ -1,6 +1,6 @@
 #include "Utils.h"
 
-void Utils::Log ( std::string message ) 
+void Utils::Log ( std::string message )
 {
 
 }
