@@ -41,10 +41,13 @@ public:
             unsigned int windowHeight 	= 600,
             std::string windowTitle 	= "Last Stand Engine",
             bool x_AntiAliasing 		= true,
-            bool fullscreen				= false,
+            bool fullScreen				= false,
             bool resizable 				= true
     );
 
+protected:
+
+    static Universe* x_instance;
 
 private:
     /**
@@ -54,8 +57,6 @@ private:
     * and is used on this class very strictly.
     **/
     Universe ();
-
-    static Universe* x_instance;
 
     /**
     * The diffrent modes and states that the Game Engine

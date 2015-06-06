@@ -1,17 +1,16 @@
 #include "Universe.h"
 
-Universe* x_instance = NULL;
+Universe* Universe::x_instance = NULL;
 
 Universe::Universe ()
 {
     x_EngineState = STARTING;
 
-
 }
 
 Universe& Universe::GetInstance ()
 {
-    if ( &x_instance == NULL )
+    if ( x_instance == NULL )
     {
         x_instance = new Universe ();
     }
