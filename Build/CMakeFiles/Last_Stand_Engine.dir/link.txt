@@ -1,2 +1,0 @@
-/usr/bin/ar cq libLast_Stand_Engine.a  CMakeFiles/Last_Stand_Engine.dir/Core/Actor.cpp.o CMakeFiles/Last_Stand_Engine.dir/Core/Camera.cpp.o CMakeFiles/Last_Stand_Engine.dir/Core/Universe.cpp.o CMakeFiles/Last_Stand_Engine.dir/Core/Vector2.cpp.o CMakeFiles/Last_Stand_Engine.dir/Core/Vector3.cpp.o
-/usr/bin/ranlib libLast_Stand_Engine.a

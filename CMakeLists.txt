@@ -4,6 +4,9 @@ project ( Last_Stand_Engine )
 set ( Last_Stand_Engine_VERSION_MAJOR 0 )
 set ( Last_Stand_Engine_VERSION_MINOR 0 )
 
+add_subdirectory(Libraries/glew-1.12.0)
+add_subdirectory(Libraries/SDL2-2.0.3)
+
 set ( SOURCE
     ${SOURCE}
 
