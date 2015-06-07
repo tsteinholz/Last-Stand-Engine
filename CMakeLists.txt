@@ -36,7 +36,7 @@ set ( HEADERS
     Source/Utils/Utils.h
 )
 
-add_library ( -LastStandEngine ${SOURCE} ${HEADERS} )
+add_library ( -LastStandEngine ${SOURCE} ${HEADERS} Source/Utils/Timer.h Source/Utils/Timer.cpp Source/Utils/StringUtils.h Source/Utils/FileUtils.h Source/Core/Math/Vector4.h Source/Core/Math/Vector4.cpp)
 add_executable( LastStandEngineDemo ${SOURCE} ${HEADERS} )
 
 INCLUDE(FindPkgConfig)
