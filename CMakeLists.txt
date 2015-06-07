@@ -24,6 +24,7 @@ set ( SOURCE
     ${SOURCE}
 
     Source/main.cpp
+    Source/Core/Audio/SoundManager.cpp
     Source/Core/Math/Vector2.cpp
     Source/Core/Math/Vector3.cpp
     Source/Core/Math/Vector4.cpp
@@ -40,6 +41,7 @@ set ( HEADERS
 
     Source/main.h
     Source/LSEngine.h
+    Source/Core/Audio/SoundManager.h
     Source/Core/Math/Vector2.h
     Source/Core/Math/Vector3.h
     Source/Core/Math/Vector4.h
