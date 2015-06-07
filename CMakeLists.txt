@@ -12,6 +12,7 @@ set ( SOURCE
     Source/main.cpp
     Source/Core/Math/Vector2.cpp
     Source/Core/Math/Vector3.cpp
+    Source/Core/Math/Vector4.cpp
     Source/Core/Camera/OrthographicCamera.cpp
     Source/Core/Camera/PerspectiveCamera.cpp
     Source/Core/Actor.cpp
@@ -26,18 +27,22 @@ set ( HEADERS
     Source/LSEngine.h
     Source/Core/Math/Vector2.h
     Source/Core/Math/Vector3.h
+    Source/Core/Math/Vector4.h
     Source/Core/Camera/OrthographicCamera.h
     Source/Core/Camera/PerspectiveCamera.h
     Source/Core/Actor.h
     Source/Core/Universe.h
+    Source/Utils/FileUtils.h
+    Source/Utils/StringUtils.h
+    Source/Utils/Timer.h
     Source/Utils/Utils.h
 )
 
-add_library ( -LastStandEngine ${SOURCE} ${HEADERS} Source/Utils/Timer.h Source/Utils/Timer.cpp Source/Utils/StringUtils.h Source/Utils/FileUtils.h Source/Core/Math/Vector4.h Source/Core/Math/Vector4.cpp Source/Core/Audio/Sound.h Source/Core/Audio/Sound.cpp)
+add_library ( -LastStandEngine ${SOURCE} ${HEADERS} )
 add_executable( LastStandEngineDemo ${SOURCE} ${HEADERS} )
 
-INCLUDE(FindPkgConfig)
-PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2)
-INCLUDE_DIRECTORIES(${SDL2_INCLUDE_DIRS})
-TARGET_LINK_LIBRARIES( -LastStandEngine ${SDL2_LIBRARIES})
-target_link_libraries( LastStandEngineDemo -LastStandEngine)
+include ( FindPkgConfig )
+pkg_search_module ( SDL2 REQUIRED sdl2 )
+include_directories ( ${SDL2_INCLUDE_DIRS} )
+target_link_libraries ( -LastStandEngine ${SDL2_LIBRARIES})
+target_link_libraries ( LastStandEngineDemo -LastStandEngine)
