@@ -1,12 +1,14 @@
+# Build File for Last Stand Engine
 cmake_minimum_required ( VERSION 3.0 )
 project ( Last_Stand_Engine )
 
 set ( Last_Stand_Engine_VERSION_MAJOR 0 )
 set ( Last_Stand_Engine_VERSION_MINOR 0 )
 
-add_subdirectory(Libraries/glew-1.12.0)
-add_subdirectory(Libraries/SDL2-2.0.3)
+# Find Libraries
 
+
+# Add sources and Headers to compile
 set ( SOURCE
     ${SOURCE}
 
@@ -36,3 +38,9 @@ set ( HEADERS
 
 add_library ( -LastStandEngine ${SOURCE} ${HEADERS} )
 add_executable( LastStandEngineDemo ${SOURCE} ${HEADERS} )
+
+INCLUDE(FindPkgConfig)
+PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2)
+INCLUDE_DIRECTORIES(${SDL2_INCLUDE_DIRS})
+TARGET_LINK_LIBRARIES( -LastStandEngine ${SDL2_LIBRARIES})
+target_link_libraries( LastStandEngineDemo -LastStandEngine)

@@ -27,7 +27,10 @@ bool Universe::Initialize ( unsigned int windowWidth, unsigned int windowHeight,
 
     //TODO : Create a window - Apply proper Settings.
 
-    //SDL_Init(SDL_INIT_VIDEO);
+    if ( SDL_Init(SDL_INIT_VIDEO) )
+    {
+
+    }
     //SDL_Quit();
 
     x_EngineState = RUNNING;
