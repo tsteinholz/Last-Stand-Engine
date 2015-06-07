@@ -36,64 +36,6 @@ public:
     static Universe& GetInstance ();
 
     /**
-    * This is the method used to set up the Universe. Since
-    * The Singleton Pattern is being used here, this is the
-    * closest thing to a constructor. The settings can only
-    * inserted in this function one time, to change any
-    * settings a diffrent method must be used.
-    *
-    * @returns true if successful.
-    **/
-    bool Initialize (
-            unsigned int windowWidth    	= 800,
-            unsigned int windowHeight   	= 600,
-            const std::string& windowTitle 	= "Last Stand Engine",
-            bool x_AntiAliasing 		    = true,
-            bool fullScreen				    = false,
-            bool resizable 				    = true
-    );
-
-    /**
-     *
-     */
-    void Start ();
-
-    /**
-     *
-     */
-    void Pause ();
-
-    /**
-     *
-     */
-    void Stop ();
-
-    /**
-     *
-     */
-    bool LoadLevel ( const std::string& levelFile );
-
-    //TODO : Load level by object reference
-
-    /**
-     *
-     */
-    void Destroy ();
-
-protected:
-
-    static Universe* x_instance;
-
-private:
-    /**
-    * This is the Constructor for the Universe, it is put
-    * in private to reinsure that only one Universe can be
-    * in exsistance at one time. This is the Singleton Pattern
-    * and is used on this class very strictly.
-    **/
-    Universe ();
-
-    /**
     * The diffrent modes and states that the Game Engine
     * could possibly be in.
     **/
@@ -136,7 +78,61 @@ private:
     * real time and will only be modified by the Universe
     * itself.
     **/
-    EngineState x_EngineState;
+    EngineState TheEngineState;
+
+    /**
+    * This is the method used to set up the Universe. Since
+    * The Singleton Pattern is being used here, this is the
+    * closest thing to a constructor. The settings can only
+    * inserted in this function one time, to change any
+    * settings a diffrent method must be used.
+    *
+    * @returns true if successful.
+    **/
+    bool Initialize (
+            unsigned int windowWidth    	= 800,
+            unsigned int windowHeight   	= 600,
+            const std::string& windowTitle 	= "Last Stand Engine",
+            bool x_AntiAliasing 		    = true,
+            bool fullScreen				    = false,
+            bool resizable 				    = true
+    );
+
+    /**
+     *
+     */
+    void Start ();
+
+    /**
+     *
+     */
+    void Pause ();
+
+    /**
+     *
+     */
+    void Stop ();
+
+    /**
+     *
+     */
+    bool LoadLevel ( const std::string& levelFile );
+
+    //TODO : Load level by object reference
+
+
+protected:
+
+    static Universe* x_instance;
+private:
+
+    /**
+    * This is the Constructor for the Universe, it is put
+    * in private to reinsure that only one Universe can be
+    * in exsistance at one time. This is the Singleton Pattern
+    * and is used on this class very strictly.
+    **/
+    Universe ();
 
     SDL_Surface* x_Surface;
 

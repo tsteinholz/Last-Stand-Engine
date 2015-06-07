@@ -6,5 +6,6 @@ int main()
 
     universe.Initialize();
 
+    universe.Start();
     return 0;
 }

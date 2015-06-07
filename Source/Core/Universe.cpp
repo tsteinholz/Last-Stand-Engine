@@ -4,7 +4,7 @@ Universe* Universe::x_instance = NULL;
 
 Universe::Universe ()
 {
-    x_EngineState = STARTING;
+    TheEngineState = STARTING;
 
     //Settings
 
@@ -25,11 +25,11 @@ Universe& Universe::GetInstance ()
 
 bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t, bool aa, bool f, bool r)
 {
-    if (x_EngineState == RUNNING)
+    if (TheEngineState == RUNNING)
     {
         return false;
     }
-    x_EngineState = INITIALIZING;
+    TheEngineState = INITIALIZING;
 
     //TODO : Create a window - Apply proper Settings.
 
@@ -50,15 +50,38 @@ bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t
                 h,
                 SDL_WINDOW_FULLSCREEN_DESKTOP
         );
+
+        Universe::x_Renderer = SDL_CreateRenderer(x_Window, -1, 0);
     }
 
-    x_EngineState = RUNNING;
+    TheEngineState = RUNNING;
     return true;
 }
 
 void Universe::Start ()
 {
+    if (TheEngineState != Universe::RUNNING)
+    {
+        Universe::Initialize();
+    }
 
+    while (TheEngineState == Universe::RUNNING)
+    {
+        SDL_SetRenderDrawColor(x_Renderer, 0, 0, 0, 225);
+        SDL_RenderClear(x_Renderer);
+        SDL_RenderPresent(x_Renderer);
+
+        SDL_Event event;
+        while (SDL_PollEvent(&event))
+        {
+            switch (event.type)
+            {
+                case SDL_MOUSEBUTTONDOWN:
+                    Stop();
+                    break;
+            }
+        }
+    }
 }
 
 void Universe::Pause ()
@@ -68,10 +91,6 @@ void Universe::Pause ()
 
 void Universe::Stop ()
 {
-
-}
-
-void Universe::Destroy()
-{
-
+    TheEngineState = Universe::STOPING;
+    SDL_Quit();
 }
