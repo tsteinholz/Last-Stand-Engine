@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Utils/Utils.h"
+#include "../Utils/Log.h"
 #include <SDL2/SDL.h>            // SDL
 #include <SDL2/SDL_video.h>      // SDL
 #include <SDL2/SDL_image.h>      // SDL_Image

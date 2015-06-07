@@ -33,11 +33,11 @@ bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t
 
     //TODO : Create a window - Apply proper Settings.
 
-    Utils::Log("INFO: SDL Version : ");
+    LOG << "INFO: SDL Version : ";
 
     if ( SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_JOYSTICK) < 0 )
     {
-        Utils::LogError("SDL could not initialize! SDL ERROR: ");SDL_GetError();
+        LOG << "SDL could not initialize! SDL ERROR: " << SDL_GetError();
         SDL_Quit();
     }
     else

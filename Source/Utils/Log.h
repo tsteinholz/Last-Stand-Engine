@@ -1,5 +1,7 @@
 #include <iostream>
 
+#pragma once
+
 class Log {
 public:
     Log(const std::string &fName) {

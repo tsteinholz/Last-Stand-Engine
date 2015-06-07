@@ -31,10 +31,11 @@ set ( HEADERS
     Source/Core/Camera/OrthographicCamera.h
     Source/Core/Camera/PerspectiveCamera.h
     Source/Core/Actor.h
+    Source/Core/Renderable.h
     Source/Core/Universe.h
     Source/Utils/FileUtils.h
+    Source/Utils/Log.h
     Source/Utils/StringUtils.h
-    Source/Utils/Timer.h
     Source/Utils/Utils.h
 )
 
