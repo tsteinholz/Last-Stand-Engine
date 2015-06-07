@@ -1,4 +1,5 @@
-#pragma once
+#ifndef LAST_STAND_ENGINE_UNIVERSE_H
+#define LAST_STAND_ENGINE_UNIVERSE_H
 
 #include "../Utils/Log.h"
 #include <SDL2/SDL.h>            // SDL
@@ -140,3 +141,5 @@ private:
 
     SDL_Renderer* x_Renderer;
 };
+
+#endif

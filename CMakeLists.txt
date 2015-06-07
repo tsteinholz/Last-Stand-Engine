@@ -15,7 +15,8 @@ set ( SOURCE
     Source/Core/Math/Vector4.cpp
     Source/Core/Camera/OrthographicCamera.cpp
     Source/Core/Camera/PerspectiveCamera.cpp
-    Source/Core/Actor.cpp
+    Source/Core/Actor2D.cpp
+    Source/Core/Actor3D.cpp
     Source/Core/Universe.cpp
     Source/Utils/Utils.cpp
 )
@@ -30,8 +31,10 @@ set ( HEADERS
     Source/Core/Math/Vector4.h
     Source/Core/Camera/OrthographicCamera.h
     Source/Core/Camera/PerspectiveCamera.h
-    Source/Core/Actor.h
-    Source/Core/Renderable.h
+    Source/Core/Actor2D.h
+    Source/Core/Actor3D.h
+    Source/Core/Renderable2D.h
+    Source/Core/Renderable3D.h
     Source/Core/Universe.h
     Source/Utils/FileUtils.h
     Source/Utils/Log.h

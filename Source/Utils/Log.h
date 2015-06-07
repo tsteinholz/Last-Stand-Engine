@@ -1,6 +1,7 @@
-#include <iostream>
+#ifndef LAST_STAND_ENGINE_LOG_H
+#define LAST_STAND_ENGINE_LOG_H
 
-#pragma once
+#include <iostream>
 
 class Log {
 public:
@@ -20,3 +21,5 @@ public:
 };
 
 #define LOG Log(__FUNCTION__)
+
+#endif //LAST_STAND_ENGINE_LOG_H

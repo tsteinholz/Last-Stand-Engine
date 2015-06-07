@@ -1,13 +1,13 @@
 #ifndef LAST_STAND_ENGINE_RENDERABLE_H
 #define LAST_STAND_ENGINE_RENDERABLE_H
 
-class Renderable
+class Renderable2D
 {
 friend class Universe;
 public:
-    Renderable (GraphicType type) : x_PendingDelete ( false ) {}
+    Renderable2D() : x_PendingDelete ( false ) {}
 
-    virtual ~Renderable () {};
+    virtual ~Renderable2D() {};
 
     virtual void Update ( float delta ) {};
 
@@ -17,17 +17,13 @@ public:
 
     bool IsDestroyed ();
 
-    int GetLayer ();
-
-    enum GraphicType
+    int Get2DLayer ()
     {
-        LS_3D,
-        LS_2D,
-    };
+        return x_2DLayer;
+    }
 protected:
     virtual void PreDestroy ();
 private:
-    GraphicType x_GraphicType;
     bool x_PendingDelete;
     int x_2DLayer;
 };

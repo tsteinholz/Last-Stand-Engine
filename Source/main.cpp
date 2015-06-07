@@ -1,5 +1,4 @@
 #include "main.h"
-#include "Utils/Log.h"
 
 int main() {
     Universe universe = TheUniverse;
