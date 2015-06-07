@@ -2,16 +2,16 @@
 
 
 namespace LastStandEngine {
-    namespace Math {
+    namespace Maths {
 
-        vec4::vec4(const float &x, const float &y, const float &z, const float &w) {
+        Vector4::Vector4(const float &x, const float &y, const float &z, const float &w) {
             this->x = x;
             this->y = y;
             this->z = z;
             this->w = w;
         }
 
-        vec4 &vec4::add(const vec4 &other) {
+        Vector4 &Vector4::add(const Vector4 &other) {
             x += other.x;
             y += other.y;
             z += other.z;
@@ -20,7 +20,7 @@ namespace LastStandEngine {
             return *this;
         }
 
-        vec4 &vec4::subtract(const vec4 &other) {
+        Vector4 &Vector4::subtract(const Vector4 &other) {
             x -= other.x;
             y -= other.y;
             z -= other.z;
@@ -29,7 +29,7 @@ namespace LastStandEngine {
             return *this;
         }
 
-        vec4 &vec4::multiply(const vec4 &other) {
+        Vector4 &Vector4::multiply(const Vector4 &other) {
             x *= other.x;
             y *= other.y;
             z *= other.z;
@@ -38,7 +38,7 @@ namespace LastStandEngine {
             return *this;
         }
 
-        vec4 &vec4::divide(const vec4 &other) {
+        Vector4 &Vector4::divide(const Vector4 &other) {
             x /= other.x;
             y /= other.y;
             z /= other.z;
@@ -47,48 +47,48 @@ namespace LastStandEngine {
             return *this;
         }
 
-        vec4 operator+(vec4 left, const vec4 &right) {
+        Vector4 operator+(Vector4 left, const Vector4 &right) {
             return left.add(right);
         }
 
-        vec4 operator-(vec4 left, const vec4 &right) {
+        Vector4 operator-(Vector4 left, const Vector4 &right) {
             return left.subtract(right);
         }
 
-        vec4 operator*(vec4 left, const vec4 &right) {
+        Vector4 operator*(Vector4 left, const Vector4 &right) {
             return left.multiply(right);
         }
 
-        vec4 operator/(vec4 left, const vec4 &right) {
+        Vector4 operator/(Vector4 left, const Vector4 &right) {
             return left.divide(right);
         }
 
-        vec4 &vec4::operator+=(const vec4 &other) {
+        Vector4 &Vector4::operator+=(const Vector4 &other) {
             return add(other);
         }
 
-        vec4 &vec4::operator-=(const vec4 &other) {
+        Vector4 &Vector4::operator-=(const Vector4 &other) {
             return subtract(other);
         }
 
-        vec4 &vec4::operator*=(const vec4 &other) {
+        Vector4 &Vector4::operator*=(const Vector4 &other) {
             return multiply(other);
         }
 
-        vec4 &vec4::operator/=(const vec4 &other) {
+        Vector4 &Vector4::operator/=(const Vector4 &other) {
             return divide(other);
         }
 
-        bool vec4::operator==(const vec4 &other) {
+        bool Vector4::operator==(const Vector4 &other) {
             return x == other.x && y == other.y && z == other.z && w == other.w;
         }
 
-        bool vec4::operator!=(const vec4 &other) {
+        bool Vector4::operator!=(const Vector4 &other) {
             return !(*this == other);
         }
 
-        std::ostream &operator<<(std::ostream &stream, const vec4 &vector) {
-            stream << "vec4: (" << vector.x << ", " << vector.y << ", " << vector.z << ", " << vector.w << ")";
+        std::ostream &operator<<(std::ostream &stream, const Vector4 &vector) {
+            stream << "Vector4: (" << vector.x << ", " << vector.y << ", " << vector.z << ", " << vector.w << ")";
             return stream;
         }
 

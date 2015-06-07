@@ -3,44 +3,44 @@
 #include <iostream>
 
 namespace LastStandEngine {
-    namespace Math {
+    namespace Maths {
 
-        struct vec4 {
+        struct Vector4 {
             float x, y, z, w;
 
-            vec4() = default;
+            Vector4() = default;
 
-            vec4(const float &x, const float &y, const float &z, const float &w);
+            Vector4(const float &x, const float &y, const float &z, const float &w);
 
-            vec4 &add(const vec4 &other);
+            Vector4 &add(const Vector4 &other);
 
-            vec4 &subtract(const vec4 &other);
+            Vector4 &subtract(const Vector4 &other);
 
-            vec4 &multiply(const vec4 &other);
+            Vector4 &multiply(const Vector4 &other);
 
-            vec4 &divide(const vec4 &other);
+            Vector4 &divide(const Vector4 &other);
 
-            friend vec4 operator+(vec4 left, const vec4 &right);
+            friend Vector4 operator+(Vector4 left, const Vector4 &right);
 
-            friend vec4 operator-(vec4 left, const vec4 &right);
+            friend Vector4 operator-(Vector4 left, const Vector4 &right);
 
-            friend vec4 operator*(vec4 left, const vec4 &right);
+            friend Vector4 operator*(Vector4 left, const Vector4 &right);
 
-            friend vec4 operator/(vec4 left, const vec4 &right);
+            friend Vector4 operator/(Vector4 left, const Vector4 &right);
 
-            bool operator==(const vec4 &other);
+            bool operator==(const Vector4 &other);
 
-            bool operator!=(const vec4 &other);
+            bool operator!=(const Vector4 &other);
 
-            vec4 &operator+=(const vec4 &other);
+            Vector4 &operator+=(const Vector4 &other);
 
-            vec4 &operator-=(const vec4 &other);
+            Vector4 &operator-=(const Vector4 &other);
 
-            vec4 &operator*=(const vec4 &other);
+            Vector4 &operator*=(const Vector4 &other);
 
-            vec4 &operator/=(const vec4 &other);
+            Vector4 &operator/=(const Vector4 &other);
 
-            friend std::ostream &operator<<(std::ostream &stream, const vec4 &vector);
+            friend std::ostream &operator<<(std::ostream &stream, const Vector4 &vector);
         };
     }
 }
