@@ -1,13 +1,10 @@
-//
-// Created by Joshua on 6/4/2015.
-//
-
 #include "main.h"
-#include "LSEngine.h"
 
-int main(){
+int main()
+{
+    Universe universe = TheUniverse;
 
-    std::cout << "Hello" << std::endl;
+    universe.Initialize();
 
     return 0;
 }

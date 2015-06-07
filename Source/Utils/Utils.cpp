@@ -1,11 +1,11 @@
 #include "Utils.h"
 
-void Utils::Log ( std::string message )
+void Utils::Log ( const std::string& message )
 {
 
 }
 
-void Utils::LogError( std::string message )
+void Utils::LogError( const std::string& message )
 {
-
+    Log("Error: " + message);
 }

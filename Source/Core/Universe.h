@@ -1,7 +1,13 @@
 #pragma once
 
 #include "../Utils/Utils.h"
-#include <SDL/SDL.h>
+#include <SDL2/SDL.h>            // SDL
+#include <SDL2/SDL_video.h>      // SDL
+#include <SDL2/SDL_image.h>      // SDL_Image
+#include <SDL2/SDL_ttf.h>        // SDL_TTF
+#include <SDL2/SDL_mixer.h>      // SDL_Mixer
+#include <SDL2/SDL2_rotozoom.h>  // SDL_GFX
+#include <SDL2/SDL2_framerate.h> // SDL_GFX
 #include <string>
 
 /**
@@ -27,7 +33,7 @@ public:
     *
     * @returns The Universe
     **/
-    Universe& GetInstance ();
+    static Universe& GetInstance ();
 
     /**
     * This is the method used to set up the Universe. Since
@@ -39,13 +45,40 @@ public:
     * @returns true if successful.
     **/
     bool Initialize (
-            unsigned int windowWidth  	= 800,
-            unsigned int windowHeight 	= 600,
-            std::string windowTitle 	= "Last Stand Engine",
-            bool x_AntiAliasing 		= true,
-            bool fullScreen				= false,
-            bool resizable 				= true
+            unsigned int windowWidth    	= 800,
+            unsigned int windowHeight   	= 600,
+            const std::string& windowTitle 	= "Last Stand Engine",
+            bool x_AntiAliasing 		    = true,
+            bool fullScreen				    = false,
+            bool resizable 				    = true
     );
+
+    /**
+     *
+     */
+    void Start ();
+
+    /**
+     *
+     */
+    void Pause ();
+
+    /**
+     *
+     */
+    void Stop ();
+
+    /**
+     *
+     */
+    bool LoadLevel ( const std::string& levelFile );
+
+    //TODO : Load level by object reference
+
+    /**
+     *
+     */
+    void Destroy ();
 
 protected:
 
@@ -105,5 +138,9 @@ private:
     **/
     EngineState x_EngineState;
 
+    SDL_Surface* x_Surface;
 
+    SDL_Window* x_Window;
+
+    SDL_Renderer* x_Renderer;
 };

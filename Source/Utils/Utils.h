@@ -6,7 +6,7 @@
 class Utils
 {
 public:
-    static void Log ( std::string message );
-    static void LogError ( std::string message );
+    static void Log ( const std::string& message );
+    static void LogError ( const std::string& message );
 private:
 };
