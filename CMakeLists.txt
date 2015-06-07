@@ -1,14 +1,11 @@
 # Build File for Last Stand Engine
+
 cmake_minimum_required ( VERSION 3.0 )
 project ( Last_Stand_Engine )
 
 set ( Last_Stand_Engine_VERSION_MAJOR 0 )
 set ( Last_Stand_Engine_VERSION_MINOR 0 )
 
-# Find Libraries
-
-
-# Add sources and Headers to compile
 set ( SOURCE
     ${SOURCE}
 
