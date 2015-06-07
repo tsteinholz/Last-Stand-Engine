@@ -2,6 +2,8 @@
 
 A C++ Game Engine targeted for SteamOS (Linux) with Windows/OSX support. This is just a side-project (open-source and free to use) so don't expect too much. The engine will be written in mostly C/C++, compiled with cmake while supporting lua scripting.
 
+##TODO - UPDATE
+
 # Structure
 
 The executable is meant to be used as a library to make a game with ease without need to worry about low-level programming.
