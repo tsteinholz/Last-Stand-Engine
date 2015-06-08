@@ -15,3 +15,143 @@
 **/
 
 #include "Vector2.h"
+
+
+Vector2::Vector2() {
+
+}
+
+Vector2::Vector2 ( float x, float y )
+{
+
+}
+
+Vector2::Vector2 ( float val )
+{
+
+}
+
+Vector2::Vector2 ( Vector2 &copy )
+{
+
+}
+
+float Vector2::Length ()
+{
+    return 0;
+}
+
+float Vector2::LengthSquared ()
+{
+    return 0;
+}
+
+float Vector2::Distance ( const Vector2 &vector2a, const Vector2 &vector2b )
+{
+    return 0;
+}
+
+float Vector2::DistanceSquared ( const Vector2 &vector2a, const Vector2 &vector2b )
+{
+    return 0;
+}
+
+float Vector2::Dot ( const Vector2 &vector2a, const Vector2 &vector2b )
+{
+    return 0;
+}
+
+float Vector2::Cross ( const Vector2 &vector2a, Vector2 &vector2b )
+{
+    return 0;
+}
+
+void Vector2::Normalize ()
+{
+
+}
+
+Vector2 Vector2::Normalize ( const Vector2 &vector2 )
+{
+    return Vector2();
+}
+
+Vector2 Vector2::Reflect ( const Vector2 &a, const Vector2 &b )
+{
+    return Vector2();
+}
+
+Vector2 Vector2::Min ( const Vector2 &vector2a, const Vector2 vector2b )
+{
+    return Vector2();
+}
+
+Vector2 Vector2::Max ( const Vector2 &vector2a, const Vector2 vector2b )
+{
+    return Vector2();
+}
+
+Vector2 Vector2::Clamp ( const Vector2 &vector2a, const Vector2 &vector2b )
+{
+    return Vector2();
+}
+
+Vector2 Vector2::Lerp ( const Vector2 &vector2a, const Vector2 &vector2b )
+{
+    return Vector2();
+}
+
+bool Vector2::operator == ( const Vector2 &v ) const
+{
+    return false;
+}
+
+bool Vector2::operator != ( const Vector2 &v ) const
+{
+    return false;
+}
+
+Vector2 Vector2::operator - () const
+{
+    return Vector2();
+}
+
+Vector2 Vector2::operator - ( const Vector2 &v ) const
+{
+    return Vector2();
+}
+
+Vector2 Vector2::operator + ( const Vector2 &v ) const
+{
+    return Vector2();
+}
+
+Vector2 Vector2::operator / ( float divider ) const
+{
+    return Vector2();
+}
+
+Vector2 Vector2::operator * ( float scaleFactor ) const
+{
+    return Vector2();
+}
+
+Vector2 &Vector2::operator += (const Vector2 &v)
+{
+    return <#initializer#>;
+}
+
+Vector2 &Vector2::operator -= ( const Vector2 &v )
+{
+    return <#initializer#>;
+}
+
+Vector2 &Vector2::operator *= ( float f )
+{
+    return <#initializer#>;
+}
+
+Vector2 &Vector2::operator /= ( float f )
+{
+    return <#initializer#>;
+}

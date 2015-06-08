@@ -26,14 +26,14 @@ class Vector2
 {
 public:
 
-/**
- * The X value value of the Vector2.
- */
+    /**
+    * The X value value of the Vector2.
+    */
     float X;
 
-/**
- * The Y value of the Vector2.
- */
+    /**
+    * The Y value of the Vector2.
+    */
     float Y;
 
     /**
@@ -203,19 +203,19 @@ public:
      */
     static Vector2 Lerp ( const Vector2& vector2a, const Vector2& vector2b );
 
-    bool operator==(const Vector2 &v) const;
-    bool operator!=(const Vector2 &v) const;
+    bool operator == (const Vector2 &v) const;
+    bool operator != (const Vector2 &v) const;
 
-    Vector2 operator-() const;
-    Vector2 operator-(const Vector2 &v) const;
-    Vector2 operator+(const Vector2 &v) const;
-    Vector2 operator/(float divider) const;
-    Vector2 operator*(float scaleFactor) const;
+    Vector2 operator - () const;
+    Vector2 operator - (const Vector2 &v) const;
+    Vector2 operator + (const Vector2 &v) const;
+    Vector2 operator / (float divider) const;
+    Vector2 operator * (float scaleFactor) const;
 
-    Vector2& operator+=(const Vector2 &v);
-    Vector2& operator-=(const Vector2 &v);
-    Vector2& operator*=(float f);
-    Vector2& operator/=(float f);
+    Vector2& operator += (const Vector2 &v);
+    Vector2& operator -= (const Vector2 &v);
+    Vector2& operator *= (float f);
+    Vector2& operator /= (float f);
 
     typedef std::vector<Vector2> Vector2List;
 };
