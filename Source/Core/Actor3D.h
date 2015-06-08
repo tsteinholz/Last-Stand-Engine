@@ -10,8 +10,8 @@
  *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *   GNU General Public License for more details.
  *
- *    You should have received a copy of the GNU General Public License
- *    along with The Last Stand Gaming Engine.  If not, see <http://www.gnu.org/licenses/>.
+ *   You should have received a copy of the GNU General Public License
+ *   along with The Last Stand Gaming Engine.  If not, see <http://www.gnu.org/licenses/>.
 **/
 
 #ifndef LAST_STAND_ENGINE_ACTOR3D_H
