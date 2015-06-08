@@ -151,6 +151,8 @@ private:
     **/
     Universe ();
 
+    ~Universe ();
+
     SDL_Surface* x_Surface;
 
     SDL_Window* x_Window;

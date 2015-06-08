@@ -19,7 +19,6 @@
 
 #include <string>
 #include <fstream>
-#include <string.h>
 
 namespace LastStandEngine {
     namespace Utils {

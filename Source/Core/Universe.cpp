@@ -30,6 +30,11 @@ Universe::Universe ()
 
 }
 
+Universe::~Universe()
+{
+
+}
+
 Universe& Universe::GetInstance ()
 {
     if ( x_instance == NULL )
@@ -49,8 +54,6 @@ bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t
 
     //TODO : Create a window - Apply proper Settings.
 
-    EngineLog << "INFO: SDL Version : ";
-
     if ( SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_JOYSTICK) < 0 )
     {
         EngineLog << "SDL could not initialize! SDL ERROR: " << SDL_GetError();
@@ -58,6 +61,7 @@ bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t
     }
     else
     {
+        EngineLog << "SDL Video, Audio, and Joystick support has been initializedl";
         Universe::x_Window = SDL_CreateWindow(
                 t.c_str(),
                 SDL_WINDOWPOS_CENTERED,

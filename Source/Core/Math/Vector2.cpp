@@ -16,25 +16,17 @@
 
 #include "Vector2.h"
 
+Vector2::Vector2() : X(0), Y(0)
+{}
 
-Vector2::Vector2() {
+Vector2::Vector2 ( float x, float y ) : X(x), Y(y)
+{}
 
-}
+Vector2::Vector2 ( float val ) : X(val), Y(val)
+{}
 
-Vector2::Vector2 ( float x, float y )
-{
-
-}
-
-Vector2::Vector2 ( float val )
-{
-
-}
-
-Vector2::Vector2 ( Vector2 &copy )
-{
-
-}
+Vector2::Vector2 ( Vector2 &copy ) : X(copy.X), Y(copy.Y)
+{}
 
 float Vector2::Length ()
 {

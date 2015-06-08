@@ -25,13 +25,17 @@ set ( SOURCE
 
     Source/main.cpp
     Source/Core/Audio/SoundManager.cpp
+    Source/Core/Math/Math.cpp
+    Source/Core/Math/Matrix.cpp
+    Source/Core/Math/Plane.cpp
+    Source/Core/Math/Quaternion.cpp
     Source/Core/Math/Vector2.cpp
     Source/Core/Math/Vector3.cpp
     Source/Core/Math/Vector4.cpp
-    Source/Core/Camera/OrthographicCamera.cpp
-    Source/Core/Camera/PerspectiveCamera.cpp
-    Source/Core/Actor2D.cpp
-    Source/Core/Actor3D.cpp
+    Source/Core/Graphics/Actors/OrthographicCamera.cpp
+    Source/Core/Graphics/Actors/PerspectiveCamera.cpp
+    Source/Core/Graphics/Actors/Actor2D.cpp
+    Source/Core/Graphics/Actors/Actor3D.cpp
     Source/Core/Universe.cpp
     Source/Utils/Utils.cpp
 )
@@ -42,15 +46,19 @@ set ( HEADERS
     Source/main.h
     Source/LSEngine.h
     Source/Core/Audio/SoundManager.h
+    Source/Core/Math/Math.h
+    Source/Core/Math/Matrix.h
+    Source/Core/Math/Plane.h
+    Source/Core/Math/Quaternion.h
     Source/Core/Math/Vector2.h
     Source/Core/Math/Vector3.h
     Source/Core/Math/Vector4.h
-    Source/Core/Camera/OrthographicCamera.h
-    Source/Core/Camera/PerspectiveCamera.h
-    Source/Core/Actor2D.h
-    Source/Core/Actor3D.h
-    Source/Core/Renderable2D.h
-    Source/Core/Renderable3D.h
+    Source/Core/Graphics/Actors/OrthographicCamera.h
+    Source/Core/Graphics/Actors/PerspectiveCamera.h
+    Source/Core/Graphics/Actors/Actor2D.h
+    Source/Core/Graphics/Actors/Actor3D.h
+    Source/Core/Graphics/Renderable2D.h
+    Source/Core/Graphics/Renderable3D.h
     Source/Core/Universe.h
     Source/Utils/FileUtils.h
     Source/Utils/Log.h

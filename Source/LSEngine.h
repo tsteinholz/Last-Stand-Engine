@@ -1,40 +1,57 @@
-/** This file is part of the Last Stand Gaming Engine.
- *
- *   The Last Stand Gaming Engine is free software: you can redistribute it and/or modify
- *   it under the terms of the GNU General Public License as published by
- *   the Free Software Foundation, either version 3 of the License, or
- *   (at your option) any later version.
- *
- *   The Last Stand Gaming Engine is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *   GNU General Public License for more details.
- *
- *   You should have received a copy of the GNU General Public License
- *   along with The Last Stand Gaming Engine.  If not, see <http://www.gnu.org/licenses/>.
-**/
+/*/-----------------------------------------------------------------------------------------------------------------/*/
+/*/                                                                                                                 /*/
+/*/                                 ______________________________________                                          /*/
+/*/                        ________|                                      |_______                                  /*/
+/*/                        \       |     This file is a part of the       |      /                                  /*/
+/*/                         \      |    Last Stand Studio Game Engine     |     /                                   /*/
+/*/                         /      |______________________________________|     \                                   /*/
+/*/                        /__________)                                (_________\                                  /*/
+/*/                                                                                                                 /*/
+/*/                                     Copyright Last Stand Studio 2015                                            /*/
+/*/                                                                                                                 /*/
+/*/               The Last Stand Gaming Engine is free software: you can redistribute it and/or modify              /*/
+/*/               it under the terms of the GNU General Public License as published by                              /*/
+/*/               the Free Software Foundation, either version 3 of the License, or                                 /*/
+/*/               (at your option) any later version.                                                               /*/
+/*/                                                                                                                 /*/
+/*/               The Last Stand Gaming Engine is distributed in the hope that it will be useful,                   /*/
+/*/               but WITHOUT ANY WARRANTY; without even the implied warranty of                                    /*/
+/*/               MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                                     /*/
+/*/               GNU General Public License for more details.                                                      /*/
+/*/                                                                                                                 /*/
+/*/               You should have received a copy of the GNU General Public License                                 /*/
+/*/               along with The Last Stand Gaming Engine. If not, see <http://www.gnu.org/licenses/>.              /*/
+/*/                                                                                                                 /*/
+/*/                                                                                                                 /*/
+/*/-----------------------------------------------------------------------------------------------------------------/*/
 
 #ifndef LAST_STAND_ENGINE_H
 #define LAST_STAND_ENGINE_H
 
 #include <iostream>
 
-//--------Core-------//
-#include "Core/Actor2D.h"
+//Core - Graphics
+#include "Core/Graphics/Actors/Actor2D.h"
 
-#include "Core/Actor3D.h"
+#include "Core/Graphics/Actors/Actor3D.h"
 
-#include "Core/Renderable2D.h"
+#include "Core/Graphics/Actors/OrthographicCamera.h"
 
-#include "Core/Renderable3D.h"
+#include "Core/Graphics/Actors/PerspectiveCamera.h"
 
-#include "Core/Audio/SoundManager.h"
+#include "Core/Graphics/Renderable2D.h"
 
-#include "Core/Camera/OrthographicCamera.h"
+#include "Core/Graphics/Renderable3D.h"
 
-#include "Core/Camera/PerspectiveCamera.h"
+//Core - Math
 
-#include "Core/Universe.h"
+#include "Core/Math/Math.h"
+
+#include "Core/Math/Matrix.h"
+
+#include "Core/Math/Plane.h"
+
+#include "Core/Math/Quaternion.h"
 
 #include "Core/Math/Vector2.h"
 
@@ -42,7 +59,13 @@
 
 #include "Core/Math/Vector4.h"
 
-//--------Utils--------//
+//Core - Audio
+#include "Core/Audio/SoundManager.h"
+
+//Core
+#include "Core/Universe.h"
+
+//Utils
 #include "Utils/Utils.h"
 
 #include "Utils/FileUtils.h"
