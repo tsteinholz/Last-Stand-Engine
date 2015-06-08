@@ -28,10 +28,9 @@
 #ifndef LAST_STAND_ENGINE_PLANE_H
 #define LAST_STAND_ENGINE_PLANE_H
 
-
-class Plane {
+class Plane
+{
 
 };
-
 
 #endif //LAST_STAND_ENGINE_PLANE_H

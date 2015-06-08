@@ -27,14 +27,13 @@
 
 #include "main.h"
 
-int main() {
+int main ()
+{
     Universe universe = TheUniverse;
 
     universe.Initialize();
 
     universe.Start();
-
-    EngineLog << "Hello";
 
     return 0;
 }

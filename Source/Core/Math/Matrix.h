@@ -28,10 +28,9 @@
 #ifndef LAST_STAND_ENGINE_MATRIX_H
 #define LAST_STAND_ENGINE_MATRIX_H
 
-
-class Matrix {
+class Matrix
+{
 
 };
-
 
 #endif //LAST_STAND_ENGINE_MATRIX_H

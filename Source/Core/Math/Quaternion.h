@@ -28,10 +28,9 @@
 #ifndef LAST_STAND_ENGINE_QUATERNION_H
 #define LAST_STAND_ENGINE_QUATERNION_H
 
-
-class Quaternion {
+class Quaternion
+{
 
 };
-
 
 #endif //LAST_STAND_ENGINE_QUATERNION_H

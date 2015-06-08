@@ -28,7 +28,8 @@
 #ifndef LAST_STAND_ENGINE_MATH_H
 #define LAST_STAND_ENGINE_MATH_H
 
-class Math {
+class Math
+{
 
 };
 
