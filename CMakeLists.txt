@@ -37,7 +37,15 @@ set ( SOURCE
     ${SOURCE}
 
     Source/main.cpp
-    Source/Core/Audio/SoundManager.cpp
+    Source/Core/Audio/AudioManager.cpp
+    Source/Core/DataStructures/AssetManager.cpp
+    Source/Core/Engine/Universe.cpp
+    Source/Core/Engine/Manager.cpp
+    Source/Core/Graphics/Actors/OrthographicCamera.cpp
+    Source/Core/Graphics/Actors/PerspectiveCamera.cpp
+    Source/Core/Graphics/Actors/Actor2D.cpp
+    Source/Core/Graphics/Actors/Actor3D.cpp
+    Source/Core/Input/InputManager.cpp
     Source/Core/Math/Math.cpp
     Source/Core/Math/Matrix.cpp
     Source/Core/Math/Plane.cpp
@@ -45,11 +53,7 @@ set ( SOURCE
     Source/Core/Math/Vector2.cpp
     Source/Core/Math/Vector3.cpp
     Source/Core/Math/Vector4.cpp
-    Source/Core/Graphics/Actors/OrthographicCamera.cpp
-    Source/Core/Graphics/Actors/PerspectiveCamera.cpp
-    Source/Core/Graphics/Actors/Actor2D.cpp
-    Source/Core/Graphics/Actors/Actor3D.cpp
-    Source/Core/Universe.cpp
+    Source/Core/Networking/NetworkManager.cpp
     Source/Utils/Utils.cpp
 )
 
@@ -58,7 +62,17 @@ set ( HEADERS
 
     Source/main.h
     Source/LSEngine.h
-    Source/Core/Audio/SoundManager.h
+    Source/Core/Audio/AudioManager.h
+    Source/Core/DataStructures/AssetManager.h
+    Source/Core/Engine/Universe.h
+    Source/Core/Engine/Manager.h
+    Source/Core/Graphics/Actors/OrthographicCamera.h
+    Source/Core/Graphics/Actors/PerspectiveCamera.h
+    Source/Core/Graphics/Actors/Actor2D.h
+    Source/Core/Graphics/Actors/Actor3D.h
+    Source/Core/Graphics/Renderable2D.h
+    Source/Core/Graphics/Renderable3D.h
+    Source/Core/Input/InputManager.cpp
     Source/Core/Math/Math.h
     Source/Core/Math/Matrix.h
     Source/Core/Math/Plane.h
@@ -66,13 +80,8 @@ set ( HEADERS
     Source/Core/Math/Vector2.h
     Source/Core/Math/Vector3.h
     Source/Core/Math/Vector4.h
-    Source/Core/Graphics/Actors/OrthographicCamera.h
-    Source/Core/Graphics/Actors/PerspectiveCamera.h
-    Source/Core/Graphics/Actors/Actor2D.h
-    Source/Core/Graphics/Actors/Actor3D.h
-    Source/Core/Graphics/Renderable2D.h
-    Source/Core/Graphics/Renderable3D.h
-    Source/Core/Universe.h
+    Source/Core/Networking/NetworkManager.cpp
+
     Source/Utils/FileUtils.h
     Source/Utils/Log.h
     Source/Utils/StringUtils.h

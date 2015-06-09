@@ -28,7 +28,7 @@
 #ifndef LAST_STAND_ENGINE_UNIVERSE_H
 #define LAST_STAND_ENGINE_UNIVERSE_H
 
-#include "../Utils/Log.h"
+#include "../../Utils/Log.h"
 #include <SDL2/SDL.h>            // SDL
 #include <SDL2/SDL_video.h>      // SDL
 #include <SDL2/SDL_image.h>      // SDL_Image
@@ -40,7 +40,7 @@
 
 /**
 * The Singleton Shortcut to get the instance of the Universe
-* just by the call of 'TheUniverse'. Super convienient.
+* just by the call of 'TheUniverse'. Super convenient.
 **/
 #define TheUniverse Universe::GetInstance ();
 
@@ -74,7 +74,7 @@ public:
         * gets executed, used mainly for set-up. The atcual
         * window creation is done in the Initialization step.
         **/
-                STARTING,
+                STARTING = 0,
 
         /**
         * At this state the engine is loading the window,
@@ -82,7 +82,7 @@ public:
         * calls to get everything running with the proper
         * settings and prefrences configured.
         **/
-                INITIALIZING,
+                INITIALIZING = 1,
 
         /**
         * This is the Engine State that it should be in most
@@ -90,7 +90,7 @@ public:
         * most amount of controll over the game and what it
         * doing.
         **/
-                RUNNING,
+                RUNNING = 2,
 
         /**
         * At this state the engine has been told to close
@@ -98,7 +98,7 @@ public:
         * get to a stopping point because it will soon be
         * removed from memory.
         **/
-                STOPING,
+                STOPING = 3,
     };
 
     /**
@@ -141,17 +141,8 @@ public:
      */
     void Stop ();
 
-    /**
-     *
-     */
-    bool LoadLevel ( const std::string& levelFile );
-
-    //TODO : Load level by object reference
-
-
 protected:
 
-    static Universe* x_instance;
 private:
 
     /**
@@ -163,6 +154,8 @@ private:
     Universe ();
 
     ~Universe ();
+
+    static Universe* x_instance;
 
     SDL_Surface* x_Surface;
 
