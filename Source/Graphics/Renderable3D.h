@@ -39,6 +39,8 @@ friend class Universe;
 
     virtual void Render () {}
 
+    //TODO Add 3D specific functions
+
     void Destroy ();
 
     bool IsDestroyed ();
