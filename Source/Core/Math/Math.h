@@ -37,6 +37,7 @@
  */
 class Math
 {
+public:
     /**
      *
      */

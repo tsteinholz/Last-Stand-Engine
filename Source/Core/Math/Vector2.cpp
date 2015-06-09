@@ -26,6 +26,7 @@
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
 #include "Vector2.h"
+#include "Math.h"
 
 Vector2 Vector2::Zero  ( 0.0f, 0.0f );
 Vector2 Vector2::One   ( 1.0f, 1.0f );
@@ -93,26 +94,22 @@ Vector2 Vector2::Reflect ( const Vector2 &a, const Vector2 &b )
 
 Vector2 Vector2::Min ( const Vector2 &vector2a, const Vector2 vector2b )
 {
-    //TODO
-    return Vector2();
+    return Vector2 ( Math::Min ( vector2a.X, vector2b.X ), Math::Min ( vector2a.Y, vector2b.Y ) );
 }
 
 Vector2 Vector2::Max ( const Vector2 &vector2a, const Vector2 vector2b )
 {
-    //TODO
-    return Vector2();
+    return Vector2 ( Math::Max ( vector2a.X, vector2a.X ), Math::Max ( vector2b.Y, vector2b.Y ) );
 }
 
-Vector2 Vector2::Clamp ( const Vector2 &vector2a, const Vector2 &vector2b )
+Vector2 Vector2::Clamp ( const Vector2 &value, const Vector2 &max, const Vector2 &min )
 {
-    //TODO
-    return Vector2();
+    return Vector2 ( Math::Clamp ( value.X, min.X, max.X ), Math::Clamp ( value.Y, min.Y, max.Y ) );
 }
 
-Vector2 Vector2::Lerp ( const Vector2 &vector2a, const Vector2 &vector2b )
+Vector2 Vector2::Lerp ( const Vector2 &vector2a, const Vector2 &vector2b, float amount )
 {
-    //TODO
-    return Vector2();
+    return Vector2 ( Math::Lerp ( vector2a.X, vector2b.X, amount ), Math::Lerp ( vector2a.Y, vector2b.Y, amount ) );
 }
 
 bool Vector2::operator == ( const Vector2 &v ) const

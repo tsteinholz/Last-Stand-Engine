@@ -202,7 +202,7 @@ public:
      *
      * @returns
      */
-    static Vector2 Clamp ( const Vector2& vector2a, const Vector2& vector2b );
+    static Vector2 Clamp ( const Vector2& value, const Vector2& max, const Vector2& min );
 
     /**
      *
@@ -212,7 +212,7 @@ public:
      *
      * @returns
      */
-    static Vector2 Lerp ( const Vector2& vector2a, const Vector2& vector2b );
+    static Vector2 Lerp ( const Vector2& vector2a, const Vector2& vector2b, float amount );
 
     bool operator == ( const Vector2 &v ) const;
     bool operator != ( const Vector2 &v ) const;
