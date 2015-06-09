@@ -31,9 +31,9 @@
 #include "Vector2.h"
 
 /**
- * A generic Math Class to make difficult equations easy with correctness and efficiency. The following class has useful
- * functions and constants you would find in your average graphing calculator. Except a little bit more centered towards
- * video-games and the math involved in making them work.
+ * A generic Math Class to make difficult equations easy with correctness and efficiency. The following class has
+ * useful functions and constants you would find in your average graphing calculator. Except a little bit more
+ * centered towards video-games and the math involved in making them work.
  */
 class Math
 {
@@ -179,17 +179,7 @@ class Math
     /**
      *
      */
-    static float AngleFromVector(const Vector2& v1);
-
-    /**
-     *
-     */
-    static float AngleFromVectors(const Vector2& v1, const Vector2& v2);
-
-    /**
-     *
-     */
-    static int RoundToInt(double x);
+    static int RoundInt(double x);
 
     /**
      *
@@ -199,7 +189,7 @@ class Math
     /**
      *
      */
-    static int RandomIntInRange(int min, int max);
+    static int RandomInt(int min, int max);
 
     /**
      *
