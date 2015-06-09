@@ -96,7 +96,11 @@ void Universe::Start ()
     {
         Universe::Initialize();
     }
+    MainLoop();
+}
 
+void Universe::MainLoop ()
+{
     while (TheEngineState == Universe::RUNNING)
     {
         SDL_SetRenderDrawColor(x_Renderer, 0, 0, 0, 225);

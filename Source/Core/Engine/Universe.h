@@ -157,6 +157,11 @@ private:
 
     static Universe* x_instance;
 
+    /**
+     *
+     */
+    void MainLoop ();
+
     SDL_Surface* x_Surface;
 
     SDL_Window* x_Window;
