@@ -146,71 +146,61 @@ public:
     /**
      *
      */
-    static int Clamp(int value, int min, int max)
+    static int Clamp ( int value, int min, int max )
     {
-        return Max(min, Min(max, value));
+        return Max ( min, Min ( max, value ) );
     }
 
     /**
      *
      */
-    static float Clamp(float value, float min, float max)
+    static float Clamp ( float value, float min, float max )
     {
-        return Max(min, Min(max, value));
+        return Max ( min, Min ( max, value ) );
     }
 
     /**
      *
      */
-    static double Clamp(double value, double min, double max)
+    static double Clamp ( double value, double min, double max )
     {
-        return Max(min, Min(max, value));
+        return Max ( min, Min ( max, value ) );
     }
 
     /**
      *
      */
-    static float ToDegrees(float radians);
+    static float ToDegrees ( float radians );
 
     /**
      *
      */
-    static float ToRadians(float degrees);
+    static float ToRadians ( float degrees );
 
     /**
      *
      */
-    static int RoundInt(double x);
+    static int RoundInt ( double x );
 
     /**
      *
      */
-    static int RandomInt(int maximum);
+    static int RandomInt ( int maximum = 1);
 
     /**
      *
      */
-    static int RandomInt(int min, int max);
+    static int RandomInt ( int min, int max );
 
     /**
      *
      */
-    static int RandomIntWithError(int target, int error);
+    static float RandomFloat ( float maximum = 1.0f );
 
     /**
      *
      */
-    static float RandomFloat(float maximum=1.0f);
-
-    /**
-     *
-     */
-    static float RandomFloatInRange(float min, float max);
-
-    /**
-     *
-     */
-    static float RandomFloatWithError(float target, float error);
+    static float RandomFloat(float min, float max);
 
     /**
      *
