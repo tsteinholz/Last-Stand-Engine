@@ -179,11 +179,6 @@ class Math
     /**
      *
      */
-    static Vector2 VectorFromAngle(float angle_in_degrees);
-
-    /**
-     *
-     */
     static float AngleFromVector(const Vector2& v1);
 
     /**
@@ -231,70 +226,6 @@ class Math
      */
     static bool RandomBool();
 
-    /**
-     *
-     */
-    static Vector2 RandomVector();
-
-    /**
-     *
-     */
-    static Vector2 RandomVector(const Vector2& maxValues);
-
-    /**
-     *
-     */
-    static Vector2 RandomVector(const Vector2& minValues, const Vector2& maxValues);
-
-    /**
-     *
-     */
-    static bool FuzzyEquals(float value1, float value2, float epsilon=Epsilon);
-
-     /**
-      *
-      */
-    static bool FuzzyEquals(const Vector2& v1, const Vector2& v2, float epsilon=Epsilon);
-
-    /**
-     *
-     */
-    static Vector2 ScreenToWorld(int x, int y);
-
-    /**
-     *
-     */
-    static Vector2 WorldToScreen(float x, float y);
-
-    /**
-     *
-     */
-    static Vector2 WorldToScreen(const Vector2& worldCoordinates);
-
-    /**
-     *
-     */
-    static Vector2 GetWorldDimensions();
-
-    /**
-     *
-     */
-    static float PixelsToWorldUnits(float pixels);
-
-    /**
-     *
-     */
-    static float WorldUnitsToPixels(float worldUnits);
-
-    /**
-     *
-     */
-    static float DeltaAngle(float A1, float A2);
-
-    /**
-     *
-     */
-    static float VectorDeltaAngle(const Vector2& v1, const Vector2& v2);
-};
+    };
 
 #endif //LAST_STAND_ENGINE_MATH_H
