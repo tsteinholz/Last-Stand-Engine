@@ -28,7 +28,7 @@
 #ifndef LAST_STAND_ENGINE_UNIVERSE_H
 #define LAST_STAND_ENGINE_UNIVERSE_H
 
-#include "../../Utils/Log.h"
+#include "../Utils/Log.h"
 #include <SDL2/SDL.h>            // SDL
 #include <SDL2/SDL_video.h>      // SDL
 #include <SDL2/SDL_image.h>      // SDL_Image

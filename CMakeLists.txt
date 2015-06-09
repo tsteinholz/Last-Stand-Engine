@@ -37,23 +37,23 @@ set ( SOURCE
     ${SOURCE}
 
     Source/main.cpp
-    Source/Core/Audio/AudioManager.cpp
-    Source/Core/DataStructures/AssetManager.cpp
-    Source/Core/Engine/Universe.cpp
-    Source/Core/Engine/Manager.cpp
-    Source/Core/Graphics/Actors/OrthographicCamera.cpp
-    Source/Core/Graphics/Actors/PerspectiveCamera.cpp
-    Source/Core/Graphics/Actors/Actor2D.cpp
-    Source/Core/Graphics/Actors/Actor3D.cpp
-    Source/Core/Input/InputManager.cpp
-    Source/Core/Math/Math.cpp
-    Source/Core/Math/Matrix.cpp
-    Source/Core/Math/Plane.cpp
-    Source/Core/Math/Quaternion.cpp
-    Source/Core/Math/Vector2.cpp
-    Source/Core/Math/Vector3.cpp
-    Source/Core/Math/Vector4.cpp
-    Source/Core/Networking/NetworkManager.cpp
+    Source/Audio/AudioManager.cpp
+    Source/DataStructures/AssetManager.cpp
+    Source/Engine/Universe.cpp
+    Source/Engine/Manager.cpp
+    Source/Graphics/Actors/OrthographicCamera.cpp
+    Source/Graphics/Actors/PerspectiveCamera.cpp
+    Source/Graphics/Actors/Actor2D.cpp
+    Source/Graphics/Actors/Actor3D.cpp
+    Source/Input/InputManager.cpp
+    Source/Math/Math.cpp
+    Source/Math/Matrix.cpp
+    Source/Math/Plane.cpp
+    Source/Math/Quaternion.cpp
+    Source/Math/Vector2.cpp
+    Source/Math/Vector3.cpp
+    Source/Math/Vector4.cpp
+    Source/Networking/NetworkManager.cpp
     Source/Utils/Utils.cpp
 )
 
@@ -62,25 +62,25 @@ set ( HEADERS
 
     Source/main.h
     Source/LSEngine.h
-    Source/Core/Audio/AudioManager.h
-    Source/Core/DataStructures/AssetManager.h
-    Source/Core/Engine/Universe.h
-    Source/Core/Engine/Manager.h
-    Source/Core/Graphics/Actors/OrthographicCamera.h
-    Source/Core/Graphics/Actors/PerspectiveCamera.h
-    Source/Core/Graphics/Actors/Actor2D.h
-    Source/Core/Graphics/Actors/Actor3D.h
-    Source/Core/Graphics/Renderable2D.h
-    Source/Core/Graphics/Renderable3D.h
-    Source/Core/Input/InputManager.cpp
-    Source/Core/Math/Math.h
-    Source/Core/Math/Matrix.h
-    Source/Core/Math/Plane.h
-    Source/Core/Math/Quaternion.h
-    Source/Core/Math/Vector2.h
-    Source/Core/Math/Vector3.h
-    Source/Core/Math/Vector4.h
-    Source/Core/Networking/NetworkManager.cpp
+    Source/Audio/AudioManager.h
+    Source/DataStructures/AssetManager.h
+    Source/Engine/Universe.h
+    Source/Engine/Manager.h
+    Source/Graphics/Actors/OrthographicCamera.h
+    Source/Graphics/Actors/PerspectiveCamera.h
+    Source/Graphics/Actors/Actor2D.h
+    Source/Graphics/Actors/Actor3D.h
+    Source/Graphics/Renderable2D.h
+    Source/Graphics/Renderable3D.h
+    Source/Input/InputManager.cpp
+    Source/Math/Math.h
+    Source/Math/Matrix.h
+    Source/Math/Plane.h
+    Source/Math/Quaternion.h
+    Source/Math/Vector2.h
+    Source/Math/Vector3.h
+    Source/Math/Vector4.h
+    Source/Networking/NetworkManager.cpp
 
     Source/Utils/FileUtils.h
     Source/Utils/Log.h

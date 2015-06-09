@@ -29,7 +29,7 @@
 #define LAST_STAND_ENGINE_LOG_H
 
 #include <iostream>
-#include "../Core/Engine/Universe.h"
+#include "../Engine/Universe.h"
 
 class Log {
 public:

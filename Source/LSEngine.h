@@ -31,33 +31,33 @@
 #include <iostream>
 
 //Core - Graphics
-#include "Core/Graphics/Actors/Actor2D.h"
+#include "Graphics/Actors/Actor2D.h"
 
-#include "Core/Graphics/Actors/Actor3D.h"
+#include "Graphics/Actors/Actor3D.h"
 
-#include "Core/Graphics/Actors/OrthographicCamera.h"
+#include "Graphics/Actors/OrthographicCamera.h"
 
-#include "Core/Graphics/Actors/PerspectiveCamera.h"
+#include "Graphics/Actors/PerspectiveCamera.h"
 
-#include "Core/Graphics/Renderable2D.h"
+#include "Graphics/Renderable2D.h"
 
-#include "Core/Graphics/Renderable3D.h"
+#include "Graphics/Renderable3D.h"
 
 //Core - Math
 
-#include "Core/Math/Math.h"
+#include "Math/Math.h"
 
-#include "Core/Math/Matrix.h"
+#include "Math/Matrix.h"
 
-#include "Core/Math/Plane.h"
+#include "Math/Plane.h"
 
-#include "Core/Math/Quaternion.h"
+#include "Math/Quaternion.h"
 
-#include "Core/Math/Vector2.h"
+#include "Math/Vector2.h"
 
-#include "Core/Math/Vector3.h"
+#include "Math/Vector3.h"
 
-#include "Core/Math/Vector4.h"
+#include "Math/Vector4.h"
 
 //Core - Audio
 //#include "AudioManager.h"
