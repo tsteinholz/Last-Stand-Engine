@@ -118,12 +118,12 @@ public:
     * @returns true if successful.
     **/
     bool Initialize (
-            unsigned int windowWidth    	= 800,
-            unsigned int windowHeight   	= 600,
-            const std::string& windowTitle 	= "Last Stand Engine",
-            bool x_AntiAliasing 		    = true,
-            bool fullScreen				    = false,
-            bool resizable 				    = true
+            unsigned int windowWidth        = 800,
+            unsigned int windowHeight       = 600,
+            const std::string& windowTitle  = "Last Stand Engine",
+            bool x_AntiAliasing             = true,
+            bool fullScreen                 = false,
+            bool resizable                  = true
     );
 
     /**
