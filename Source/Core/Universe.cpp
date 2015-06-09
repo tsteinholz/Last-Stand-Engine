@@ -72,7 +72,7 @@ bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t
     }
     else
     {
-        EngineLog << "SDL Video, Audio, and Joystick support has been initializedl";
+        EngineLog << "SDL Video, Audio, and Joystick support has been initialized";
         Universe::x_Window = SDL_CreateWindow(
                 t.c_str(),
                 SDL_WINDOWPOS_CENTERED,
@@ -108,6 +108,7 @@ void Universe::Start ()
             switch (event.type)
             {
                 case SDL_MOUSEBUTTONDOWN:
+                    EngineLog << "Closing down Window.";
                     Stop();
                     break;
             }

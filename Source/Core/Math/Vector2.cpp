@@ -35,7 +35,7 @@ Vector2 Vector2::UnitY ( 0.0f, 1.0f );
 Vector2::Vector2 () : X(0), Y(0) {}
 Vector2::Vector2 ( float x, float y ) : X(x), Y(y) {}
 Vector2::Vector2 ( float val ) : X(val), Y(val) {}
-Vector2::Vector2 ( Vector2 &copy ) : X(copy.X), Y(copy.Y) {}
+Vector2::Vector2 ( const Vector2 &copy ) : X(copy.X), Y(copy.Y) {}
 
 float Vector2::Length ()
 {
@@ -93,21 +93,25 @@ Vector2 Vector2::Reflect ( const Vector2 &a, const Vector2 &b )
 
 Vector2 Vector2::Min ( const Vector2 &vector2a, const Vector2 vector2b )
 {
+    //TODO
     return Vector2();
 }
 
 Vector2 Vector2::Max ( const Vector2 &vector2a, const Vector2 vector2b )
 {
+    //TODO
     return Vector2();
 }
 
 Vector2 Vector2::Clamp ( const Vector2 &vector2a, const Vector2 &vector2b )
 {
+    //TODO
     return Vector2();
 }
 
 Vector2 Vector2::Lerp ( const Vector2 &vector2a, const Vector2 &vector2b )
 {
+    //TODO
     return Vector2();
 }
 
@@ -148,15 +152,15 @@ Vector2 Vector2::operator * ( float f) const
 
 Vector2& Vector2::operator += (const Vector2 &v)
 {
-    X += v;
-    Y += v;
+    X += v.X;
+    Y += v.Y;
     return *this;
 }
 
 Vector2& Vector2::operator -= ( const Vector2 &v )
 {
-    X -= v;
-    Y -= v;
+    X -= v.X;
+    Y -= v.Y;
     return *this;
 }
 

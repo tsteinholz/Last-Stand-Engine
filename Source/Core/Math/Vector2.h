@@ -33,7 +33,7 @@
 /**
 * A Coordinate Point on the screen that has two instance Variables (X & Y).
 */
-class Vector2
+struct Vector2
 {
 public:
 
@@ -72,7 +72,7 @@ public:
     *
     * @param copy : an exciting Vector2 with desired values.
     */
-    Vector2 (Vector2& copy);
+    Vector2 ( const Vector2& copy );
 
     /**
      * Vector2 with the values (0,0).
@@ -214,19 +214,19 @@ public:
      */
     static Vector2 Lerp ( const Vector2& vector2a, const Vector2& vector2b );
 
-    bool operator == (const Vector2 &v) const;
-    bool operator != (const Vector2 &v) const;
+    bool operator == ( const Vector2 &v ) const;
+    bool operator != ( const Vector2 &v ) const;
 
     Vector2 operator - () const;
-    Vector2 operator - (const Vector2 &v) const;
-    Vector2 operator + (const Vector2 &v) const;
-    Vector2 operator / (float f) const;
-    Vector2 operator * (float f) const;
+    Vector2 operator - ( const Vector2 &v ) const;
+    Vector2 operator + ( const Vector2 &v ) const;
+    Vector2 operator / ( float f ) const;
+    Vector2 operator * ( float f ) const;
 
-    Vector2& operator += (const Vector2 &v);
-    Vector2& operator -= (const Vector2 &v);
-    Vector2& operator *= (float f);
-    Vector2& operator /= (float f);
+    Vector2& operator += ( const Vector2 &v );
+    Vector2& operator -= ( const Vector2 &v );
+    Vector2& operator *= ( float f );
+    Vector2& operator /= ( float f );
 
     typedef std::vector<Vector2> Vector2List;
 };

@@ -29,7 +29,7 @@
 
 int main ()
 {
-    Universe universe = TheUniverse;
+    Universe& universe = TheUniverse;
 
     universe.Initialize();
 
