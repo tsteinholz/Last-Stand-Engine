@@ -28,51 +28,9 @@
 #ifndef LAST_STAND_ENGINE_H
 #define LAST_STAND_ENGINE_H
 
-// TODO - When v1 is released or sooner, update this file to make sure that every single file is included here.
+// TODO - When v1 is released or sooner, include all class headers.
 // TODO - And Documented as to what it is - and accurately.
 
-//Core - Graphics
-#include "Graphics/Actors/Actor2D.h"
-
-#include "Graphics/Actors/Actor3D.h"
-
-#include "Graphics/Actors/OrthographicCamera.h"
-
-#include "Graphics/Actors/PerspectiveCamera.h"
-
-#include "Graphics/Renderable2D.h"
-
-#include "Graphics/Renderable3D.h"
-
-//Core - Math
-
-#include "Math/Math.h"
-
-#include "Math/Matrix.h"
-
-#include "Math/Plane.h"
-
-#include "Math/Quaternion.h"
-
-#include "Math/Vector2.h"
-
-#include "Math/Vector3.h"
-
-#include "Math/Vector4.h"
-
-//Core - Audio
-//#include "AudioManager.h"
-
-//Core
-//#include "Core/Universe.h"
-
-//Utils
-#include "Utils/Utils.h"
-
-#include "Utils/FileUtils.h"
-
-#include "Utils/Log.h"
-
-#include "Utils/StringUtils.h"
+#include "Core/Universe.h"
 
 #endif

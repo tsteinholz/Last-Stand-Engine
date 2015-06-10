@@ -25,31 +25,62 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#ifndef LAST_STAND_ENGINE_RENDERABLE3D_H
-#define LAST_STAND_ENGINE_RENDERABLE3D_H
+#ifndef LAST_STAND_ENGINE_RENDERABLE_H
+#define LAST_STAND_ENGINE_RENDERABLE_H
 
-class Renderable3D
+/**
+ *
+ */
+class IRenderable2D
 {
 friend class Universe;
-    Renderable3D () : x_PendingDelete(false) {}
+public:
+    IRenderable2D() : x_PendingDelete ( false ) {}
 
-    virtual ~Renderable3D();
+    virtual ~IRenderable2D() {};
 
+    /**
+     *
+     */
     virtual void Update ( float delta ) {};
 
+    /**
+     *
+     */
     virtual void Render () {}
 
-    //TODO Add 3D specific functions
-
+    /**
+     *
+     */
     void Destroy ();
 
+    /**
+     *
+     */
     bool IsDestroyed ();
 
+    /**
+     *
+     */
+    int Get2DLayer ()
+    {
+        return x_2DLayer;
+    }
 protected:
+    /**
+     *
+     */
     virtual void PreDestroy ();
 private:
+    /**
+     *
+     */
     bool x_PendingDelete;
 
+    /**
+     *
+     */
+    int x_2DLayer;
 };
 
-#endif //LAST_STAND_ENGINE_RENDERABLE3D_H
+#endif //LAST_STAND_ENGINE_RENDERABLE_H

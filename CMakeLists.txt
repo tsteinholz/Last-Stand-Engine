@@ -33,62 +33,82 @@ list( APPEND CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS} -g -ftest-coverage -
 set ( Last_Stand_Engine_VERSION_MAJOR 0 )
 set ( Last_Stand_Engine_VERSION_MINOR 0 )
 
-set ( SOURCE
-    ${SOURCE}
+#TODO Organize source code list. (after v1 release)
+set (LS_SOURCE_CODE
 
-    Source/main.cpp
-    Source/Audio/AudioManager.cpp
-    Source/Core/Universe.cpp
-    Source/Core/Manager.cpp
-    Source/Graphics/Actors/OrthographicCamera.cpp
-    Source/Graphics/Actors/PerspectiveCamera.cpp
-    Source/Graphics/Actors/Actor2D.cpp
-    Source/Graphics/Actors/Actor3D.cpp
-    Source/Input/InputManager.cpp
-    Source/Math/Math.cpp
-    Source/Math/Matrix.cpp
-    Source/Math/Plane.cpp
-    Source/Math/Quaternion.cpp
-    Source/Math/Vector2.cpp
-    Source/Math/Vector3.cpp
-    Source/Math/Vector4.cpp
-    Source/Networking/NetworkManager.cpp
-    Source/Utils/Utils.cpp
-)
-
-set ( HEADERS
-    ${HEADERS}
-
-    Source/main.h
     Source/LSEngine.h
+
+    ######### - Classes - #########
+    Source/main.cpp
+    Source/main.h
+
+    Source/Audio/AudioManager.cpp
     Source/Audio/AudioManager.h
-    Source/Core/IManages.h
+
+    Source/Core/Universe.cpp
     Source/Core/Universe.h
+
+    Source/Core/Manager.cpp
     Source/Core/Manager.h
+
+    Source/Graphics/Actors/OrthographicCamera.cpp
     Source/Graphics/Actors/OrthographicCamera.h
+
+    Source/Graphics/Actors/PerspectiveCamera.cpp
     Source/Graphics/Actors/PerspectiveCamera.h
+
+    Source/Graphics/Actors/Actor2D.cpp
     Source/Graphics/Actors/Actor2D.h
+
+    Source/Graphics/Actors/Actor3D.cpp
     Source/Graphics/Actors/Actor3D.h
-    Source/Graphics/Renderable2D.h
-    Source/Graphics/Renderable3D.h
+
     Source/Input/InputManager.cpp
+    Source/Input/InputManager.h
+
+    Source/Math/Math.cpp
     Source/Math/Math.h
+
+    Source/Math/Matrix.cpp
     Source/Math/Matrix.h
+
+    Source/Math/Plane.cpp
     Source/Math/Plane.h
+
+    Source/Math/Quaternion.cpp
     Source/Math/Quaternion.h
+
+    Source/Math/Vector2.cpp
     Source/Math/Vector2.h
+
+    Source/Math/Vector3.cpp
     Source/Math/Vector3.h
+
+    Source/Math/Vector4.cpp
     Source/Math/Vector4.h
+
     Source/Networking/NetworkManager.cpp
+    Source/Networking/NetworkManager.cpp
+
+    Source/Utils/Utils.h
+    Source/Utils/Utils.cpp
+
+    Source/Files/File.cpp
+    Source/Files/File.h
+    ######### - Headers - #########
 
     Source/Utils/FileUtils.h
     Source/Utils/Log.h
     Source/Utils/StringUtils.h
-    Source/Utils/Utils.h
+
+    ######### - Interfaces - #########
+    Source/Graphics/IRenderable3D.h
+    Source/Graphics/IRenderable2D.h
+    Source/Core/IManages.h
 )
 
-add_library ( -LastStandEngine ${SOURCE} ${HEADERS} )
-add_executable( LastStandEngineDemo ${SOURCE} ${HEADERS} )
+add_library ( -LastStandEngine ${LS_SOURCE_CODE} )
+add_executable( LastStandEngineDemo ${LS_SOURCE_CODE} )
 
 include ( FindPkgConfig )
 pkg_search_module ( SDL2 REQUIRED sdl2 )
