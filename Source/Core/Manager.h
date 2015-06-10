@@ -28,10 +28,32 @@
 #ifndef LAST_STAND_ENGINE_MANAGER_H
 #define LAST_STAND_ENGINE_MANAGER_H
 
+#include "../Audio/AudioManager.h"
+#include "../Networking/NetworkManager.h"
+#include "../Input/InputManager.h"
+#include "IManages.h"
 
-class Manager {
+#define TheManager Manager::GetInstance ();
 
+/**
+ * This is the master of all managers. This class will be active in every game, to keep everything managed as
+ * efficiently as possible. This class is designed to have only one instance running all the time, this means
+ * that the class has been designed very modular and efficient.
+ */
+class Manager : IManages {
+public:
+
+    Manager& GetInstance ();
+
+    static AudioManager*   Audio;
+    static InputManager*   Inputs;
+    static NetworkManager* Network;
+
+protected:
+
+private:
+    Manager ();
+    ~Manager();
 };
-
 
 #endif //LAST_STAND_ENGINE_MANAGER_H

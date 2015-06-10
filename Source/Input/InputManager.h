@@ -28,10 +28,13 @@
 #ifndef LAST_STAND_ENGINE_INPUTMANAGER_H
 #define LAST_STAND_ENGINE_INPUTMANAGER_H
 
+#include "../Core/IManages.h"
 
-class InputManager {
+/**
+ *
+ */
+class InputManager : IManages {
 
 };
-
 
 #endif //LAST_STAND_ENGINE_INPUTMANAGER_H

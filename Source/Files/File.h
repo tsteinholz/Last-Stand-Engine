@@ -25,4 +25,14 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#include "AssetManager.h"
+#ifndef LAST_STAND_ENGINE_FILE_H
+#define LAST_STAND_ENGINE_FILE_H
+
+/**
+ *
+ */
+class File {
+
+};
+
+#endif //LAST_STAND_ENGINE_FILE_H

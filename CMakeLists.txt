@@ -38,7 +38,6 @@ set ( SOURCE
 
     Source/main.cpp
     Source/Audio/AudioManager.cpp
-    Source/DataStructures/AssetManager.cpp
     Source/Core/Universe.cpp
     Source/Core/Manager.cpp
     Source/Graphics/Actors/OrthographicCamera.cpp
@@ -63,7 +62,7 @@ set ( HEADERS
     Source/main.h
     Source/LSEngine.h
     Source/Audio/AudioManager.h
-    Source/DataStructures/AssetManager.h
+    Source/Core/IManages.h
     Source/Core/Universe.h
     Source/Core/Manager.h
     Source/Graphics/Actors/OrthographicCamera.h

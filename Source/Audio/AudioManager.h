@@ -17,7 +17,9 @@
 #ifndef LAST_STAND_ENGINE_SOUNDMANAGER_H
 #define LAST_STAND_ENGINE_SOUNDMANAGER_H
 
-class SoundManager {
+#include "../Core/IManages.h"
+
+class AudioManager : IManages {
 
 };
 

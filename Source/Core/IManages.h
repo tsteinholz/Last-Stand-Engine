@@ -25,13 +25,21 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#ifndef LAST_STAND_ENGINE_ASSETMANAGER_H
-#define LAST_STAND_ENGINE_ASSETMANAGER_H
+#ifndef LAST_STAND_ENGINE_IMANAGES_H
+#define LAST_STAND_ENGINE_IMANAGES_H
 
+/**
+ * This is the interface that every manager should implement. It contains all of the most generic and basic functions
+ * of all managers which keeps consistency and code efficiency.
+ */
+class IManages //TODO - Generic Manager Functions
+{
+public:
 
-class AssetManager {
+protected:
+
+private:
 
 };
 
-
-#endif //LAST_STAND_ENGINE_ASSETMANAGER_H
+#endif //LAST_STAND_ENGINE_IMANAGES_H

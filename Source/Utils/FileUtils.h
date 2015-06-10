@@ -34,7 +34,7 @@
 
 namespace LastStandEngine {
     namespace Utils {
-
+//TODO move this class to FILE DIR
         static std::string readFile(const char *filepath) {
             FILE *file = fopen(filepath, "rt");
             fseek(file, 0, SEEK_END);

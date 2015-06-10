@@ -28,10 +28,17 @@
 #ifndef LAST_STAND_ENGINE_NETWORKMANAGER_H
 #define LAST_STAND_ENGINE_NETWORKMANAGER_H
 
+#include "../Core/IManages.h"
 
-class NetworkManager {
+/**
+ * This Class takes care of and manages all network connections, form p2p & server multi-player. To http streaming
+ * form web servers. Anything to do with networking will be accessible from this class and will manage it in the
+ * most efficient and speedy way possible.
+ */
+class NetworkManager : IManages {
+
+ //TODO - Networking
 
 };
-
 
 #endif //LAST_STAND_ENGINE_NETWORKMANAGER_H
