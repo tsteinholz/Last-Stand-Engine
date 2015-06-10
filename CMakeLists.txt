@@ -120,6 +120,7 @@ add_executable( LastStandEngineDemo ${LS_SOURCE_CODE} )
 include ( FindPkgConfig )
 pkg_search_module ( SDL2 REQUIRED sdl2 )
 include_directories ( ${SDL2_INCLUDE_DIRS} )
+
 # Includes SDL2 with the build files
 target_link_libraries ( -LastStandEngine ${SDL2_LIBRARIES})
 target_link_libraries ( LastStandEngineDemo -LastStandEngine)
