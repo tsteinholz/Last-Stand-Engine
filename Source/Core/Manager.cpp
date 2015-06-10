@@ -26,3 +26,92 @@
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
 #include "Manager.h"
+
+Manager* Manager::x_Instance = NULL;
+
+Manager::Manager()
+{
+    EnableAll();
+}
+
+Manager::~Manager ()
+{
+    DisableAll();
+}
+
+Manager& Manager::GetInstance()
+{
+    if ( x_Instance == NULL )
+    {
+        x_Instance = new Manager ();
+    }
+    return *x_Instance;
+}
+
+void Manager::DisableAll()
+{
+    DisableAudio();
+    DisableNetworking();
+    DisableInputs();
+}
+
+void Manager::DisableAudio()
+{
+    if ( Audio != NULL )
+    {
+        delete Audio;
+    }
+    x_AudioEnabled = false;
+}
+
+void Manager::DisableInputs()
+{
+    if ( Inputs != NULL )
+    {
+        delete Inputs;
+    }
+    x_InputEnabled = false;
+}
+
+void Manager::DisableNetworking()
+{
+    if ( Network != NULL )
+    {
+        delete Network;
+    }
+    x_NetworkEnabled = false;
+}
+
+void Manager::EnableAll()
+{
+    EnableAudio();
+    EnableInputs();
+    EnableNetworking();
+}
+
+void Manager::EnableAudio()
+{
+    if ( Audio == NULL )
+    {
+        Audio = new AudioManager ();
+    }
+    x_AudioEnabled = true;
+}
+
+void Manager::EnableInputs()
+{
+    if ( Inputs == NULL )
+    {
+        Inputs = new InputManager ();
+    }
+    x_InputEnabled = true;
+}
+
+void Manager::EnableNetworking()
+{
+    if ( Network == NULL )
+    {
+        Network = new NetworkManager ();
+    }
+    x_NetworkEnabled = true;
+}

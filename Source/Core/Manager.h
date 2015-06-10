@@ -32,6 +32,7 @@
 #include "../Networking/NetworkManager.h"
 #include "../Input/InputManager.h"
 #include "IManages.h"
+#include <stddef.h>
 
 #define TheManager Manager::GetInstance ();
 
@@ -45,15 +46,38 @@ public:
 
     Manager& GetInstance ();
 
-    static AudioManager*   Audio;
-    static InputManager*   Inputs;
-    static NetworkManager* Network;
+    AudioManager*   Audio;
+    InputManager*   Inputs;
+    NetworkManager* Network;
+
+    void DisableAll ();
+
+    void DisableAudio ();
+
+    void DisableInputs ();
+
+    void DisableNetworking ();
+
+    void EnableAll ();
+
+    void EnableAudio ();
+
+    void EnableInputs ();
+
+    void EnableNetworking ();
 
 protected:
 
+    static Manager* x_Instance;
+
 private:
     Manager ();
+
     ~Manager();
+
+    bool x_AudioEnabled;
+    bool x_InputEnabled;
+    bool x_NetworkEnabled;
 };
 
 #endif //LAST_STAND_ENGINE_MANAGER_H
