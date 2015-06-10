@@ -28,12 +28,16 @@
 cmake_minimum_required ( VERSION 3.0 )
 project ( Last_Stand_Engine )
 
+#Compile for C++11
 list( APPEND CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS} -g -ftest-coverage -fprofile-arcs")
 
+#Set the current engine version
 set ( Last_Stand_Engine_VERSION_MAJOR 0 )
 set ( Last_Stand_Engine_VERSION_MINOR 0 )
 
-#TODO Organize source code list. (after v1 release)
+#TODO Organize source code list in alpha order. (after v1 release)
+
+# All of the source code in the project (that will be compiled)
 set (LS_SOURCE_CODE
 
     Source/LSEngine.h
@@ -107,11 +111,15 @@ set (LS_SOURCE_CODE
     Source/Core/IManages.h
 )
 
+# What will be included in client projects
 add_library ( -LastStandEngine ${LS_SOURCE_CODE} )
+# Used to test build
 add_executable( LastStandEngineDemo ${LS_SOURCE_CODE} )
 
+# Includes SDL2
 include ( FindPkgConfig )
 pkg_search_module ( SDL2 REQUIRED sdl2 )
 include_directories ( ${SDL2_INCLUDE_DIRS} )
+# Includes SDL2 with the build files
 target_link_libraries ( -LastStandEngine ${SDL2_LIBRARIES})
 target_link_libraries ( LastStandEngineDemo -LastStandEngine)
