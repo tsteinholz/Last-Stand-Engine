@@ -42,7 +42,7 @@
 * The Singleton Shortcut to get the instance of the Universe
 * just by the call of 'TheUniverse'. Super convenient.
 **/
-#define TheUniverse Universe::GetInstance ();
+#define TheUniverse Universe::GetInstance ()
 
 /**
 * This is the mother class of the game. This Class represnts

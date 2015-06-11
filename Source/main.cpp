@@ -29,11 +29,9 @@
 
 int main ()
 {
-    Universe& universe = TheUniverse;
+    TheUniverse.Initialize();
 
-    universe.Initialize();
-
-    universe.Start();
+    TheUniverse.Start();
 
     return 0;
 }
