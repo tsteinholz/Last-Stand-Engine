@@ -77,6 +77,7 @@ public:
 
 private:
 
+    //TODO Fix this
     template <class T>
     std::map<const std::string&, T> Settings;
 };
