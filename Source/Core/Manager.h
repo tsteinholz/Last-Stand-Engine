@@ -46,8 +46,8 @@ public:
 
     Manager& GetInstance ();
 
-    AudioManager*   Audio;
-    InputManager*   Inputs;
+    AudioManager* Audio;
+    InputManager* Inputs;
     NetworkManager* Network;
 
     void DisableAll ();

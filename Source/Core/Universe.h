@@ -36,6 +36,7 @@
 #include <SDL2/SDL_mixer.h>      // SDL_Mixer
 #include <SDL2/SDL2_rotozoom.h>  // SDL_GFX
 #include <SDL2/SDL2_framerate.h> // SDL_GFX
+#include "GlobalSettings.h"
 #include <string>
 
 /**
@@ -98,7 +99,7 @@ public:
         * get to a stopping point because it will soon be
         * removed from memory.
         **/
-                STOPING = 3,
+                STOPPING = 3,
     };
 
     /**
@@ -161,6 +162,8 @@ private:
      *
      */
     void MainLoop ();
+
+    GlobalSettings* Settings;
 
     SDL_Surface* x_Surface;
 

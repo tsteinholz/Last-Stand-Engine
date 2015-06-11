@@ -25,106 +25,60 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#include "Universe.h"
+#ifndef LAST_STAND_ENGINE_SETTINGS_H
+#define LAST_STAND_ENGINE_SETTINGS_H
 
-Universe* Universe::x_instance = NULL;
+#include <map>
+#include <SDL_stdinc.h>
+#include <SDL_video.h>
+#include <string>
 
-Universe::Universe ()
-{
-    TheEngineState = STARTING;
+/**
+ * These are client side settings that the client can and should change regarding all client side video and sound
+ * options.
+ */
+class GlobalSettings {
+public:
+    GlobalSettings ();
+    ~GlobalSettings ();
 
-    Settings = new GlobalSettings ();
-}
+    /**
+     *
+     */
+    bool LoadConfig ();
 
-Universe::~Universe()
-{
-    delete Settings;
-}
+    template <class T>
+    void Set (std::string, T);
 
-Universe& Universe::GetInstance ()
-{
-    if ( x_instance == NULL )
-    {
-        x_instance = new Universe ();
-    }
-    return *x_instance;
-}
+    template <class T>
+    T Get ( std::string key );
 
-bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t, bool aa, bool f, bool r)
-{
-    if (TheEngineState == RUNNING)
-    {
-        return false;
-    }
-    TheEngineState = INITIALIZING;
+    bool GetBool ( std::string key );
 
-    //TODO : Create a window - Apply proper Settings.
+    double GetDouble ( std::string key );
 
-    if ( SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_JOYSTICK) < 0 )
-    {
-        EngineLog << "SDL could not initialize! SDL ERROR: " << SDL_GetError();
-        SDL_Quit();
-        return false;
-    }
-    else
-    {
-        EngineLog << "SDL Video, Audio, and Joystick support has been initialized";
-        Universe::x_Window = SDL_CreateWindow(
-                t.c_str(),
-                SDL_WINDOWPOS_CENTERED,
-                SDL_WINDOWPOS_CENTERED,
-                w,
-                h,
-                Settings->Window
-        );
+    float GetFloat ( std::string key );
 
-        Universe::x_Renderer = SDL_CreateRenderer(x_Window, -1, 0);
-    }
+    int GetInt ( std::string key );
 
-    TheEngineState = RUNNING;
-    return true;
-}
+    long GetLong ( std::string key );
 
-void Universe::Start ()
-{
-    EngineLog << "Starting the Universe!";
-    if (TheEngineState != Universe::RUNNING)
-    {
-        Universe::Initialize();
-    }
-    EngineLog << "The Universe has Started!";
-    MainLoop();
-}
+    std::string GetString ( std::string key );
 
-void Universe::MainLoop ()
-{
-    while (TheEngineState == Universe::RUNNING)
-    {
-        SDL_SetRenderDrawColor(x_Renderer, 0, 0, 0, 225);
-        SDL_RenderClear(x_Renderer);
-        SDL_RenderPresent(x_Renderer);
+    /**
+     *
+     */
+    bool AntiAliasing;
 
-        SDL_Event event;
-        while (SDL_PollEvent(&event))
-        {
-            switch (event.type)
-            {
-                case SDL_MOUSEBUTTONDOWN:
-                    EngineLog << "Closing down Window.";
-                    Stop();
-                    break;
-            }
-        }
-    }
-}
+    /**
+     *
+     */
+    SDL_WindowFlags Window;
 
-void Universe::Pause ()
-{
+private:
 
-}
+    template <class T>
+    std::map<const std::string&, T> Settings;
+};
 
-void Universe::Stop ()
-{
-    TheEngineState = Universe::STOPPING;
-    SDL_Quit();
-}
+#endif //LAST_STAND_ENGINE_SETTINGS_H

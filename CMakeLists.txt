@@ -55,6 +55,9 @@ set (LS_SOURCE_CODE
     Source/Core/Manager.cpp
     Source/Core/Manager.h
 
+    Source/Core/GlobalSettings.cpp
+    Source/Core/GlobalSettings.h
+
     Source/Graphics/Actors/OrthographicCamera.cpp
     Source/Graphics/Actors/OrthographicCamera.h
 

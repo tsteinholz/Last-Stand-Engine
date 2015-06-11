@@ -25,106 +25,58 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#include "Universe.h"
+#include "GlobalSettings.h"
 
-Universe* Universe::x_instance = NULL;
-
-Universe::Universe ()
+GlobalSettings::GlobalSettings ()
 {
-    TheEngineState = STARTING;
-
-    Settings = new GlobalSettings ();
-}
-
-Universe::~Universe()
-{
-    delete Settings;
-}
-
-Universe& Universe::GetInstance ()
-{
-    if ( x_instance == NULL )
+    if ( !LoadConfig() )
     {
-        x_instance = new Universe ();
-    }
-    return *x_instance;
-}
-
-bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t, bool aa, bool f, bool r)
-{
-    if (TheEngineState == RUNNING)
-    {
-        return false;
-    }
-    TheEngineState = INITIALIZING;
-
-    //TODO : Create a window - Apply proper Settings.
-
-    if ( SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_JOYSTICK) < 0 )
-    {
-        EngineLog << "SDL could not initialize! SDL ERROR: " << SDL_GetError();
-        SDL_Quit();
-        return false;
-    }
-    else
-    {
-        EngineLog << "SDL Video, Audio, and Joystick support has been initialized";
-        Universe::x_Window = SDL_CreateWindow(
-                t.c_str(),
-                SDL_WINDOWPOS_CENTERED,
-                SDL_WINDOWPOS_CENTERED,
-                w,
-                h,
-                Settings->Window
-        );
-
-        Universe::x_Renderer = SDL_CreateRenderer(x_Window, -1, 0);
-    }
-
-    TheEngineState = RUNNING;
-    return true;
-}
-
-void Universe::Start ()
-{
-    EngineLog << "Starting the Universe!";
-    if (TheEngineState != Universe::RUNNING)
-    {
-        Universe::Initialize();
-    }
-    EngineLog << "The Universe has Started!";
-    MainLoop();
-}
-
-void Universe::MainLoop ()
-{
-    while (TheEngineState == Universe::RUNNING)
-    {
-        SDL_SetRenderDrawColor(x_Renderer, 0, 0, 0, 225);
-        SDL_RenderClear(x_Renderer);
-        SDL_RenderPresent(x_Renderer);
-
-        SDL_Event event;
-        while (SDL_PollEvent(&event))
-        {
-            switch (event.type)
-            {
-                case SDL_MOUSEBUTTONDOWN:
-                    EngineLog << "Closing down Window.";
-                    Stop();
-                    break;
-            }
-        }
+        Set ( "AntiAliasing", true );
+        Set ( "Window", SDL_WINDOW_FULLSCREEN_DESKTOP );
     }
 }
 
-void Universe::Pause ()
+GlobalSettings::~GlobalSettings()
 {
-
+    //TODO - Save any unsaved changes to the file
 }
 
-void Universe::Stop ()
+bool GlobalSettings::LoadConfig()
 {
-    TheEngineState = Universe::STOPPING;
-    SDL_Quit();
+    //TODO using File utils load a file called settings.(haven't decided the file extension)
+    return false;
+}
+
+template<class T>
+void GlobalSettings::Set(std::string string, T t) {
+    Settings.insert( std::pair<std::string, T> ( string, t ) );
+}
+
+template<class T>
+T GlobalSettings::Get(std::string key) {
+    return Settings.find ( key );
+}
+
+bool GlobalSettings::GetBool(std::string key) {
+    return (bool) Get ( key );
+}
+
+double GlobalSettings::GetDouble(std::string key) {
+    return (double) Get ( key );
+}
+
+float GlobalSettings::GetFloat(std::string key) {
+    return (float) Get ( key );
+}
+
+int GlobalSettings::GetInt(std::string key) {
+    return (int) Get ( key );
+}
+
+long GlobalSettings::GetLong(std::string key) {
+    return (long) Get ( key );
+}
+
+std::string GlobalSettings::GetString(std::string key) {
+    return (std::string) Get ( key );
 }
