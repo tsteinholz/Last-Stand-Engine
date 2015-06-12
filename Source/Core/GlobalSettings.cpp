@@ -26,15 +26,29 @@
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
 #include "GlobalSettings.h"
+#include "../Utils/Log.h"
 
 GlobalSettings::GlobalSettings ()
 {
     if ( !LoadConfig() )
     {
+        //These are the Default Values.
+
         SetBool( "AntiAliasing", true );
+        SetDouble( "Test", 23.23 );
 
         Window = SDL_WINDOW_FULLSCREEN_DESKTOP;
     }
+    for (std::map<std::string, bool>::const_iterator it = BoolSettings.begin(); it != BoolSettings.end(); it++)
+    {
+        std::string value = it->second ? "true" : "false";
+        EngineLog << it->first + " = " + value;
+    }
+    for (std::map<std::string, double>::const_iterator it = DoubleSettings.begin(); it != DoubleSettings.end(); it++)
+    {
+        EngineLog << it->first + " = " + std::to_string ( it->second );
+    }
+    //TODO print out the rest of the configured Settings.
 }
 
 GlobalSettings::~GlobalSettings()
