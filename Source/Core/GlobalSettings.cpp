@@ -31,8 +31,8 @@ GlobalSettings::GlobalSettings ()
 {
     if ( !LoadConfig() )
     {
-        Set ( "AntiAliasing", true );
-        Set ( "Window", SDL_WINDOW_FULLSCREEN_DESKTOP );
+        AntiAliasing = true;
+        Window = SDL_WINDOW_FULLSCREEN_DESKTOP;
     }
 }
 
@@ -47,36 +47,61 @@ bool GlobalSettings::LoadConfig()
     return false;
 }
 
-template<class T>
-void GlobalSettings::Set(std::string string, T t) {
-    Settings.insert( std::pair<std::string, T> ( string, t ) );
-}
-
-template<class T>
-T GlobalSettings::Get(std::string key) {
-    return Settings.find ( key );
-}
+void GlobalSettings::SetBool(std::string key, bool value) {
+    BoolSettings.insert( std::pair<std::string, bool> (key, value) );}
 
 bool GlobalSettings::GetBool(std::string key) {
-    return (bool) Get ( key );
+    std::map<std::string, bool>::const_iterator iterator = BoolSettings.find ( key );
+    if ( iterator == BoolSettings.end() ) return false;
+    return iterator->second;
+}
+
+void GlobalSettings::SetDouble(std::string key, double value) {
+    DoubleSettings.insert( std::pair <std::string, double> ( key, value ) );
 }
 
 double GlobalSettings::GetDouble(std::string key) {
-    return (double) Get ( key );
+    std::map<std::string, double>::const_iterator iterator = DoubleSettings.find ( key );
+    if ( iterator == DoubleSettings.end() ) return -1;
+    return iterator->second;
+}
+
+void GlobalSettings::SetFloat(std::string key, float value) {
+    FloatSettings.insert( std::pair <std::string, float> ( key, value ) );
 }
 
 float GlobalSettings::GetFloat(std::string key) {
-    return (float) Get ( key );
+    std::map<std::string, float>::const_iterator iterator = FloatSettings.find ( key );
+    if ( iterator == FloatSettings.end() ) return -1;
+    return iterator->second;
+}
+
+void GlobalSettings::SetInt(std::string key, int value) {
+    IntSettings.insert(std::pair<std::string, int> ( key, value ) );
 }
 
 int GlobalSettings::GetInt(std::string key) {
-    return (int) Get ( key );
+    std::map<std::string, int>::const_iterator iterator = IntSettings.find ( key );
+    if ( iterator == IntSettings.end() ) return -1;
+    return iterator->second;
+}
+
+void GlobalSettings::SetLong(std::string key, long value) {
+    LongSettings.insert (std::pair<std::string, long> ( key , value ) );
 }
 
 long GlobalSettings::GetLong(std::string key) {
-    return (long) Get ( key );
+    std::map<std::string, long>::const_iterator iterator = LongSettings.find ( key );
+    if ( iterator == LongSettings.end() ) return -1;
+    return iterator->second;
+}
+
+void GlobalSettings::SetString(std::string key, std::string value) {
+    StringSettings.insert ( std::pair<std::string, std::string> ( key, value ) );
 }
 
 std::string GlobalSettings::GetString(std::string key) {
-    return (std::string) Get ( key );
+    std::map<std::string, std::string>::const_iterator iterator = StringSettings.find ( key );
+    if ( iterator == StringSettings.end() ) return "";
+    return iterator->second;
 }

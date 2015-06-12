@@ -47,21 +47,27 @@ public:
      */
     bool LoadConfig ();
 
-    template <class T>
-    void Set (std::string, T);
-
-    template <class T>
-    T Get ( std::string key );
+    void SetBool ( std::string key, bool value );
 
     bool GetBool ( std::string key );
 
+    void SetDouble ( std::string key, double value );
+
     double GetDouble ( std::string key );
+
+    void SetFloat ( std::string key, float value );
 
     float GetFloat ( std::string key );
 
+    void SetInt ( std::string key, int value );
+
     int GetInt ( std::string key );
 
+    void SetLong ( std::string key, long value );
+
     long GetLong ( std::string key );
+
+    void SetString ( std::string key, std::string value );
 
     std::string GetString ( std::string key );
 
@@ -77,9 +83,17 @@ public:
 
 private:
 
-    //TODO Fix this
-    template <class T>
-    std::map<const std::string&, T> Settings;
+    std::map<std::string, bool> BoolSettings;
+
+    std::map<std::string, std::string> StringSettings;
+
+    std::map<std::string, int> IntSettings;
+
+    std::map<std::string, double> DoubleSettings;
+
+    std::map<std::string, float> FloatSettings;
+
+    std::map<std::string, long> LongSettings;
 };
 
 #endif //LAST_STAND_ENGINE_SETTINGS_H
