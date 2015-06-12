@@ -39,18 +39,33 @@
  */
 class GlobalSettings {
 public:
+
     GlobalSettings ();
     ~GlobalSettings ();
 
     /**
      *
      */
-    bool LoadConfig ();
+    bool LoadConfig () { LoadConfig("Settings.json"); }
 
+    /**
+     *
+     */
+    bool LoadConfig (std::string fileName);
+
+    /**
+     *
+     */
     void SetBool ( std::string key, bool value );
 
+    /**
+    *
+    */
     bool GetBool ( std::string key );
 
+    /**
+     *
+     */
     void SetDouble ( std::string key, double value );
 
     double GetDouble ( std::string key );
@@ -71,28 +86,38 @@ public:
 
     std::string GetString ( std::string key );
 
-    /**
-     *
-     */
-    bool AntiAliasing;
-
-    /**
-     *
-     */
     SDL_WindowFlags Window;
 
-private:
+protected:
 
+    /**
+     *
+     */
     std::map<std::string, bool> BoolSettings;
 
+    /**
+     *
+     */
     std::map<std::string, std::string> StringSettings;
 
+    /**
+     *
+     */
     std::map<std::string, int> IntSettings;
 
+    /**
+     *
+     */
     std::map<std::string, double> DoubleSettings;
 
+    /**
+     *
+     */
     std::map<std::string, float> FloatSettings;
 
+    /**
+     *
+     */
     std::map<std::string, long> LongSettings;
 };
 
