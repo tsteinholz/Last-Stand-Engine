@@ -31,7 +31,8 @@ GlobalSettings::GlobalSettings ()
 {
     if ( !LoadConfig() )
     {
-        AntiAliasing = true;
+        SetBool( "AntiAliasing", true );
+
         Window = SDL_WINDOW_FULLSCREEN_DESKTOP;
     }
 }
