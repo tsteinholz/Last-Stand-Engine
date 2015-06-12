@@ -35,7 +35,11 @@ GlobalSettings::GlobalSettings ()
         //These are the Default Values.
 
         SetBool( "AntiAliasing", true );
-        SetDouble( "Test", 23.23 );
+        SetDouble( "TestDouble", 23.23 );
+        SetFloat( "TestFloat", 23.5 );
+        SetInt( "TestInt", 23 );
+        SetLong( "TestLong", 23234 );
+        SetString( "q", "asdfsdaf" );
 
         Window = SDL_WINDOW_FULLSCREEN_DESKTOP;
     }
@@ -48,7 +52,22 @@ GlobalSettings::GlobalSettings ()
     {
         EngineLog << it->first + " = " + std::to_string ( it->second );
     }
-    //TODO print out the rest of the configured Settings.
+    for (std::map<std::string, float>::const_iterator it = FloatSettings.begin(); it != FloatSettings.end(); it++)
+    {
+        EngineLog << it->first + " = " + std::to_string( it->second );
+    }
+    for (std::map<std::string, int>::const_iterator it = IntSettings.begin(); it != IntSettings.end(); it++)
+    {
+        EngineLog << it->first + " = " + std::to_string( it->second );
+    }
+    for (std::map<std::string, long>::const_iterator it = LongSettings.begin(); it != LongSettings.end(); it++)
+    {
+        EngineLog << it->first + " = " + std::to_string( it->second );
+    }
+    for (std::map<std::string, std::string>::const_iterator it = StringSettings.begin(); it != StringSettings.end(); it++)
+    {
+        EngineLog << it->first + " = " + it->second;
+    }
 }
 
 GlobalSettings::~GlobalSettings()
@@ -56,7 +75,7 @@ GlobalSettings::~GlobalSettings()
     //TODO - Save any unsaved changes to the file
 }
 
-bool GlobalSettings::LoadConfig()
+bool GlobalSettings::LoadConfig( std::string fileName)
 {
     //TODO using File utils load a file called settings.(haven't decided the file extension)
     return false;

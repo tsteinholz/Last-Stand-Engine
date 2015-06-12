@@ -46,7 +46,7 @@ public:
     /**
      *
      */
-    bool LoadConfig () { LoadConfig("Settings.json"); }
+    bool LoadConfig () { return LoadConfig("Settings.json"); }
 
     /**
      *
