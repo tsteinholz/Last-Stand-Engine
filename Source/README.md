@@ -1,6 +1,6 @@
 # The Root of the Project
 
-Structure
+##Structure:
 * **Audio** - Where all Audio is handled and taken care of.
 * **Core** - Where the base of the engine lies.
 * **Files** - Where all the File io is taken care of.
