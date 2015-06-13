@@ -33,7 +33,7 @@ OS=$(uname -s)
 ARCH=$(uname -m)
 VER=$(uname -r)
 
-if [ -f "/etc/arch-release" ]; then
+if [ -f /etc/arch-release ]; then
 
 	echo  [*] Arch Linux Distro Detected!
 	OS=Arch
@@ -51,5 +51,5 @@ elif [ -f /etc/redhat-release ]; then
 	OS=RedHat
 
 else
-	echo  [*] Current Distro is not supported!
+	echo  [*] Current Distro is not supported! Feel free to pull request any modifications to fix this.
 fi
