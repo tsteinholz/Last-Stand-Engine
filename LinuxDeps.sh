@@ -12,6 +12,7 @@ if [ -f "/etc/arch-release" ]; then
 elif [ -f etc/debian_version ]; then
 	echo  [*] Debian Based Distro Detected
 	OS=Debian
+	apt-get install dev-libsdl2
 elif [ -f /etc/redhat-release ]; then
 	echo  [*] RedHat Distro Detected
 	OS=RedHat
