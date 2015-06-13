@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 echo Last Stand Studio Dependencies
 
 OS=$(uname -s)
