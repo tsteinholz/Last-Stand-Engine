@@ -29,12 +29,21 @@
 #define LAST_STAND_ENGINE_LOG_H
 
 #include <iostream>
+#include "Utils.h"
 #include "../Core/Universe.h"
+#include "../Core/GlobalSettings.h"
 
 class Log {
 public:
     Log(const std::string &fName) {
-        std::cout << fName << ": ";
+        if ( GlobalSettings::GetBool ( "LogClass" ) )
+        {
+            std::cout << LastStandEngine::Utils::GetTime () << " | (~" << fName << "~) ";
+        }
+        else
+        {
+            std::cout << LastStandEngine::Utils::GetTime () << " | ";
+        }
     }
 
     template<class T>

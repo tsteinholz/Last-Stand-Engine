@@ -61,7 +61,7 @@ public:
     /**
     *
     */
-    bool GetBool ( std::string key );
+    static bool GetBool ( std::string key );
 
     /**
      *
@@ -87,38 +87,37 @@ public:
     std::string GetString ( std::string key );
 
     SDL_WindowFlags Window;
-
 protected:
 
     /**
      *
      */
-    std::map<std::string, bool> BoolSettings;
+    static std::map<std::string, bool> BoolSettings;
 
     /**
      *
      */
-    std::map<std::string, std::string> StringSettings;
+    static std::map<std::string, double> DoubleSettings;
 
     /**
      *
      */
-    std::map<std::string, int> IntSettings;
+    static std::map<std::string, float> FloatSettings;
 
     /**
      *
      */
-    std::map<std::string, double> DoubleSettings;
+    static std::map<std::string, int> IntSettings;
 
     /**
      *
      */
-    std::map<std::string, float> FloatSettings;
+    static std::map<std::string, long> LongSettings;
 
     /**
      *
      */
-    std::map<std::string, long> LongSettings;
+    static std::map<std::string, std::string> StringSettings;
 };
 
 #endif //LAST_STAND_ENGINE_SETTINGS_H

@@ -28,7 +28,14 @@
 #include "Utils.h"
 
 namespace LastStandEngine {
-    namespace Utils {
 
+    std::string LastStandEngine::Utils::GetTime() {
+
+        time_t currentTime;
+        struct tm *localTime;
+        time(&currentTime);
+        localTime = localtime(&currentTime);
+
+        return std::to_string( localTime->tm_hour ) + ":" + std::to_string( localTime->tm_min );
     }
 }

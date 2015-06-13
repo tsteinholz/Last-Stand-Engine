@@ -28,14 +28,17 @@
 //TODO change to ifndef
 #pragma once
 
+#include <ctime>
 #include <iostream>
 #include <string>
 
 namespace LastStandEngine {
-    namespace Utils {
-        class Utils {
-        public:
+    class Utils {
+    public:
 
-        };
-    }
+        /**
+         *
+         */
+        static std::string GetTime();
+    };
 }

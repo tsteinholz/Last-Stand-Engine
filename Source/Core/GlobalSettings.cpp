@@ -28,17 +28,25 @@
 #include "GlobalSettings.h"
 #include "../Utils/Log.h"
 
+std::map<std::string, bool> GlobalSettings::BoolSettings = {};
+std::map<std::string, double> GlobalSettings::DoubleSettings = {};
+std::map<std::string, float> GlobalSettings::FloatSettings = {};
+std::map<std::string, int> GlobalSettings::IntSettings = {};
+std::map<std::string, long> GlobalSettings::LongSettings = {};
+std::map<std::string, std::string> GlobalSettings::StringSettings = {};
+
 GlobalSettings::GlobalSettings ()
 {
     if ( !LoadConfig() )
     {
-        //These are the Default Values.
+        // These are the Default Values.
 
-        SetBool( "AntiAliasing", true );
-
+        SetBool ( "AntiAliasing", true );
+        SetBool ( "LogClass", false );
 
         Window = SDL_WINDOW_FULLSCREEN_DESKTOP;
     }
+    // Print out current Settings
     for (std::map<std::string, bool>::const_iterator it = BoolSettings.begin(); it != BoolSettings.end(); it++)
     {
         std::string value = it->second ? "true" : "false";
