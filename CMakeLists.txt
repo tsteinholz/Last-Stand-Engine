@@ -119,11 +119,16 @@ add_library ( -LastStandEngine ${LS_SOURCE_CODE} )
 # Used to test build
 add_executable( LastStandEngineDemo ${LS_SOURCE_CODE} )
 
-# Includes SDL2
+#Find Packages
 include ( FindPkgConfig )
+
+# Includes SDL2
 pkg_search_module ( SDL2 REQUIRED sdl2 )
 include_directories ( ${SDL2_INCLUDE_DIRS} )
 
+pkg_search_module ( JSONCPP REQUIRED jsoncpp )
+include_directories ( ${JSONCPP_INCLUDE_DIRS} )
+
 # Includes SDL2 with the build files
-target_link_libraries ( -LastStandEngine ${SDL2_LIBRARIES})
+target_link_libraries ( -LastStandEngine ${SDL2_LIBRARIES} ${JSONCPP_INCLUDE_DIRS})
 target_link_libraries ( LastStandEngineDemo -LastStandEngine)
