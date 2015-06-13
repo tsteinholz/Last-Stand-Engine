@@ -46,7 +46,7 @@ GlobalSettings::GlobalSettings ()
         Window = SDL_WINDOW_FULLSCREEN_DESKTOP;
     }
     // Print out current Settings
-    EngineLog << "!!!!!!!!- CURENT SETTINGS -!!!!!!!!";
+    EngineLog << "#######: CURENT SETTINGS :#######";
     for (std::map<std::string, bool>::const_iterator it = BoolSettings.begin(); it != BoolSettings.end(); it++)
     {
         std::string value = it->second ? "true" : "false";
@@ -72,7 +72,7 @@ GlobalSettings::GlobalSettings ()
     {
         EngineLog << it->first + " = " + it->second;
     }
-    EngineLog << "!!!!!!!!- END OF CURENT SETTINGS -!!!!!!!!";
+    EngineLog << "#######: END OF CURENT SETTINGS :#######";
 }
 
 GlobalSettings::~GlobalSettings()
