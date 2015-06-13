@@ -35,11 +35,7 @@ GlobalSettings::GlobalSettings ()
         //These are the Default Values.
 
         SetBool( "AntiAliasing", true );
-        SetDouble( "TestDouble", 23.23 );
-        SetFloat( "TestFloat", 23.5 );
-        SetInt( "TestInt", 23 );
-        SetLong( "TestLong", 23234 );
-        SetString( "q", "asdfsdaf" );
+
 
         Window = SDL_WINDOW_FULLSCREEN_DESKTOP;
     }

@@ -32,6 +32,7 @@ Universe* Universe::x_instance = NULL;
 Universe::Universe ()
 {
     TheEngineState = STARTING;
+    EngineLog << "Engine State : Starting";
 
     Settings = new GlobalSettings ();
 }
@@ -57,8 +58,7 @@ bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t
         return false;
     }
     TheEngineState = INITIALIZING;
-
-    //TODO : Create a window - Apply proper Settings.
+    EngineLog << "Engine State : Initializing";
 
     if ( SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_JOYSTICK) < 0 )
     {
@@ -82,17 +82,17 @@ bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t
     }
 
     TheEngineState = RUNNING;
+    EngineLog << "Engine State : Running";
     return true;
 }
 
 void Universe::Start ()
 {
-    EngineLog << "Starting the Universe!";
     if (TheEngineState != Universe::RUNNING)
     {
         Universe::Initialize();
     }
-    EngineLog << "The Universe has Started!";
+    EngineLog << "The Universe has Started! Beginning Main Loop";
     MainLoop();
 }
 
@@ -110,7 +110,7 @@ void Universe::MainLoop ()
             switch (event.type)
             {
                 case SDL_MOUSEBUTTONDOWN:
-                    EngineLog << "Closing down Window.";
+                    EngineLog << "User Prompted Exit";
                     Stop();
                     break;
             }
