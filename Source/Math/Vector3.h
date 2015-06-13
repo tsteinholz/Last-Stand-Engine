@@ -28,4 +28,8 @@
 #ifndef LAST_STAND_ENGINE_VECTOR3_H
 #define LAST_STAND_ENGINE_VECTOR3_H
 
+namespace LastStandEngine {
+
+}
+
 #endif //LAST_STAND_ENGINE_VECTOR3_H

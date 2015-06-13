@@ -28,149 +28,129 @@
 #include "Vector2.h"
 #include "Math.h"
 
-Vector2 Vector2::Zero  ( 0.0f, 0.0f );
-Vector2 Vector2::One   ( 1.0f, 1.0f );
-Vector2 Vector2::UnitX ( 1.0f, 0.0f );
-Vector2 Vector2::UnitY ( 0.0f, 1.0f );
+namespace LastStandEngine {
 
-Vector2::Vector2 () : X(0), Y(0) {}
-Vector2::Vector2 ( float x, float y ) : X(x), Y(y) {}
-Vector2::Vector2 ( float val ) : X(val), Y(val) {}
-Vector2::Vector2 ( const Vector2 &copy ) : X(copy.X), Y(copy.Y) {}
+    Vector2 Vector2::Zero(0.0f, 0.0f);
+    Vector2 Vector2::One(1.0f, 1.0f);
+    Vector2 Vector2::UnitX(1.0f, 0.0f);
+    Vector2 Vector2::UnitY(0.0f, 1.0f);
 
-float Vector2::Length ()
-{
-    return 0;
-}
+    Vector2::Vector2() : X(0), Y(0) { }
 
-float Vector2::LengthSquared ()
-{
-    return ( X * X ) + ( Y * Y );
-}
+    Vector2::Vector2(float x, float y) : X(x), Y(y) { }
 
-float Vector2::Distance ( const Vector2 &vector2a, const Vector2 &vector2b )
-{
-    return Vector2 ( vector2a - vector2b ).Length ();
-}
+    Vector2::Vector2(float val) : X(val), Y(val) { }
 
-float Vector2::DistanceSquared ( const Vector2 &vector2a, const Vector2 &vector2b )
-{
-    return Vector2 ( vector2a - vector2b ).LengthSquared ();
-}
+    Vector2::Vector2(const Vector2 &copy) : X(copy.X), Y(copy.Y) { }
 
-float Vector2::Dot ( const Vector2 &vector2a, const Vector2 &vector2b )
-{
-    return ( vector2a.X * vector2b.X ) + ( vector2a.Y * vector2b.Y );
-}
-
-float Vector2::Cross ( const Vector2 &vector2a, Vector2 &vector2b )
-{
-    return ( vector2a.X * vector2b.Y ) - ( vector2a.Y * vector2b.X );
-}
-
-void Vector2::Normalize ()
-{
-    if( Length () < 1e-7f )
-    {
-        *this = Y > X ? UnitY : UnitX;
+    float Vector2::Length() {
+        return 0;
     }
-    else
-    {
-        *this /= Length ();
+
+    float Vector2::LengthSquared() {
+        return (X * X) + (Y * Y);
     }
-}
 
-Vector2 Vector2::Normalize ( const Vector2 &vector2 )
-{
-    Vector2 temp (vector2);
-    temp.Normalize();
-    return temp;
-}
+    float Vector2::Distance(const Vector2 &vector2a, const Vector2 &vector2b) {
+        return Vector2(vector2a - vector2b).Length();
+    }
 
-Vector2 Vector2::Reflect ( const Vector2 &a, const Vector2 &b )
-{
-    return a - ( b * 2.0f * Vector2::Dot(a, b) );
-}
+    float Vector2::DistanceSquared(const Vector2 &vector2a, const Vector2 &vector2b) {
+        return Vector2(vector2a - vector2b).LengthSquared();
+    }
 
-Vector2 Vector2::Min ( const Vector2 &vector2a, const Vector2 vector2b )
-{
-    return Vector2 ( Math::Min ( vector2a.X, vector2b.X ), Math::Min ( vector2a.Y, vector2b.Y ) );
-}
+    float Vector2::Dot(const Vector2 &vector2a, const Vector2 &vector2b) {
+        return (vector2a.X * vector2b.X) + (vector2a.Y * vector2b.Y);
+    }
 
-Vector2 Vector2::Max ( const Vector2 &vector2a, const Vector2 vector2b )
-{
-    return Vector2 ( Math::Max ( vector2a.X, vector2a.X ), Math::Max ( vector2b.Y, vector2b.Y ) );
-}
+    float Vector2::Cross(const Vector2 &vector2a, Vector2 &vector2b) {
+        return (vector2a.X * vector2b.Y) - (vector2a.Y * vector2b.X);
+    }
 
-Vector2 Vector2::Clamp ( const Vector2 &value, const Vector2 &max, const Vector2 &min )
-{
-    return Vector2 ( Math::Clamp ( value.X, min.X, max.X ), Math::Clamp ( value.Y, min.Y, max.Y ) );
-}
+    void Vector2::Normalize() {
+        if (Length() < 1e-7f) {
+            *this = Y > X ? UnitY : UnitX;
+        }
+        else {
+            *this /= Length();
+        }
+    }
 
-Vector2 Vector2::Lerp ( const Vector2 &vector2a, const Vector2 &vector2b, float amount )
-{
-    return Vector2 ( Math::Lerp ( vector2a.X, vector2b.X, amount ), Math::Lerp ( vector2a.Y, vector2b.Y, amount ) );
-}
+    Vector2 Vector2::Normalize(const Vector2 &vector2) {
+        Vector2 temp(vector2);
+        temp.Normalize();
+        return temp;
+    }
 
-bool Vector2::operator == ( const Vector2 &v ) const
-{
-    return X == v.X && Y == v.Y;
-}
+    Vector2 Vector2::Reflect(const Vector2 &a, const Vector2 &b) {
+        return a - (b * 2.0f * Vector2::Dot(a, b));
+    }
 
-bool Vector2::operator != ( const Vector2 &v ) const
-{
-    return !(*this == v);
-}
+    Vector2 Vector2::Min(const Vector2 &vector2a, const Vector2 vector2b) {
+        return Vector2(Math::Min(vector2a.X, vector2b.X), Math::Min(vector2a.Y, vector2b.Y));
+    }
 
-Vector2 Vector2::operator - () const
-{
-    return Vector2::Zero - *this;
-}
+    Vector2 Vector2::Max(const Vector2 &vector2a, const Vector2 vector2b) {
+        return Vector2(Math::Max(vector2a.X, vector2a.X), Math::Max(vector2b.Y, vector2b.Y));
+    }
 
-Vector2 Vector2::operator - ( const Vector2 &v ) const
-{
-    return Vector2(X - v.X, Y - v.Y);
-}
+    Vector2 Vector2::Clamp(const Vector2 &value, const Vector2 &max, const Vector2 &min) {
+        return Vector2(Math::Clamp(value.X, min.X, max.X), Math::Clamp(value.Y, min.Y, max.Y));
+    }
 
-Vector2 Vector2::operator + ( const Vector2 &v ) const
-{
-    return Vector2(X + v.X, Y + v.Y);
-}
+    Vector2 Vector2::Lerp(const Vector2 &vector2a, const Vector2 &vector2b, float amount) {
+        return Vector2(Math::Lerp(vector2a.X, vector2b.X, amount), Math::Lerp(vector2a.Y, vector2b.Y, amount));
+    }
 
-Vector2 Vector2::operator / ( float f) const
-{
-    return Vector2(X / f, Y / f);
-}
+    bool Vector2::operator==(const Vector2 &v) const {
+        return X == v.X && Y == v.Y;
+    }
 
-Vector2 Vector2::operator * ( float f) const
-{
-    return Vector2 ( X * f, Y * f);
-}
+    bool Vector2::operator!=(const Vector2 &v) const {
+        return !(*this == v);
+    }
 
-Vector2& Vector2::operator += (const Vector2 &v)
-{
-    X += v.X;
-    Y += v.Y;
-    return *this;
-}
+    Vector2 Vector2::operator-() const {
+        return Vector2::Zero - *this;
+    }
 
-Vector2& Vector2::operator -= ( const Vector2 &v )
-{
-    X -= v.X;
-    Y -= v.Y;
-    return *this;
-}
+    Vector2 Vector2::operator-(const Vector2 &v) const {
+        return Vector2(X - v.X, Y - v.Y);
+    }
 
-Vector2& Vector2::operator *= ( float f )
-{
-    X *= f;
-    Y *= f;
-    return *this;
-}
+    Vector2 Vector2::operator+(const Vector2 &v) const {
+        return Vector2(X + v.X, Y + v.Y);
+    }
 
-Vector2& Vector2::operator /= ( float f )
-{
-    X /= f;
-    Y /= f;
-    return *this;
+    Vector2 Vector2::operator/(float f) const {
+        return Vector2(X / f, Y / f);
+    }
+
+    Vector2 Vector2::operator*(float f) const {
+        return Vector2(X * f, Y * f);
+    }
+
+    Vector2 &Vector2::operator+=(const Vector2 &v) {
+        X += v.X;
+        Y += v.Y;
+        return *this;
+    }
+
+    Vector2 &Vector2::operator-=(const Vector2 &v) {
+        X -= v.X;
+        Y -= v.Y;
+        return *this;
+    }
+
+    Vector2 &Vector2::operator*=(float f) {
+        X *= f;
+        Y *= f;
+        return *this;
+    }
+
+    Vector2 &Vector2::operator/=(float f) {
+        X /= f;
+        Y /= f;
+        return *this;
+    }
 }
