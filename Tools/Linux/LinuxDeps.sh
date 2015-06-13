@@ -43,13 +43,14 @@ elif [ -f etc/debian_version ]; then
 
 	echo  [*] Debian Based Distro Detected!
 	OS=Debian
-	apt-get install dev-libsdl2
+	apt-get install libsdl2-dev libjsoncpp-dev
 
 elif [ -f /etc/redhat-release ]; then
 
 	echo  [*] RedHat Distro Detected!
 	OS=RedHat
-
+    #TODO : Install SDL2 & JSONCPP For RedHat
+	echo This Distro is not yet supported.
 else
 	echo  [*] Current Distro is not supported! Feel free to pull request any modifications to fix this.
 fi
