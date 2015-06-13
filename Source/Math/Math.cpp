@@ -27,20 +27,23 @@
 
 #include "Math.h"
 
-const float Math::E = 2.718282f;
+namespace LastStandEngine {
 
-const float Math::Log10E = 0.4342945f;
+    const float Math::E = 2.718282f;
 
-const float Math::Log2E = 1.442695f;
+    const float Math::Log10E = 0.4342945f;
 
-const float Math::Pi = 3.141593f;
+    const float Math::Log2E = 1.442695f;
 
-const float Math::MaxFloat = 3.402823E+38f;
+    const float Math::Pi = 3.141593f;
 
-const float Math::MinFloat = -3.402823E+38f;
+    const float Math::MaxFloat = 3.402823E+38f;
 
-const int   Math::MaxInt = 2147483648;
+    const float Math::MinFloat = -3.402823E+38f;
 
-const int   Math::MinInt = -2147483648;
+    const int   Math::MaxInt = 2147483648;
 
-const float Math::Epsilon = 0.000001f;
+    const int   Math::MinInt = -2147483648;
+
+    const float Math::Epsilon = 0.000001f;
+}

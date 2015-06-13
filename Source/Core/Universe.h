@@ -110,6 +110,11 @@ public:
     EngineState TheEngineState;
 
     /**
+     *
+     */
+    const int FrameRate = 0;
+
+    /**
     * This is the method used to set up the Universe. Since
     * The Singleton Pattern is being used here, this is the
     * closest thing to a constructor. The settings can only

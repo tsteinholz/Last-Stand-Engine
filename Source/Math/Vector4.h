@@ -25,8 +25,8 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-//TODO : change to ifndef
-#pragma once
+#ifndef LAST_STAND_ENGINE_VECTOR4_H
+#define LAST_STAND_ENGINE_VECTOR4_H
 
 #include <iostream>
 
@@ -72,3 +72,5 @@ namespace LastStandEngine {
         };
     }
 }
+
+#endif

@@ -41,6 +41,7 @@ GlobalSettings::GlobalSettings ()
     {
         // These are the Default Values.
         SetBool ( "AntiAliasing", true );
+        SetBool ( "CapFrameRate", false );
         SetBool ( "Debug", false );
 
         Window = SDL_WINDOW_FULLSCREEN_DESKTOP;

@@ -25,8 +25,8 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-//TODO change to ifndef
-#pragma once
+#ifndef LAST_STAND_ENGINE_UTILS_H
+#define LAST_STAND_ENGINE_UTILS_H
 
 #include <ctime>
 #include <iostream>
@@ -42,3 +42,5 @@ namespace LastStandEngine {
         static std::string GetTime();
     };
 }
+
+#endif

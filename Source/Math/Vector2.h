@@ -30,205 +30,214 @@
 
 #include <vector>
 
-/**
-* A Coordinate Point on the screen that has two instance Variables (X & Y).
-*/
-struct Vector2
-{
-public:
+namespace LastStandEngine {
 
     /**
-    * The X value value of the Vector2.
+    * A Coordinate Point on the screen that has two instance Variables (X & Y).
     */
-    float X;
+    struct Vector2 {
+    public:
 
-    /**
-    * The Y value of the Vector2.
-    */
-    float Y;
+        /**
+        * The X value value of the Vector2.
+        */
+        float X;
 
-    /**
-    * Basic Constructor for a Vector2 object, sets values to 0,0.
-    */
-    Vector2 ();
+        /**
+        * The Y value of the Vector2.
+        */
+        float Y;
 
-    /**
-    * Complete Constructor for a Vector2
-    *
-    * @param x : X value of the Vector2.
-    * @param y : Y value of the Vector2.
-    */
-    Vector2 ( float x, float y );
+        /**
+        * Basic Constructor for a Vector2 object, sets values to 0,0.
+        */
+        Vector2();
 
-    /**
-    * Sets the x and y values to the same value.
-    *
-    * @param val : value going into both x and y.
-    */
-    Vector2 ( float val );
+        /**
+        * Complete Constructor for a Vector2
+        *
+        * @param x : X value of the Vector2.
+        * @param y : Y value of the Vector2.
+        */
+        Vector2(float x, float y);
 
-    /**
-    * Copies a Vector2.
-    *
-    * @param copy : an exciting Vector2 with desired values.
-    */
-    Vector2 ( const Vector2& copy );
+        /**
+        * Sets the x and y values to the same value.
+        *
+        * @param val : value going into both x and y.
+        */
+        Vector2(float val);
 
-    /**
-     * Vector2 with the values (0,0).
-     */
-    static Vector2 Zero;
+        /**
+        * Copies a Vector2.
+        *
+        * @param copy : an exciting Vector2 with desired values.
+        */
+        Vector2(const Vector2 &copy);
 
-    /**
-     * Vector2 with the values (1,1).
-     */
-    static Vector2 One;
+        /**
+        * Vector2 with the values (0,0).
+        */
+        static Vector2 Zero;
 
-    /**
-     * Vector2 with the values (1,0).
-     */
-    static Vector2 UnitX;
+        /**
+        * Vector2 with the values (1,1).
+        */
+        static Vector2 One;
 
-    /**
-     * Vector2 with the values (0,1).
-     */
-    static Vector2 UnitY;
+        /**
+        * Vector2 with the values (1,0).
+        */
+        static Vector2 UnitX;
 
-    /**
-     *
-     *
-     * @returns :
-     */
-    float Length ();
+        /**
+        * Vector2 with the values (0,1).
+        */
+        static Vector2 UnitY;
 
-    /**
-     *
-     *
-     * @returns
-     */
-    float LengthSquared ();
+        /**
+        *
+        *
+        * @returns :
+        */
+        float Length();
 
-    /**
-     *
-     *
-     * @param
-     * @param
-     *
-     * @returns
-     */
-    static float Distance ( const Vector2& vector2a, const Vector2& vector2b );
+        /**
+        *
+        *
+        * @returns
+        */
+        float LengthSquared();
 
-    /**
-     *
-     *
-     * @param
-     * @param
-     *
-     * @returns
-     */
-    static float DistanceSquared ( const Vector2& vector2a, const Vector2& vector2b );
+        /**
+        *
+        *
+        * @param
+        * @param
+        *
+        * @returns
+        */
+        static float Distance(const Vector2 &vector2a, const Vector2 &vector2b);
 
-    /**
-     *
-     *
-     * @param
-     * @param
-     *
-     * @returns
-     */
-    static float Dot ( const Vector2& vector2a, const Vector2& vector2b );
+        /**
+        *
+        *
+        * @param
+        * @param
+        *
+        * @returns
+        */
+        static float DistanceSquared(const Vector2 &vector2a, const Vector2 &vector2b);
 
-    /**
-     *
-     *
-     * @param
-     * @param
-     *
-     * @returns
-     */
-    static float Cross ( const Vector2& vector2a, Vector2& vector2b );
+        /**
+        *
+        *
+        * @param
+        * @param
+        *
+        * @returns
+        */
+        static float Dot(const Vector2 &vector2a, const Vector2 &vector2b);
 
-    /**
-     *
-     *
-     *  @returns
-     */
-    void Normalize ();
+        /**
+        *
+        *
+        * @param
+        * @param
+        *
+        * @returns
+        */
+        static float Cross(const Vector2 &vector2a, Vector2 &vector2b);
 
-    /**
-     *
-     *
-     * @param
-     *
-     * @returns
-     */
-    static Vector2 Normalize ( const Vector2& vector2 );
+        /**
+        *
+        *
+        *  @returns
+        */
+        void Normalize();
 
-    /**
-     *
-     *
-     * @param
-     * @param
-     *
-     * @returns
-     */
-    static Vector2 Reflect ( const Vector2&a, const Vector2&b );
+        /**
+        *
+        *
+        * @param
+        *
+        * @returns
+        */
+        static Vector2 Normalize(const Vector2 &vector2);
 
-    /**
-     *
-     *
-     * @param
-     * @param
-     *
-     * @returns
-     */
-    static Vector2 Min ( const Vector2& vector2a, const Vector2 vector2b );
+        /**
+        *
+        *
+        * @param
+        * @param
+        *
+        * @returns
+        */
+        static Vector2 Reflect(const Vector2 &a, const Vector2 &b);
 
-    /**
-     *
-     *
-     * @param
-     * @param
-     *
-     * @returns
-     */
-    static Vector2 Max ( const Vector2& vector2a, const Vector2 vector2b );
+        /**
+        *
+        *
+        * @param
+        * @param
+        *
+        * @returns
+        */
+        static Vector2 Min(const Vector2 &vector2a, const Vector2 vector2b);
 
-    /**
-     *
-     *
-     * @param
-     * @param
-     *
-     * @returns
-     */
-    static Vector2 Clamp ( const Vector2& value, const Vector2& max, const Vector2& min );
+        /**
+        *
+        *
+        * @param
+        * @param
+        *
+        * @returns
+        */
+        static Vector2 Max(const Vector2 &vector2a, const Vector2 vector2b);
 
-    /**
-     *
-     *
-     * @param
-     * @param
-     *
-     * @returns
-     */
-    static Vector2 Lerp ( const Vector2& vector2a, const Vector2& vector2b, float amount );
+        /**
+        *
+        *
+        * @param
+        * @param
+        *
+        * @returns
+        */
+        static Vector2 Clamp(const Vector2 &value, const Vector2 &max, const Vector2 &min);
 
-    bool operator == ( const Vector2 &v ) const;
-    bool operator != ( const Vector2 &v ) const;
+        /**
+        *
+        *
+        * @param
+         * @param
+         *
+         * @returns
+         */
+        static Vector2 Lerp(const Vector2 &vector2a, const Vector2 &vector2b, float amount);
 
-    Vector2 operator - () const;
-    Vector2 operator - ( const Vector2 &v ) const;
-    Vector2 operator + ( const Vector2 &v ) const;
-    Vector2 operator / ( float f ) const;
-    Vector2 operator * ( float f ) const;
+        bool operator==(const Vector2 &v) const;
 
-    Vector2& operator += ( const Vector2 &v );
-    Vector2& operator -= ( const Vector2 &v );
-    Vector2& operator *= ( float f );
-    Vector2& operator /= ( float f );
+        bool operator!=(const Vector2 &v) const;
 
-    typedef std::vector<Vector2> Vector2List;
-};
+        Vector2 operator-() const;
 
+        Vector2 operator-(const Vector2 &v) const;
+
+        Vector2 operator+(const Vector2 &v) const;
+
+        Vector2 operator/(float f) const;
+
+        Vector2 operator*(float f) const;
+
+        Vector2 &operator+=(const Vector2 &v);
+
+        Vector2 &operator-=(const Vector2 &v);
+
+        Vector2 &operator*=(float f);
+
+        Vector2 &operator/=(float f);
+
+        typedef std::vector<Vector2> Vector2List;
+    };
+}
 #endif //LAST_STAND_ENGINE_VECTOR2_H
