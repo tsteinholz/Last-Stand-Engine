@@ -36,9 +36,9 @@
 class Log {
 public:
     Log(const std::string &fName) {
-        if ( GlobalSettings::GetBool ( "LogClass" ) )
+        if ( GlobalSettings::GetBool ( "Debug" ) )
         {
-            std::cout << LastStandEngine::Utils::GetTime () << " | (~" << fName << "~) ";
+            std::cout << LastStandEngine::Utils::GetTime () << " | (" << fName << ") ";
         }
         else
         {

@@ -35,7 +35,7 @@
 
 /**
  * These are client side settings that the client can and should change regarding all client side video and sound
- * options.
+ * options. This file will read and write to the Settings.json file.
  */
 class GlobalSettings {
 public:
@@ -56,7 +56,7 @@ public:
     /**
      *
      */
-    void SetBool ( std::string key, bool value );
+    static void SetBool ( std::string key, bool value );
 
     /**
     *
@@ -66,27 +66,28 @@ public:
     /**
      *
      */
-    void SetDouble ( std::string key, double value );
+    static void SetDouble ( std::string key, double value );
 
-    double GetDouble ( std::string key );
+    static double GetDouble ( std::string key );
 
-    void SetFloat ( std::string key, float value );
+    static void SetFloat ( std::string key, float value );
 
-    float GetFloat ( std::string key );
+    static float GetFloat ( std::string key );
 
-    void SetInt ( std::string key, int value );
+    static void SetInt ( std::string key, int value );
 
-    int GetInt ( std::string key );
+    static int GetInt ( std::string key );
 
-    void SetLong ( std::string key, long value );
+    static void SetLong ( std::string key, long value );
 
-    long GetLong ( std::string key );
+    static long GetLong ( std::string key );
 
-    void SetString ( std::string key, std::string value );
+    static void SetString ( std::string key, std::string value );
 
-    std::string GetString ( std::string key );
+    static std::string GetString ( std::string key );
 
     SDL_WindowFlags Window;
+
 protected:
 
     /**
