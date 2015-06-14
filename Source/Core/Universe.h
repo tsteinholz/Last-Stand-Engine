@@ -125,9 +125,7 @@ public:
     **/
     bool Initialize (
             unsigned int windowWidth        = 800,
-            unsigned int windowHeight       = 600,
-            const std::string& windowTitle  = GlobalSettings::GetString ( "WindowTitle" ),
-            bool fullScreen                 = GlobalSettings::GetBool ( "Fullscreen" )
+            unsigned int windowHeight       = 600
     );
 
     /**

@@ -51,7 +51,7 @@ Universe& Universe::GetInstance ()
     return *x_instance;
 }
 
-bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t, bool f )
+bool Universe::Initialize ( unsigned int w, unsigned int h )
 {
     if (TheEngineState == RUNNING)
     {
@@ -70,10 +70,10 @@ bool Universe::Initialize ( unsigned int w, unsigned int h, const std::string& t
     {
         EngineLog << "SDL Video, Audio, and Joystick support has been initialized";
 
-        Uint8 Window = f ? SDL_WINDOW_FULLSCREEN_DESKTOP : SDL_WINDOW_RESIZABLE;
+        Uint8 Window = Settings->GetBool( "Fullscreen" ) ? SDL_WINDOW_FULLSCREEN_DESKTOP : SDL_WINDOW_RESIZABLE;
 
         Universe::x_Window = SDL_CreateWindow(
-                t.c_str(),
+                Settings->GetString ( "WindowTitle" ).c_str(),
                 SDL_WINDOWPOS_CENTERED,
                 SDL_WINDOWPOS_CENTERED,
                 w,
@@ -113,9 +113,8 @@ void Universe::MainLoop ()
             switch (event.type)
             {
                 case SDL_MOUSEBUTTONDOWN:
-                    //EngineLog << "User Prompted Exit";
-                    Settings->Save();
-                    //Stop();
+                    EngineLog << "User Prompted Exit";
+                    Stop();
                     break;
                 case SDL_QUIT:
                     EngineLog << "User Prompted Exit";
@@ -124,6 +123,7 @@ void Universe::MainLoop ()
             }
         }
     }
+    Settings->Save();
 }
 
 void Universe::Pause ()
