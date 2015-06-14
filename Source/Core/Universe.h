@@ -126,10 +126,8 @@ public:
     bool Initialize (
             unsigned int windowWidth        = 800,
             unsigned int windowHeight       = 600,
-            const std::string& windowTitle  = "Last Stand Engine",
-            bool x_AntiAliasing             = true,
-            bool fullScreen                 = false,
-            bool resizable                  = true
+            const std::string& windowTitle  = GlobalSettings::GetString ( "WindowTitle" ),
+            bool fullScreen                 = GlobalSettings::GetBool ( "Fullscreen" )
     );
 
     /**
@@ -153,8 +151,8 @@ private:
 
     /**
     * This is the Constructor for the Universe, it is put
-    * in private to reinsure that only one Universe can be
-    * in exsistance at one time. This is the Singleton Pattern
+    * in private to re-insure that only one Universe can be
+    * in existence at one time. This is the Singleton Pattern
     * and is used on this class very strictly.
     **/
     Universe ();

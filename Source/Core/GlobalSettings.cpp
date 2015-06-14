@@ -43,6 +43,8 @@ GlobalSettings::GlobalSettings ()
         SetBool ( "AntiAliasing", true );
         SetBool ( "CapFrameRate", false );
         SetBool ( "Debug", false );
+        SetBool ( "Fullscreen", false );
+        SetString ( "WindowTitle", "Last Stand Engine" );
 
         Window = SDL_WINDOW_FULLSCREEN_DESKTOP;
     }

@@ -37,7 +37,7 @@ if [ -f /etc/arch-release ]; then
 
 	echo  [*] Arch Linux Distro Detected!
 	OS=Arch
-	pacman -S sdl2 jsoncpp
+	pacman -S sdl2 sdl2_image sdl2_mixer sdl2_gfx  sdl2_ttf jsoncpp
 
 elif [ -f etc/debian_version ]; then
 
