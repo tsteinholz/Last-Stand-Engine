@@ -28,12 +28,14 @@
 cmake_minimum_required ( VERSION 3.0 )
 project ( Last_Stand_Engine )
 
-#Compile for C++11
+# Compile for C++11
 list( APPEND CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS} -g -ftest-coverage -fprofile-arcs")
 
-#Set the current engine version
+# Set the current engine version
 set ( Last_Stand_Engine_VERSION_MAJOR 0 )
 set ( Last_Stand_Engine_VERSION_MINOR 0 )
+
+link_directories ( /usr/include )
 
 #TODO Organize source code list in alpha order. (after v1 release)
 
@@ -112,6 +114,11 @@ set (LS_SOURCE_CODE
     Source/Graphics/IRenderable3D.h
     Source/Graphics/IRenderable2D.h
     Source/Core/IManages.h
+
+    ######### - JSONCPP - #########
+    Source/Files/jsoncpp.cpp
+    Source/Files/json/json.h
+    Source/Files/json/json-forwards.h
 )
 
 # What will be included in client projects
@@ -126,10 +133,6 @@ include ( FindPkgConfig )
 pkg_search_module ( SDL2 REQUIRED sdl2 )
 include_directories ( ${SDL2_INCLUDE_DIRS} )
 
-# Includes JSON CPP
-pkg_search_module ( JSONCPP REQUIRED jsoncpp )
-include_directories ( ${JSONCPP_INCLUDE_DIRS} )
-
 # Includes SDL2 with the build files
-target_link_libraries ( -LastStandEngine ${SDL2_LIBRARIES} ${JSONCPP_INCLUDE_DIRS})
+target_link_libraries ( -LastStandEngine ${SDL2_LIBRARIES} )
 target_link_libraries ( LastStandEngineDemo -LastStandEngine)

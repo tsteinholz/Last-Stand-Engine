@@ -29,10 +29,10 @@
 #define LAST_STAND_ENGINE_SETTINGS_H
 
 #include <map>
-#include <json/json.h>
 #include <SDL_stdinc.h>
 #include <SDL_video.h>
 #include <string>
+#include "../Files/json/json.h"
 
 /**
  * These are client side settings that the client can and should change regarding all client side video and sound
