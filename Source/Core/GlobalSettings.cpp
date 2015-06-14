@@ -52,23 +52,12 @@ GlobalSettings::GlobalSettings ()
 
         SetString ( "WindowTitle", "Last Stand Engine" );
     }
-    ReloadSettings();
+    Reload();
 }
 
 GlobalSettings::~GlobalSettings()
 {
-    //TODO - Save any unsaved changes to the file
-    Json::Value responce = Json::Value ( Json::objectValue );
-
-    responce["bools"] = JBoolSettings;
-    responce["doubles"] = JDoubleSettings;
-    responce["floats"] = JFloatSettings;
-    responce["ints"] = JIntSettings;
-    responce["strings"] = JStringSettings;
-
-    Json::StyledWriter writer;
-
-    EngineLog << writer.write(responce);
+    Save ();
 }
 
 bool GlobalSettings::LoadConfig( std::string fileName)
@@ -77,8 +66,10 @@ bool GlobalSettings::LoadConfig( std::string fileName)
     return false;
 }
 
-void GlobalSettings::ReloadSettings()
+void GlobalSettings::Reload()
 {
+    //TODO : Optimise this function
+
     EngineLog << "#######: CURENT SETTINGS :#######";
     // Boolean Settings
     for (std::map<std::string, bool>::const_iterator it = BoolSettings.begin(); it != BoolSettings.end(); it++)
@@ -112,6 +103,21 @@ void GlobalSettings::ReloadSettings()
         EngineLog << it->first + " = " + it->second;
     }
     EngineLog << "#######: END OF CURENT SETTINGS :#######";
+}
+
+void GlobalSettings::Save ()
+{
+    Json::Value responce = Json::Value ( Json::objectValue );
+
+    responce["Boolean Settings"] = JBoolSettings;
+    responce["Double Settings"] = JDoubleSettings;
+    responce["Float Settings"] = JFloatSettings;
+    responce["Integer Settings"] = JIntSettings;
+    responce["String Settings"] = JStringSettings;
+
+    Json::StyledWriter writer;
+
+    EngineLog << "Saving Settings.json :\n" << writer.write(responce);
 }
 
 void GlobalSettings::SetBool(std::string key, bool value) {

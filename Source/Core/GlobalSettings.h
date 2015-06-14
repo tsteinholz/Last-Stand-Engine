@@ -48,7 +48,9 @@ public:
 
     bool LoadConfig (std::string fileName);
 
-    void ReloadSettings ();
+    void Reload ();
+
+    void Save ();
 
     static void SetBool ( std::string key, bool value );
 

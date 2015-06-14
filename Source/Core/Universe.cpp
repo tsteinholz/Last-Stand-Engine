@@ -113,8 +113,9 @@ void Universe::MainLoop ()
             switch (event.type)
             {
                 case SDL_MOUSEBUTTONDOWN:
-                    EngineLog << "User Prompted Exit";
-                    Stop();
+                    //EngineLog << "User Prompted Exit";
+                    Settings->Save();
+                    //Stop();
                     break;
                 case SDL_QUIT:
                     EngineLog << "User Prompted Exit";
