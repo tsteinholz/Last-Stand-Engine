@@ -29,6 +29,7 @@
 #define LAST_STAND_ENGINE_SETTINGS_H
 
 #include <map>
+#include <json/json.h>
 #include <SDL_stdinc.h>
 #include <SDL_video.h>
 #include <string>
@@ -43,29 +44,16 @@ public:
     GlobalSettings ();
     ~GlobalSettings ();
 
-    /**
-     *
-     */
     bool LoadConfig () { return LoadConfig("Settings.json"); }
 
-    /**
-     *
-     */
     bool LoadConfig (std::string fileName);
 
-    /**
-     *
-     */
+    void ReloadSettings ();
+
     static void SetBool ( std::string key, bool value );
 
-    /**
-    *
-    */
     static bool GetBool ( std::string key );
 
-    /**
-     *
-     */
     static void SetDouble ( std::string key, double value );
 
     static double GetDouble ( std::string key );
@@ -86,39 +74,31 @@ public:
 
     static std::string GetString ( std::string key );
 
-    SDL_WindowFlags Window;
-
 protected:
 
-    /**
-     *
-     */
     static std::map<std::string, bool> BoolSettings;
 
-    /**
-     *
-     */
+    static Json::Value JBoolSettings;
+
     static std::map<std::string, double> DoubleSettings;
 
-    /**
-     *
-     */
+    static Json::Value JDoubleSettings;
+
     static std::map<std::string, float> FloatSettings;
 
-    /**
-     *
-     */
+    static Json::Value JFloatSettings;
+
     static std::map<std::string, int> IntSettings;
 
-    /**
-     *
-     */
+    static Json::Value JIntSettings;
+
     static std::map<std::string, long> LongSettings;
 
-    /**
-     *
-     */
+    static Json::Value JLongSettings;
+
     static std::map<std::string, std::string> StringSettings;
+
+    static Json::Value JStringSettings;
 };
 
 #endif //LAST_STAND_ENGINE_SETTINGS_H

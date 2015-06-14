@@ -25,6 +25,7 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
+#include <jansson.h>
 #include "GlobalSettings.h"
 #include "../Utils/Log.h"
 
@@ -45,48 +46,68 @@ GlobalSettings::GlobalSettings ()
         SetBool ( "Debug", false );
         SetBool ( "Fullscreen", false );
         SetString ( "WindowTitle", "Last Stand Engine" );
-
-        Window = SDL_WINDOW_FULLSCREEN_DESKTOP;
     }
-    // Print out current Settings
-    EngineLog << "#######: CURENT SETTINGS :#######";
-    for (std::map<std::string, bool>::const_iterator it = BoolSettings.begin(); it != BoolSettings.end(); it++)
-    {
-        std::string value = it->second ? "true" : "false";
-        EngineLog << it->first + " = " + value;
-    }
-    for (std::map<std::string, double>::const_iterator it = DoubleSettings.begin(); it != DoubleSettings.end(); it++)
-    {
-        EngineLog << it->first + " = " + std::to_string ( it->second );
-    }
-    for (std::map<std::string, float>::const_iterator it = FloatSettings.begin(); it != FloatSettings.end(); it++)
-    {
-        EngineLog << it->first + " = " + std::to_string( it->second );
-    }
-    for (std::map<std::string, int>::const_iterator it = IntSettings.begin(); it != IntSettings.end(); it++)
-    {
-        EngineLog << it->first + " = " + std::to_string( it->second );
-    }
-    for (std::map<std::string, long>::const_iterator it = LongSettings.begin(); it != LongSettings.end(); it++)
-    {
-        EngineLog << it->first + " = " + std::to_string( it->second );
-    }
-    for (std::map<std::string, std::string>::const_iterator it = StringSettings.begin(); it != StringSettings.end(); it++)
-    {
-        EngineLog << it->first + " = " + it->second;
-    }
-    EngineLog << "#######: END OF CURENT SETTINGS :#######";
+    ReloadSettings();
 }
 
 GlobalSettings::~GlobalSettings()
 {
     //TODO - Save any unsaved changes to the file
+    Json::Value responce = Json::Value ( Json::objectValue );
+
+    responce["bools"] = JBoolSettings;
+    responce["doubles"] = JDoubleSettings;
+    responce["floats"] = JFloatSettings;
+    responce["ints"] = JIntSettings;
+    responce["longs"] = JLongSettings;
+    responce["strings"] = JStringSettings;
+
+    Json::StyledWriter writer;
+
+    EngineLog << writer.write(responce);
 }
 
 bool GlobalSettings::LoadConfig( std::string fileName)
 {
     //TODO using File utils load a file called settings.(haven't decided the file extension)
     return false;
+}
+
+void GlobalSettings::ReloadSettings()
+{
+    EngineLog << "#######: CURENT SETTINGS :#######";
+    for (std::map<std::string, bool>::const_iterator it = BoolSettings.begin(); it != BoolSettings.end(); it++)
+    {
+        std::string value = it->second ? "true" : "false";
+        JBoolSettings[it->first] = it->second;
+        EngineLog << it->first + " = " + value;
+    }
+    for (std::map<std::string, double>::const_iterator it = DoubleSettings.begin(); it != DoubleSettings.end(); it++)
+    {
+        JDoubleSettings[it->first] = it->second;
+        EngineLog << it->first + " = " + std::to_string ( it->second );
+    }
+    for (std::map<std::string, float>::const_iterator it = FloatSettings.begin(); it != FloatSettings.end(); it++)
+    {
+        JFloatSettings[it->first] = it->second;
+        EngineLog << it->first + " = " + std::to_string( it->second );
+    }
+    for (std::map<std::string, int>::const_iterator it = IntSettings.begin(); it != IntSettings.end(); it++)
+    {
+        JIntSettings[it->first] = it->second;
+        EngineLog << it->first + " = " + std::to_string( it->second );
+    }
+    for (std::map<std::string, long>::const_iterator it = LongSettings.begin(); it != LongSettings.end(); it++)
+    {
+        JLongSettings[it->first] = it->second;
+        EngineLog << it->first + " = " + std::to_string( it->second );
+    }
+    for (std::map<std::string, std::string>::const_iterator it = StringSettings.begin(); it != StringSettings.end(); it++)
+    {
+        JStringSettings[it->first] = it->second;
+        EngineLog << it->first + " = " + it->second;
+    }
+    EngineLog << "#######: END OF CURENT SETTINGS :#######";
 }
 
 void GlobalSettings::SetBool(std::string key, bool value) {
