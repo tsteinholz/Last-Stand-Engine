@@ -28,11 +28,41 @@
 #ifndef LAST_STAND_ENGINE_FILE_H
 #define LAST_STAND_ENGINE_FILE_H
 
+#include <string>
+#include <ios>
+#include <iostream>
+#include <fstream>
+
+namespace LastStandEngine {
 /**
  *
  */
-class File {
+    class File {
+    public:
+        enum Extension
+        {
+            JSON,
+            TEXT,
+            IMAGE,
+            SOUND,
+            NONE,
+        };
 
-};
+        /**
+         * Loads a File
+         *
+         * @param loc File Name or Location
+         */
+        static bool Load ( const std::string& loc );
 
+        /**
+         * Writes a file
+         *
+         * @param loc File Name or Location
+         * @param extension
+         * @param data What the file will contain
+         */
+        static bool Write ( const std::string& loc , Extension, const std::string& data );
+    };
+}
 #endif //LAST_STAND_ENGINE_FILE_H
