@@ -25,7 +25,6 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#include <jansson.h>
 #include "GlobalSettings.h"
 #include "../Utils/Log.h"
 
@@ -99,7 +98,7 @@ void GlobalSettings::ReloadSettings()
     }
     for (std::map<std::string, long>::const_iterator it = LongSettings.begin(); it != LongSettings.end(); it++)
     {
-        JLongSettings[it->first] = it->second;
+//        JLongSettings[it->first] = it->second;
         EngineLog << it->first + " = " + std::to_string( it->second );
     }
     for (std::map<std::string, std::string>::const_iterator it = StringSettings.begin(); it != StringSettings.end(); it++)
