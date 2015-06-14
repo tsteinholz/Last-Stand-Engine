@@ -32,8 +32,13 @@ std::map<std::string, bool> GlobalSettings::BoolSettings = {};
 std::map<std::string, double> GlobalSettings::DoubleSettings = {};
 std::map<std::string, float> GlobalSettings::FloatSettings = {};
 std::map<std::string, int> GlobalSettings::IntSettings = {};
-std::map<std::string, long> GlobalSettings::LongSettings = {};
 std::map<std::string, std::string> GlobalSettings::StringSettings = {};
+
+Json::Value GlobalSettings::JBoolSettings = {};
+Json::Value GlobalSettings::JDoubleSettings = {};
+Json::Value GlobalSettings::JFloatSettings = {};
+Json::Value GlobalSettings::JIntSettings = {};
+Json::Value GlobalSettings::JStringSettings = {};
 
 GlobalSettings::GlobalSettings ()
 {
@@ -44,6 +49,7 @@ GlobalSettings::GlobalSettings ()
         SetBool ( "CapFrameRate", false );
         SetBool ( "Debug", false );
         SetBool ( "Fullscreen", false );
+
         SetString ( "WindowTitle", "Last Stand Engine" );
     }
     ReloadSettings();
@@ -58,7 +64,6 @@ GlobalSettings::~GlobalSettings()
     responce["doubles"] = JDoubleSettings;
     responce["floats"] = JFloatSettings;
     responce["ints"] = JIntSettings;
-    responce["longs"] = JLongSettings;
     responce["strings"] = JStringSettings;
 
     Json::StyledWriter writer;
@@ -75,32 +80,32 @@ bool GlobalSettings::LoadConfig( std::string fileName)
 void GlobalSettings::ReloadSettings()
 {
     EngineLog << "#######: CURENT SETTINGS :#######";
+    // Boolean Settings
     for (std::map<std::string, bool>::const_iterator it = BoolSettings.begin(); it != BoolSettings.end(); it++)
     {
         std::string value = it->second ? "true" : "false";
         JBoolSettings[it->first] = it->second;
         EngineLog << it->first + " = " + value;
     }
+    // Double Settings
     for (std::map<std::string, double>::const_iterator it = DoubleSettings.begin(); it != DoubleSettings.end(); it++)
     {
         JDoubleSettings[it->first] = it->second;
         EngineLog << it->first + " = " + std::to_string ( it->second );
     }
+    // Float Settings
     for (std::map<std::string, float>::const_iterator it = FloatSettings.begin(); it != FloatSettings.end(); it++)
     {
         JFloatSettings[it->first] = it->second;
         EngineLog << it->first + " = " + std::to_string( it->second );
     }
+    // Integer Settings
     for (std::map<std::string, int>::const_iterator it = IntSettings.begin(); it != IntSettings.end(); it++)
     {
         JIntSettings[it->first] = it->second;
         EngineLog << it->first + " = " + std::to_string( it->second );
     }
-    for (std::map<std::string, long>::const_iterator it = LongSettings.begin(); it != LongSettings.end(); it++)
-    {
-//        JLongSettings[it->first] = it->second;
-        EngineLog << it->first + " = " + std::to_string( it->second );
-    }
+    // String Settings
     for (std::map<std::string, std::string>::const_iterator it = StringSettings.begin(); it != StringSettings.end(); it++)
     {
         JStringSettings[it->first] = it->second;
@@ -145,16 +150,6 @@ void GlobalSettings::SetInt(std::string key, int value) {
 int GlobalSettings::GetInt(std::string key) {
     std::map<std::string, int>::const_iterator iterator = IntSettings.find ( key );
     if ( iterator == IntSettings.end() ) return -1;
-    return iterator->second;
-}
-
-void GlobalSettings::SetLong(std::string key, long value) {
-    LongSettings.insert (std::pair<std::string, long> ( key , value ) );
-}
-
-long GlobalSettings::GetLong(std::string key) {
-    std::map<std::string, long>::const_iterator iterator = LongSettings.find ( key );
-    if ( iterator == LongSettings.end() ) return -1;
     return iterator->second;
 }
 

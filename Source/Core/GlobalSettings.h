@@ -66,10 +66,6 @@ public:
 
     static int GetInt ( std::string key );
 
-    static void SetLong ( std::string key, long value );
-
-    static long GetLong ( std::string key );
-
     static void SetString ( std::string key, std::string value );
 
     static std::string GetString ( std::string key );
@@ -91,10 +87,6 @@ protected:
     static std::map<std::string, int> IntSettings;
 
     static Json::Value JIntSettings;
-
-    static std::map<std::string, long> LongSettings;
-
-    static Json::Value JLongSettings;
 
     static std::map<std::string, std::string> StringSettings;
 

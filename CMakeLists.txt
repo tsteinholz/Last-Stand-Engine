@@ -135,4 +135,4 @@ include_directories ( ${SDL2_INCLUDE_DIRS} )
 
 # Includes SDL2 with the build files
 target_link_libraries ( -LastStandEngine ${SDL2_LIBRARIES} )
-target_link_libraries ( LastStandEngineDemo -LastStandEngine)
+target_link_libraries ( LastStandEngineDemo -LastStandEngine )
