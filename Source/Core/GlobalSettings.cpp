@@ -43,7 +43,7 @@ GlobalSettings::GlobalSettings ()
 {
     if ( !LoadConfig() )
     {
-        // These are the Default Values.
+        EngineLog << "Using Default Setting Values";
         SetBool ( "AntiAliasing", true );
         SetBool ( "CapFrameRate", false );
         SetBool ( "Debug", false );
@@ -96,21 +96,22 @@ void GlobalSettings::Reload()
         EngineLog << it->first + " = " + it->second;
     }
     EngineLog << "#######: END OF CURENT SETTINGS :#######";
+    Save ();
 }
 
 void GlobalSettings::Save ()
 {
-    Json::Value responce = Json::Value ( Json::objectValue );
+    Json::Value settings = Json::Value ( Json::objectValue );
 
-    responce["Boolean Settings"] = JBoolSettings;
-    responce["Double Settings"] = JDoubleSettings;
-    responce["Integer Settings"] = JIntSettings;
-    responce["String Settings"] = JStringSettings;
+    settings["Boolean Settings"] = JBoolSettings;
+    settings["Double Settings"]  = JDoubleSettings;
+    settings["Integer Settings"] = JIntSettings;
+    settings["String Settings"]  = JStringSettings;
 
     Json::StyledWriter writer;
 
     EngineLog << "Saving Settings.json..";
-    LastStandEngine::File::Write ( "Settings.json", writer.write ( responce ) );
+    LastStandEngine::File::Write ( "Settings.json", writer.write (settings) );
 }
 
 void GlobalSettings::SetBool(std::string key, bool value) {
