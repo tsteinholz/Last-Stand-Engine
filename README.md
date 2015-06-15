@@ -17,12 +17,13 @@ mkdir Build
 cd Build
 cmake ..
 make
-./Last-Stand-Engine-Demo
+./LastStandEngineDemo
 ```
 
-or one line:
-`git clone https://github.com/LastStandStudio/Last-Stand-Engine && cd Last-Stand-Engine && mkdir Build && cd Build && cmake .. && make && ./Last-Stand-Engine-Demo`
-
+or The One Line Wonder:
+```
+git clone https://github.com/LastStandStudio/Last-Stand-Engine && cd Last-Stand-Engine && mkdir Build && cd Build && cmake .. && make && ./LastStandEngineDemo
+```
 # Highlights
 
 * 2D and 3D Support (2D is the main priority as of alpha builds)
