@@ -10,13 +10,15 @@ This Engine is under very heavy development as mentioned earlier, so we could us
 
 # Building from Source
 Unix based systems ... Easy as ctrl-c, ctrl-v.
-1. `git clone https://github.com/LastStandStudio/Last-Stand-Engine`
-2. `cd Last-Stand-Engine`
-3. `mkdir Build`
-4. `cd Build`
-5. `cmake ..`
-6. `make`
-7. `./Last-Stand-Engine-Demo`
+```
+git clone https://github.com/LastStandStudio/Last-Stand-Engine
+cd Last-Stand-Engine
+mkdir Build
+cd Build
+cmake ..
+make
+./Last-Stand-Engine-Demo
+```
 
 or one line:
 `git clone https://github.com/LastStandStudio/Last-Stand-Engine && cd Last-Stand-Engine && mkdir Build && cd Build && cmake .. && make && ./Last-Stand-Engine-Demo`
