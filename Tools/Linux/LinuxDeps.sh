@@ -37,19 +37,19 @@ if [ -f /etc/arch-release ]; then
 
 	echo  [*] Arch Linux Distro Detected!
 	OS=Arch
-	pacman -S sdl2 sdl2_image sdl2_mixer sdl2_gfx  sdl2_ttf jsoncpp
+	pacman -S sdl2 sdl2_image sdl2_mixer sdl2_gfx sdl2_ttf
 
 elif [ -f etc/debian_version ]; then
 
 	echo  [*] Debian Based Distro Detected!
 	OS=Debian
-	apt-get install libsdl2-dev libjsoncpp-dev
+	apt-get install libsdl2-dev libsdl2_image-dev libsdl2_mixer-dev libsdl2_gfx-dev  libsdl2_ttf-dev
 
 elif [ -f /etc/redhat-release ]; then
 
 	echo  [*] RedHat Distro Detected!
 	OS=RedHat
-    #TODO : Install SDL2 & JSONCPP For RedHat
+    #TODO : Install SDL2 For RedHat
 	echo This Distro is not yet supported.
 else
 	echo  [*] Current Distro is not supported! Feel free to pull request any modifications to fix this.
