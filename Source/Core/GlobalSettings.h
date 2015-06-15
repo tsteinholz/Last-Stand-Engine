@@ -60,10 +60,6 @@ public:
 
     static double GetDouble ( std::string key );
 
-    static void SetFloat ( std::string key, float value );
-
-    static float GetFloat ( std::string key );
-
     static void SetInt ( std::string key, int value );
 
     static int GetInt ( std::string key );
@@ -81,10 +77,6 @@ protected:
     static std::map<std::string, double> DoubleSettings;
 
     static Json::Value JDoubleSettings;
-
-    static std::map<std::string, float> FloatSettings;
-
-    static Json::Value JFloatSettings;
 
     static std::map<std::string, int> IntSettings;
 

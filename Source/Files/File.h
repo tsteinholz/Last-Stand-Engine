@@ -39,14 +39,8 @@ namespace LastStandEngine {
  */
     class File {
     public:
-        enum Extension
-        {
-            JSON,
-            TEXT,
-            IMAGE,
-            SOUND,
-            NONE,
-        };
+
+        //static const std::string RESOURCE_FOLDER = "Resourses";
 
         /**
          * Loads a File
@@ -59,10 +53,9 @@ namespace LastStandEngine {
          * Writes a file
          *
          * @param loc File Name or Location
-         * @param extension
          * @param data What the file will contain
          */
-        static bool Write ( const std::string& loc , Extension, const std::string& data );
+        static bool Write ( const std::string& loc, const std::string& data );
     };
 }
 #endif //LAST_STAND_ENGINE_FILE_H

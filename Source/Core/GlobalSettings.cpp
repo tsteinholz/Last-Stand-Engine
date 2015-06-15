@@ -27,16 +27,15 @@
 
 #include "GlobalSettings.h"
 #include "../Utils/Log.h"
+#include "../Files/File.h"
 
 std::map<std::string, bool> GlobalSettings::BoolSettings = {};
 std::map<std::string, double> GlobalSettings::DoubleSettings = {};
-std::map<std::string, float> GlobalSettings::FloatSettings = {};
 std::map<std::string, int> GlobalSettings::IntSettings = {};
 std::map<std::string, std::string> GlobalSettings::StringSettings = {};
 
 Json::Value GlobalSettings::JBoolSettings = {};
 Json::Value GlobalSettings::JDoubleSettings = {};
-Json::Value GlobalSettings::JFloatSettings = {};
 Json::Value GlobalSettings::JIntSettings = {};
 Json::Value GlobalSettings::JStringSettings = {};
 
@@ -84,12 +83,6 @@ void GlobalSettings::Reload()
         JDoubleSettings[it->first] = it->second;
         EngineLog << it->first + " = " + std::to_string ( it->second );
     }
-    // Float Settings
-    for (std::map<std::string, float>::const_iterator it = FloatSettings.begin(); it != FloatSettings.end(); it++)
-    {
-        JFloatSettings[it->first] = it->second;
-        EngineLog << it->first + " = " + std::to_string( it->second );
-    }
     // Integer Settings
     for (std::map<std::string, int>::const_iterator it = IntSettings.begin(); it != IntSettings.end(); it++)
     {
@@ -111,13 +104,13 @@ void GlobalSettings::Save ()
 
     responce["Boolean Settings"] = JBoolSettings;
     responce["Double Settings"] = JDoubleSettings;
-    responce["Float Settings"] = JFloatSettings;
     responce["Integer Settings"] = JIntSettings;
     responce["String Settings"] = JStringSettings;
 
     Json::StyledWriter writer;
 
-    EngineLog << "Saving Settings.json :\n" << writer.write(responce);
+    EngineLog << "Saving Settings.json..";
+    LastStandEngine::File::Write ( "Settings.json", writer.write ( responce ) );
 }
 
 void GlobalSettings::SetBool(std::string key, bool value) {
@@ -136,16 +129,6 @@ void GlobalSettings::SetDouble(std::string key, double value) {
 double GlobalSettings::GetDouble(std::string key) {
     std::map<std::string, double>::const_iterator iterator = DoubleSettings.find ( key );
     if ( iterator == DoubleSettings.end() ) return -1;
-    return iterator->second;
-}
-
-void GlobalSettings::SetFloat(std::string key, float value) {
-    FloatSettings.insert( std::pair <std::string, float> ( key, value ) );
-}
-
-float GlobalSettings::GetFloat(std::string key) {
-    std::map<std::string, float>::const_iterator iterator = FloatSettings.find ( key );
-    if ( iterator == FloatSettings.end() ) return -1;
     return iterator->second;
 }
 
