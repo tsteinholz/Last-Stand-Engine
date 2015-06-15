@@ -1,0 +1,13 @@
+{
+  "Boolean Settings": {
+    "AntiAliasing": true,
+    "CapFrameRate": false,
+    "Debug": false,
+    "Fullscreen": false
+  },
+  "Double Settings": null,
+  "Integer Settings": null,
+  "String Settings": {
+    "WindowTitle": "Last Stand Engine"
+  }
+}
