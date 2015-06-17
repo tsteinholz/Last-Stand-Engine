@@ -14,7 +14,7 @@ This Engine is under very heavy development as mentioned earlier, so we could us
 * Text Editors (Sublime, Atom, Gedit, etc)
 
 ## Building from Source
-**All of the successfull building this far has been on Linux using cmake.**
+**All of the *successful* building this far has been on Linux using CMake (generating Makefiles then compiled with g++).** Windows is almost ready to be built off of, and OSX is still an unreachable platform for the developers.
 
 Use this in Terminal(Unix) or Git-Bash(Win)
 ```
