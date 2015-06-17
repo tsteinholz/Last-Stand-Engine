@@ -33,4 +33,4 @@ or The One Line Wonder:
 git clone https://github.com/LastStandStudio/Last-Stand-Engine && cd Last-Stand-Engine && mkdir Build && cd Build && cmake .. && make && ./LastStandEngineDemo
 ```
  
-Last Updated [6/14/2015] Stay up-to-date on [Our Team Trello Page](https://trello.com/b/t2C62QjU/laststandengine-c) & on the [Last Stand Website](http://laststandstudio.com)!
+Last Updated [6/17/2015] Stay up-to-date on [Our Team Trello Page](https://trello.com/b/t2C62QjU/laststandengine-c) & on the [Last Stand Website](http://laststandstudio.com)!
