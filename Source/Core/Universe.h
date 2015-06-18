@@ -29,6 +29,11 @@
 #define LAST_STAND_ENGINE_UNIVERSE_H
 
 #include "../Utils/Log.h"
+
+#ifdef __WIN32__
+#include "../../Dependencies/include/SDL.h"
+#include "../../Dependencies/include/SDL_video.h"
+#else
 #include <SDL2/SDL.h>            // SDL
 #include <SDL2/SDL_video.h>      // SDL
 #include <SDL2/SDL_image.h>      // SDL_Image
@@ -38,7 +43,7 @@
 #include <SDL2/SDL2_framerate.h> // SDL_GFX
 #include "GlobalSettings.h"
 #include <string>
-
+#endif
 /**
 * The Singleton Shortcut to get the instance of the Universe
 * just by the call of 'TheUniverse'. Super convenient.
