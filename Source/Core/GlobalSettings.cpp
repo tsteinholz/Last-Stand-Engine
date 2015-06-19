@@ -44,6 +44,7 @@ GlobalSettings::GlobalSettings() {
         SetBool("Debug", false);
         SetBool("Fullscreen", false);
 
+        //TODO Remove this...
         SetString("WindowTitle", "Last Stand Engine");
     }
     Reload();
