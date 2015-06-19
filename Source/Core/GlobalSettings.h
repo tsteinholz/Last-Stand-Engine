@@ -70,6 +70,8 @@ public:
 
 protected:
 
+    static Json::Value Settings;
+
     static std::map<std::string, bool> BoolSettings;
 
     static Json::Value JBoolSettings;
