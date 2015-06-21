@@ -30,7 +30,7 @@
 
 #include <vector>
 
-namespace LastStandEngine {
+namespace LSEngine {
 
     /**
     * A Coordinate Point on the screen that has two instance Variables (X & Y).

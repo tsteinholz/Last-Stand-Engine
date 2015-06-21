@@ -29,9 +29,12 @@
 #define LAST_STAND_ENGINE_DICTIONARY_H
 
 #include "../Files/json/json.h"
+#include "../Files/File.h"
+#include "../Utils/Log.h"
 #include <string>
 
-namespace LastStandEngine {
+namespace LSEngine
+{
     /**
      * This is for in=game dialog, and making the language system support many languages, by loading in the specified
      * language for dialog instead of just hard-coding it inside of the game. Having Multi-Language support in a game
@@ -40,25 +43,121 @@ namespace LastStandEngine {
      * for you. And since translation services are never perfect, you can always edit the files manually and fix some
      * of the stupid things that get generated in there.
      */
-    class Dictionary {
+    class Dictionary
+    {
     public:
+
         Dictionary();
+
         ~Dictionary();
 
         /**
+         * Get the Dialog for the correct language.
          *
-         * @parm key
-         * @parm value
+         * @parm key The Value's Key
          */
-        std::string Get ( std::string key , std::string value );
+        std::string Get ( std::string key );
 
+        /**
+         * List (Enumeration) of all supported Languages.
+         */
         enum Language
         {
+            Afrikaans,
+            Albanian,
+            Arabic,
+            Armenian,
+            Azerbaijani,
+            Basque,
+            Belarusian,
+            Bengali,
+            Bosnian,
+            Bulgarian,
+            Catalan,
+            Cebuano,
+            Chichewa,
+            Chinese,
+            Croatian,
+            Czech,
+            Danish,
+            Dutch,
             English,
+            Esperanto,
+            Estonian,
+            Filipino,
+            Finnish,
+            French,
+            Galician,
+            Georgian,
             German,
+            Greek,
+            Gujarati,
+            Haitian_Creole,
+            Hausa,
+            Hebrew,
+            Hindi,
+            Hmong,
+            Hungarian,
+            Icelandic,
+            Igbo,
+            Indonesian,
+            Irish,
+            Italian,
+            Japanese,
+            Javanese,
+            Kannada,
+            Kazakh,
+            Khmer,
+            Korean,
+            Lao,
+            Latin,
+            Latvian,
+            Lithuanian,
+            Macedonian,
+            Malagasy,
+            Malay,
+            Malayalam,
+            Maltese,
+            Maori,
+            Marathi,
+            Mongolian,
+            Myanmar,
+            Nepali,
+            Norwegian,
+            Persian,
+            Polish,
+            Portuguese,
+            Punjabi,
+            Romanian,
+            Russian,
+            Serbian,
+            Sesotho,
+            Sinhala,
+            Slovak,
+            Slovenian,
+            Somali,
             Spanish,
+            Sundanese,
+            Swahili,
+            Swedish,
+            Tajik,
+            Tamil,
+            Telugu,
+            Thai,
+            Turkish,
+            Ukrainian,
+            Urdu,
+            Uzbek,
+            Vietnamese,
+            Welsh,
+            Yiddish,
+            Yoruba,
+            Zulu,
         };
 
+        /**
+         * Load the
+         */
         Language Load ();
 
         void Save();
@@ -73,7 +172,13 @@ namespace LastStandEngine {
          */
         void SetLang ( Language);
 
+        /**
+         * Create a JSON Save File when one is not present.
+         **/
+        void GenerateSave();
+
     private:
+
         /**
          * The current langauge of the dicionary
          */

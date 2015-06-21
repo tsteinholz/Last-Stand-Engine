@@ -36,13 +36,13 @@
 class Log {
 public:
     Log(const std::string &fName) {
-        if ( GlobalSettings::GetBool ( "Debug" ) )
+        if ( LSEngine::GlobalSettings::GetBool ( "Debug" ) )
         {
-            std::cout << LastStandEngine::Utils::GetTime () << " | (" << fName << ") ";
+            std::cout << LSEngine::Utils::GetTime () << " | (" << fName << ") ";
         }
         else
         {
-            std::cout << LastStandEngine::Utils::GetTime () << " | ";
+            std::cout << LSEngine::Utils::GetTime () << " | ";
         }
     }
 

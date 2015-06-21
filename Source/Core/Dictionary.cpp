@@ -27,40 +27,55 @@
 
 #include "Dictionary.h"
 
-LastStandEngine::Dictionary::Language LastStandEngine::Dictionary::x_Language = LastStandEngine::Dictionary::Language::English;
+LSEngine::Dictionary::Language LSEngine::Dictionary::x_Language = LSEngine::Dictionary::Language::English;
 Json::Value x_Dictionary = {};
 
-LastStandEngine::Dictionary::Dictionary()
+LSEngine::Dictionary::Dictionary()
 {
     x_Language = Load ();
 }
 
-LastStandEngine::Dictionary::~Dictionary()
+LSEngine::Dictionary::~Dictionary()
 {
     Save();
 }
 
-LastStandEngine::Dictionary::Language LastStandEngine::Dictionary::Load()
+LSEngine::Dictionary::Language LSEngine::Dictionary::Load()
+{
+    //TODO : Find/Load File
+
+    //if file not found then...
+    GenerateSave();
+}
+
+void LSEngine::Dictionary::Save()
 {
 
 }
 
-void LastStandEngine::Dictionary::Save()
-{
-
-}
-
-std::string LastStandEngine::Dictionary::Get(std::string key, std::string value)
+std::string LSEngine::Dictionary::Get(std::string key )
 {
     return NULL;
 }
 
-LastStandEngine::Dictionary::Language LastStandEngine::Dictionary::GetLang()
+LSEngine::Dictionary::Language LSEngine::Dictionary::GetLang()
 {
     return x_Language;
 }
 
-void LastStandEngine::Dictionary::SetLang(LastStandEngine::Dictionary::Language language)
+void LSEngine::Dictionary::SetLang(LSEngine::Dictionary::Language language)
 {
-    LastStandEngine::Dictionary::x_Language = language;
+    LSEngine::Dictionary::x_Language = language;
+}
+
+void LSEngine::Dictionary::GenerateSave()
+{
+    Json::Value settings = Json::Value(Json::objectValue);
+
+    settings["Language"] = Language::English;
+
+    Json::StyledWriter writer;
+
+    EngineLog << "Saving Language.json..";
+    LSEngine::File::Write("Language.json", writer.write(settings));
 }

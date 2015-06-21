@@ -27,12 +27,12 @@
 
 #include "File.h"
 
-bool LastStandEngine::File::Load(const std::string &loc)
+bool LSEngine::File::Load(const std::string &loc)
 {
     return false;
 }
 
-bool LastStandEngine::File::Write(const std::string &l, const std::string &d)
+bool LSEngine::File::Write(const std::string &l, const std::string &d)
 {
     std::ofstream stream;
     stream.open ( l );

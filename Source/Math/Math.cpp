@@ -27,7 +27,7 @@
 
 #include "Math.h"
 
-namespace LastStandEngine {
+namespace LSEngine {
 
     const float Math::E = 2.718282f;
 

@@ -27,9 +27,9 @@
 
 #include "Utils.h"
 
-namespace LastStandEngine {
+namespace LSEngine {
 
-    std::string LastStandEngine::Utils::GetTime() {
+    std::string LSEngine::Utils::GetTime() {
 
         time_t currentTime;
         struct tm *localTime;

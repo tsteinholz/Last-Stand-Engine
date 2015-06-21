@@ -29,65 +29,66 @@
 #define LAST_STAND_ENGINE_SETTINGS_H
 
 #include <map>
-#include <SDL_stdinc.h>
-#include <SDL_video.h>
 #include <string>
 #include "../Files/json/json.h"
 
+namespace LSEngine
+{
 /**
  * These are client side settings that the client can and should change regarding all client side video and sound
  * options. This file will read and write to the Settings.json file.
  */
-class GlobalSettings {
-public:
+    class GlobalSettings
+    {
+    public:
 
-    GlobalSettings ();
+        GlobalSettings();
 
-    ~GlobalSettings ();
+        ~GlobalSettings();
 
-    bool LoadConfig () { return LoadConfig("Settings.json"); }
+        bool LoadConfig() { return LoadConfig("Settings.json"); }
 
-    bool LoadConfig ( std::string fileName );
+        bool LoadConfig(std::string fileName);
 
-    void Reload ();
+        void Reload();
 
-    void Save ();
+        void Save();
 
-    static void SetBool ( std::string key, bool value );
+        static void SetBool(std::string key, bool value);
 
-    static bool GetBool ( std::string key );
+        static bool GetBool(std::string key);
 
-    static void SetDouble ( std::string key, double value );
+        static void SetDouble(std::string key, double value);
 
-    static double GetDouble ( std::string key );
+        static double GetDouble(std::string key);
 
-    static void SetInt ( std::string key, int value );
+        static void SetInt(std::string key, int value);
 
-    static int GetInt ( std::string key );
+        static int GetInt(std::string key);
 
-    static void SetString ( std::string key, std::string value );
+        static void SetString(std::string key, std::string value);
 
-    static std::string GetString ( std::string key );
+        static std::string GetString(std::string key);
 
-protected:
+    protected:
 
-    static Json::Value Settings;
+        static Json::Value Settings;
 
-    static std::map<std::string, bool> BoolSettings;
+        static std::map<std::string, bool> BoolSettings;
 
-    static Json::Value JBoolSettings;
+        static Json::Value JBoolSettings;
 
-    static std::map<std::string, double> DoubleSettings;
+        static std::map<std::string, double> DoubleSettings;
 
-    static Json::Value JDoubleSettings;
+        static Json::Value JDoubleSettings;
 
-    static std::map<std::string, int> IntSettings;
+        static std::map<std::string, int> IntSettings;
 
-    static Json::Value JIntSettings;
+        static Json::Value JIntSettings;
 
-    static std::map<std::string, std::string> StringSettings;
+        static std::map<std::string, std::string> StringSettings;
 
-    static Json::Value JStringSettings;
-};
-
+        static Json::Value JStringSettings;
+    };
+}
 #endif //LAST_STAND_ENGINE_SETTINGS_H

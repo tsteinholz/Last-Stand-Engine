@@ -33,7 +33,7 @@
 #include <iostream>
 #include <fstream>
 
-namespace LastStandEngine {
+namespace LSEngine {
 /**
  *
  */

@@ -27,6 +27,6 @@
 
 #include "Vector3.h"
 
-namespace LastStandEngine {
+namespace LSEngine {
 
 }

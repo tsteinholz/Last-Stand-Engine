@@ -32,7 +32,7 @@
 #include <iostream>
 #include <string>
 
-namespace LastStandEngine {
+namespace LSEngine {
     class Utils {
     public:
 

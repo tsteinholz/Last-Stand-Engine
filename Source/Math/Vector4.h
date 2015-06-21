@@ -30,7 +30,7 @@
 
 #include <iostream>
 
-namespace LastStandEngine {
+namespace LSEngine {
     namespace Maths {
 
         struct Vector4 {

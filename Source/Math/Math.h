@@ -30,7 +30,7 @@
 
 #include "Vector2.h"
 
-namespace LastStandEngine {
+namespace LSEngine {
 /**
  * A generic Math Class to make difficult equations easy with correctness and efficiency. The following class has
  * useful functions and constants you would find in your average graphing calculator. Except a little bit more

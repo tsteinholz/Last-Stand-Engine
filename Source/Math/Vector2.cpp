@@ -28,7 +28,7 @@
 #include "Vector2.h"
 #include "Math.h"
 
-namespace LastStandEngine {
+namespace LSEngine {
 
     Vector2 Vector2::Zero(0.0f, 0.0f);
     Vector2 Vector2::One(1.0f, 1.0f);

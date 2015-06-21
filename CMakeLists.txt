@@ -142,4 +142,4 @@ include_directories ( ${SDL2_INCLUDE_DIRS} )
 target_link_libraries ( -LastStandEngine ${SDL2_LIBRARIES} )
 endif ()
 
-target_link_libraries ( LastStandEngineDemo -LastStandEngine )
+target_link_libraries ( LastStandEngineDemo -LSEngine )

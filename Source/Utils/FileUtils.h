@@ -32,7 +32,7 @@
 #include <fstream>
 #include <string.h>
 
-namespace LastStandEngine {
+namespace LSEngine {
     namespace Utils {
 //TODO move this class to FILE DIR
         static std::string readFile(const char *filepath) {
