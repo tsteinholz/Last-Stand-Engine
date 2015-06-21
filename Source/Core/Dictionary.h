@@ -25,69 +25,62 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#ifndef LAST_STAND_ENGINE_SETTINGS_H
-#define LAST_STAND_ENGINE_SETTINGS_H
+#ifndef LAST_STAND_ENGINE_DICTIONARY_H
+#define LAST_STAND_ENGINE_DICTIONARY_H
 
-#include <map>
-#include <SDL_stdinc.h>
-#include <SDL_video.h>
-#include <string>
 #include "../Files/json/json.h"
+#include <string>
 
-/**
- * These are client side settings that the client can and should change regarding all client side video and sound
- * options. This file will read and write to the Settings.json file.
- */
-class GlobalSettings {
-public:
+namespace LastStandEngine {
+    /**
+     * This is for in=game dialog, and making the language system support many languages, by loading in the specified
+     * language for dialog instead of just hard-coding it inside of the game. Having Multi-Language support in a game
+     * can add entire countries to your promotion scheme. Their is also a tool to automaticly generate all the .json
+     * dictionary files for you, so all you need to do is know one language and the tool will take care of the rest
+     * for you. And since translation services are never perfect, you can always edit the files manually and fix some
+     * of the stupid things that get generated in there.
+     */
+    class Dictionary {
+    public:
+        Dictionary();
+        ~Dictionary();
 
-    GlobalSettings ();
+        /**
+         *
+         * @parm key
+         * @parm value
+         */
+        std::string Get ( std::string key , std::string value );
 
-    ~GlobalSettings ();
+        enum Language
+        {
+            English,
+            German,
+            Spanish,
+        };
 
-    bool LoadConfig () { return LoadConfig("Settings.json"); }
+        Language Load ();
 
-    bool LoadConfig ( std::string fileName );
+        void Save();
 
-    void Reload ();
+        /** @return The Currently set language */
+        Language GetLang ();
 
-    void Save ();
+        /**
+         * Set the current language of the dictionary
+         *
+         * @parm Language That gets Set to current
+         */
+        void SetLang ( Language);
 
-    static void SetBool ( std::string key, bool value );
+    private:
+        /**
+         * The current langauge of the dicionary
+         */
+        static Language x_Language;
 
-    static bool GetBool ( std::string key );
+        static Json::Value x_Dictionary;
+    };
+}
 
-    static void SetDouble ( std::string key, double value );
-
-    static double GetDouble ( std::string key );
-
-    static void SetInt ( std::string key, int value );
-
-    static int GetInt ( std::string key );
-
-    static void SetString ( std::string key, std::string value );
-
-    static std::string GetString ( std::string key );
-
-protected:
-
-    static Json::Value Settings;
-
-    static std::map<std::string, bool> BoolSettings;
-
-    static Json::Value JBoolSettings;
-
-    static std::map<std::string, double> DoubleSettings;
-
-    static Json::Value JDoubleSettings;
-
-    static std::map<std::string, int> IntSettings;
-
-    static Json::Value JIntSettings;
-
-    static std::map<std::string, std::string> StringSettings;
-
-    static Json::Value JStringSettings;
-};
-
-#endif //LAST_STAND_ENGINE_SETTINGS_H
+#endif //LAST_STAND_ENGINE_DICTIONARY_H

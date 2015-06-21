@@ -29,13 +29,11 @@ cmake_minimum_required ( VERSION 3.0 )
 project ( Last_Stand_Engine )
 
 # Compile for C++11
-list( APPEND CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS} -g -ftest-coverage -fprofile-arcs")
+list( APPEND CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS} -g -ftest-coverage -fprofile-arcs")
 
 # Set the current engine version
 set ( Last_Stand_Engine_VERSION_MAJOR 0 )
 set ( Last_Stand_Engine_VERSION_MINOR 0 )
-
-link_directories ( /usr/include )
 
 #TODO Organize source code list in alpha order. (after v1 release)
 
@@ -104,6 +102,10 @@ set (LS_SOURCE_CODE
 
     Source/Files/File.cpp
     Source/Files/File.h
+
+    Source/Core/Dictionary.cpp
+    Source/Core/Dictionary.h
+
     ######### - Headers - #########
 
     Source/Utils/FileUtils.h
@@ -126,13 +128,18 @@ add_library ( -LastStandEngine ${LS_SOURCE_CODE} )
 # Used to test build
 add_executable( LastStandEngineDemo ${LS_SOURCE_CODE} )
 
-# Find Packages
-include ( FindPkgConfig )
-
 # Includes SDL2
+if ( WIN32 )
+target_link_libraries( -LastStandEngine Dependencies/bin/x64/SDL2.dll)
+include_directories ( Dependencies/include )
+else ()
+link_directories ( /usr/include )
+include ( FindPkgConfig )
 pkg_search_module ( SDL2 REQUIRED sdl2 )
 include_directories ( ${SDL2_INCLUDE_DIRS} )
 
 # Includes SDL2 with the build files
 target_link_libraries ( -LastStandEngine ${SDL2_LIBRARIES} )
+endif ()
+
 target_link_libraries ( LastStandEngineDemo -LastStandEngine )

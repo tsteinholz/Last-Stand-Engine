@@ -34,14 +34,11 @@ std::map<std::string, double> GlobalSettings::DoubleSettings = {};
 std::map<std::string, int> GlobalSettings::IntSettings = {};
 std::map<std::string, std::string> GlobalSettings::StringSettings = {};
 
-Json::Value GlobalSettings::JBoolSettings = {};
-Json::Value GlobalSettings::JDoubleSettings = {};
-Json::Value GlobalSettings::JIntSettings = {};
-Json::Value GlobalSettings::JStringSettings = {};
+Json::Value GlobalSettings::Settings = {};
 
-GlobalSettings::GlobalSettings ()
+GlobalSettings::GlobalSettings()
 {
-    if ( !LoadConfig() )
+    if (!LoadConfig())
     {
         EngineLog << "Using Default Setting Values";
         SetBool ( "AntiAliasing", true );
@@ -49,19 +46,51 @@ GlobalSettings::GlobalSettings ()
         SetBool ( "Debug", false );
         SetBool ( "Fullscreen", false );
 
-        SetString ( "WindowTitle", "Last Stand Engine" );
+        SetString ( "Language", "English" );
+        //TODO Remove this...
+        SetString("WindowTitle", "Last Stand Engine" );
     }
     Reload();
 }
 
 GlobalSettings::~GlobalSettings()
 {
-    Save ();
+    Save();
 }
 
-bool GlobalSettings::LoadConfig( std::string fileName)
+bool GlobalSettings::LoadConfig(std::string fileName)
 {
-    //TODO using File utils load a file called settings.(haven't decided the file extension)
+    std::ifstream file (fileName);
+    Json::Reader reader;
+    Json::Value root;
+    if ( reader.parse( file, root ) )
+    {
+        //TODO using File utils load a file called settings.
+        //const Json::Value array = root["Settings"];
+        //for ( unsigned int i = 0; i < array.size(); i++ )
+        //{
+        //    if ( array[i].isBool() )
+        //    {
+        //SetBool ( array[i].asString(), array[i].asBool() );
+        //    }
+        //    else if ( array[i].isDouble() )
+        //    {
+        //SetDouble ( array[i].asString(), array[i].asDouble() );
+        //    }
+        //    else if ( array[i].isInt() )
+        //    {
+        //SetInt ( array[i].asString(), array[i].asInt() );
+        //    }
+        //    else if ( array[i].isString() )
+        //    {
+        //SetString ( array[i].asString(), array[i].asString() );
+        //    }
+        //    else
+        //    {
+        //        EngineLog << "Loading Setting " << array[i].asString() << " Cannot find type";
+        //    }
+        //}
+    }
     return false;
 }
 
@@ -74,81 +103,86 @@ void GlobalSettings::Reload()
     for (std::map<std::string, bool>::const_iterator it = BoolSettings.begin(); it != BoolSettings.end(); it++)
     {
         std::string value = it->second ? "true" : "false";
-        JBoolSettings[it->first] = it->second;
+        Settings[it->first] = it->second;
         EngineLog << it->first + " = " + value;
     }
     // Double Settings
     for (std::map<std::string, double>::const_iterator it = DoubleSettings.begin(); it != DoubleSettings.end(); it++)
     {
-        JDoubleSettings[it->first] = it->second;
-        EngineLog << it->first + " = " + std::to_string ( it->second );
+        Settings[it->first] = it->second;
+        EngineLog << it->first + " = " + std::to_string(it->second);
     }
     // Integer Settings
     for (std::map<std::string, int>::const_iterator it = IntSettings.begin(); it != IntSettings.end(); it++)
     {
-        JIntSettings[it->first] = it->second;
-        EngineLog << it->first + " = " + std::to_string( it->second );
+        Settings[it->first] = it->second;
+        EngineLog << it->first + " = " + std::to_string(it->second);
     }
     // String Settings
     for (std::map<std::string, std::string>::const_iterator it = StringSettings.begin(); it != StringSettings.end(); it++)
     {
-        JStringSettings[it->first] = it->second;
+        Settings[it->first] = it->second;
         EngineLog << it->first + " = " + it->second;
     }
     EngineLog << "#######: END OF CURENT SETTINGS :#######";
-    Save ();
+    Save();
 }
 
-void GlobalSettings::Save ()
+void GlobalSettings::Save()
 {
-    Json::Value settings = Json::Value ( Json::objectValue );
+    Json::Value settings = Json::Value(Json::objectValue);
 
-    settings["Boolean Settings"] = JBoolSettings;
-    settings["Double Settings"]  = JDoubleSettings;
-    settings["Integer Settings"] = JIntSettings;
-    settings["String Settings"]  = JStringSettings;
+    settings["Settings"] = Settings;
 
     Json::StyledWriter writer;
 
     EngineLog << "Saving Settings.json..";
-    LastStandEngine::File::Write ( "Settings.json", writer.write (settings) );
+    LastStandEngine::File::Write("Settings.json", writer.write(settings));
 }
 
-void GlobalSettings::SetBool(std::string key, bool value) {
-    BoolSettings.insert( std::pair<std::string, bool> (key, value) );}
+void GlobalSettings::SetBool(std::string key, bool value)
+{
+    BoolSettings.insert(std::pair<std::string, bool>(key, value));
+}
 
-bool GlobalSettings::GetBool(std::string key) {
-    std::map<std::string, bool>::const_iterator iterator = BoolSettings.find ( key );
-    if ( iterator == BoolSettings.end() ) return false;
+bool GlobalSettings::GetBool(std::string key)
+{
+    std::map<std::string, bool>::const_iterator iterator = BoolSettings.find(key);
+    if (iterator == BoolSettings.end()) return false;
     return iterator->second;
 }
 
-void GlobalSettings::SetDouble(std::string key, double value) {
-    DoubleSettings.insert( std::pair <std::string, double> ( key, value ) );
+void GlobalSettings::SetDouble(std::string key, double value)
+{
+    DoubleSettings.insert(std::pair<std::string, double>(key, value));
 }
 
-double GlobalSettings::GetDouble(std::string key) {
-    std::map<std::string, double>::const_iterator iterator = DoubleSettings.find ( key );
-    if ( iterator == DoubleSettings.end() ) return -1;
+double GlobalSettings::GetDouble(std::string key)
+{
+    std::map<std::string, double>::const_iterator iterator = DoubleSettings.find(key);
+    if (iterator == DoubleSettings.end()) return -1;
     return iterator->second;
 }
 
-void GlobalSettings::SetInt(std::string key, int value) {
-    IntSettings.insert(std::pair<std::string, int> ( key, value ) );
+void GlobalSettings::SetInt(std::string key, int value)
+{
+    IntSettings.insert(std::pair<std::string, int>(key, value));
 }
 
 int GlobalSettings::GetInt(std::string key) {
-    std::map<std::string, int>::const_iterator iterator = IntSettings.find ( key );
-    if ( iterator == IntSettings.end() ) return -1;
+    std::map<std::string, int>::const_iterator iterator = IntSettings.find(key);
+    if (iterator == IntSettings.end()) return -1;
     return iterator->second;
 }
 
-void GlobalSettings::SetString(std::string key, std::string value) {
-    StringSettings.insert ( std::pair<std::string, std::string> ( key, value ) );
+void GlobalSettings::SetString(std::string key, std::string value)
+{
+    StringSettings.insert(std::pair<std::string, std::string>(key, value));
 }
 
-std::string GlobalSettings::GetString(std::string key) {
-    std::map<std::string, std::string>::const_iterator iterator = StringSettings.find ( key );
-    if ( iterator == StringSettings.end() ) return "";
+std::string GlobalSettings::GetString(std::string key)
+{
+    std::map<std::string, std::string>::const_iterator iterator = StringSettings.find(key);
+    if (iterator == StringSettings.end()) return "";
     return iterator->second;
 }

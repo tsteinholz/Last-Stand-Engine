@@ -25,69 +25,42 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#ifndef LAST_STAND_ENGINE_SETTINGS_H
-#define LAST_STAND_ENGINE_SETTINGS_H
+#include "Dictionary.h"
 
-#include <map>
-#include <SDL_stdinc.h>
-#include <SDL_video.h>
-#include <string>
-#include "../Files/json/json.h"
+LastStandEngine::Dictionary::Language LastStandEngine::Dictionary::x_Language = LastStandEngine::Dictionary::Language::English;
+Json::Value x_Dictionary = {};
 
-/**
- * These are client side settings that the client can and should change regarding all client side video and sound
- * options. This file will read and write to the Settings.json file.
- */
-class GlobalSettings {
-public:
+LastStandEngine::Dictionary::Dictionary()
+{
+    x_Language = Load ();
+}
 
-    GlobalSettings ();
+LastStandEngine::Dictionary::~Dictionary()
+{
+    Save();
+}
 
-    ~GlobalSettings ();
+LastStandEngine::Dictionary::Language LastStandEngine::Dictionary::Load()
+{
 
-    bool LoadConfig () { return LoadConfig("Settings.json"); }
+}
 
-    bool LoadConfig ( std::string fileName );
+void LastStandEngine::Dictionary::Save()
+{
 
-    void Reload ();
+}
 
-    void Save ();
+std::string LastStandEngine::Dictionary::Get(std::string key, std::string value)
+{
+    return NULL;
+}
 
-    static void SetBool ( std::string key, bool value );
+LastStandEngine::Dictionary::Language LastStandEngine::Dictionary::GetLang()
+{
+    return x_Language;
+}
 
-    static bool GetBool ( std::string key );
-
-    static void SetDouble ( std::string key, double value );
-
-    static double GetDouble ( std::string key );
-
-    static void SetInt ( std::string key, int value );
-
-    static int GetInt ( std::string key );
-
-    static void SetString ( std::string key, std::string value );
-
-    static std::string GetString ( std::string key );
-
-protected:
-
-    static Json::Value Settings;
-
-    static std::map<std::string, bool> BoolSettings;
-
-    static Json::Value JBoolSettings;
-
-    static std::map<std::string, double> DoubleSettings;
-
-    static Json::Value JDoubleSettings;
-
-    static std::map<std::string, int> IntSettings;
-
-    static Json::Value JIntSettings;
-
-    static std::map<std::string, std::string> StringSettings;
-
-    static Json::Value JStringSettings;
-};
-
-#endif //LAST_STAND_ENGINE_SETTINGS_H
+void LastStandEngine::Dictionary::SetLang(LastStandEngine::Dictionary::Language language)
+{
+    LastStandEngine::Dictionary::x_Language = language;
+}
