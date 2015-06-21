@@ -29,6 +29,8 @@
 
 int main ()
 {
+    TheUniverse.Settings->LoadConfig();
+
     TheUniverse.Initialize();
 
     TheUniverse.Start();

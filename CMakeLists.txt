@@ -102,6 +102,10 @@ set (LS_SOURCE_CODE
 
     Source/Files/File.cpp
     Source/Files/File.h
+
+    Source/Core/Dictionary.cpp
+    Source/Core/Dictionary.h
+
     ######### - Headers - #########
 
     Source/Utils/FileUtils.h

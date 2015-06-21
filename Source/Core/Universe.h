@@ -148,6 +148,8 @@ public:
      */
     void Stop ();
 
+    GlobalSettings* Settings;
+
 protected:
 
 private:
@@ -168,8 +170,6 @@ private:
      *
      */
     void MainLoop ();
-
-    GlobalSettings* Settings;
 
     SDL_Surface* x_Surface;
 
