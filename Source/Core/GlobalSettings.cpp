@@ -49,8 +49,6 @@ namespace LSEngine
             SetBool("Fullscreen", false);
 
             SetString("Language", "English");
-            //TODO Remove this...
-            SetString("WindowTitle", "Last Stand Engine");
         }
         Reload();
     }

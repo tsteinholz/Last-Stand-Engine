@@ -54,7 +54,7 @@ namespace LSEngine
         return *x_instance;
     }
 
-    bool Universe::Initialize(unsigned int w, unsigned int h)
+    bool Universe::Initialize(unsigned int w, unsigned int h, const std::string& t)
     {
         if (TheEngineState == RUNNING)
         {
@@ -76,7 +76,7 @@ namespace LSEngine
             Uint8 Window = Settings->GetBool("Fullscreen") ? SDL_WINDOW_FULLSCREEN_DESKTOP : SDL_WINDOW_RESIZABLE;
 
             Universe::x_Window = SDL_CreateWindow(
-                    Settings->GetString("WindowTitle").c_str(),
+                    t.c_str(),
                     SDL_WINDOWPOS_CENTERED,
                     SDL_WINDOWPOS_CENTERED,
                     w,

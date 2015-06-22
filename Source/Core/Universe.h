@@ -134,7 +134,8 @@ namespace LSEngine
         **/
         bool Initialize(
                 unsigned int windowWidth = 800,
-                unsigned int windowHeight = 600
+                unsigned int windowHeight = 600,
+                const std::string& title = "Last Stand Engine"
         );
 
         /**
@@ -153,7 +154,6 @@ namespace LSEngine
         void Stop();
 
         LSEngine::GlobalSettings *Settings;
-        //LastStandEngine::Dictionary *Dictionary;
 
     protected:
 

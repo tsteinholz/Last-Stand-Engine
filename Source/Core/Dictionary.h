@@ -36,9 +36,9 @@
 namespace LSEngine
 {
     /**
-     * This is for in=game dialog, and making the language system support many languages, by loading in the specified
+     * This is for in-game dialog, and making the language system support many languages, by loading in the specified
      * language for dialog instead of just hard-coding it inside of the game. Having Multi-Language support in a game
-     * can add entire countries to your promotion scheme. Their is also a tool to automaticly generate all the .json
+     * can add entire countries to your promotion scheme. Their is also a tool to automatically generate all the .json
      * dictionary files for you, so all you need to do is know one language and the tool will take care of the rest
      * for you. And since translation services are never perfect, you can always edit the files manually and fix some
      * of the stupid things that get generated in there.
@@ -156,7 +156,7 @@ namespace LSEngine
         };
 
         /**
-         * Load the
+         * Load the past language
          */
         Language Load ();
 
