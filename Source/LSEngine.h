@@ -1,0 +1,7 @@
+#pragma once
+#ifndef LSENGINE_LSENGINE_H
+#define LSENGINE_LSENGINE_H
+
+
+
+#endif //LSENGINE_LSENGINE_H
