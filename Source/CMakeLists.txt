@@ -9,7 +9,7 @@ set(SOURCE_FILES
     LSEngine.h
     Engine.cpp
     Engine.h
-        Engine.cpp Engine.h)
+)
 
 #add_executable(LSEngine ${SOURCE_FILES})
 add_library(LSEngine ${SOURCE_FILES})
