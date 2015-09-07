@@ -1,0 +1,178 @@
+\hypertarget{classISteamUGC}{}\section{I\+Steam\+U\+G\+C Class Reference}
+\label{classISteamUGC}\index{I\+Steam\+U\+G\+C@{I\+Steam\+U\+G\+C}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classISteamUGC_a701e96d732942eab2ebc3d86965b98db}{}virtual U\+G\+C\+Query\+Handle\+\_\+t {\bfseries Create\+Query\+User\+U\+G\+C\+Request} (Account\+I\+D\+\_\+t un\+Account\+I\+D, E\+User\+U\+G\+C\+List e\+List\+Type, E\+U\+G\+C\+Matching\+U\+G\+C\+Type e\+Matching\+U\+G\+C\+Type, E\+User\+U\+G\+C\+List\+Sort\+Order e\+Sort\+Order, App\+Id\+\_\+t n\+Creator\+App\+I\+D, App\+Id\+\_\+t n\+Consumer\+App\+I\+D, uint32 un\+Page)=0\label{classISteamUGC_a701e96d732942eab2ebc3d86965b98db}
+
+\item 
+\hypertarget{classISteamUGC_ab7bba235c8ef89d8d7d3a98f0ed2e64e}{}virtual U\+G\+C\+Query\+Handle\+\_\+t {\bfseries Create\+Query\+All\+U\+G\+C\+Request} (E\+U\+G\+C\+Query e\+Query\+Type, E\+U\+G\+C\+Matching\+U\+G\+C\+Type e\+Matchinge\+Matching\+U\+G\+C\+Type\+File\+Type, App\+Id\+\_\+t n\+Creator\+App\+I\+D, App\+Id\+\_\+t n\+Consumer\+App\+I\+D, uint32 un\+Page)=0\label{classISteamUGC_ab7bba235c8ef89d8d7d3a98f0ed2e64e}
+
+\item 
+\hypertarget{classISteamUGC_ad369c4e6eecc09dfc76b494254d330f6}{}virtual U\+G\+C\+Query\+Handle\+\_\+t {\bfseries Create\+Query\+U\+G\+C\+Details\+Request} (Published\+File\+Id\+\_\+t $\ast$pvec\+Published\+File\+I\+D, uint32 un\+Num\+Published\+File\+I\+Ds)=0\label{classISteamUGC_ad369c4e6eecc09dfc76b494254d330f6}
+
+\item 
+\hypertarget{classISteamUGC_ad3670cfa5bca882a679fb9bd339020f3}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Send\+Query\+U\+G\+C\+Request} (U\+G\+C\+Query\+Handle\+\_\+t handle)=0\label{classISteamUGC_ad3670cfa5bca882a679fb9bd339020f3}
+
+\item 
+\hypertarget{classISteamUGC_a1020425f4dfb254e253884390326dbe2}{}virtual bool {\bfseries Get\+Query\+U\+G\+C\+Result} (U\+G\+C\+Query\+Handle\+\_\+t handle, uint32 index, \hyperlink{structSteamUGCDetails__t}{Steam\+U\+G\+C\+Details\+\_\+t} $\ast$p\+Details)=0\label{classISteamUGC_a1020425f4dfb254e253884390326dbe2}
+
+\item 
+\hypertarget{classISteamUGC_a80ca215de03056ec6377cdcb3da2da30}{}virtual bool {\bfseries Get\+Query\+U\+G\+C\+Preview\+U\+R\+L} (U\+G\+C\+Query\+Handle\+\_\+t handle, uint32 index, char $\ast$pch\+U\+R\+L, uint32 cch\+U\+R\+L\+Size)=0\label{classISteamUGC_a80ca215de03056ec6377cdcb3da2da30}
+
+\item 
+\hypertarget{classISteamUGC_a0f54a109d4377d535459d4d1433805b2}{}virtual bool {\bfseries Get\+Query\+U\+G\+C\+Metadata} (U\+G\+C\+Query\+Handle\+\_\+t handle, uint32 index, char $\ast$pch\+Metadata, uint32 cch\+Metadatasize)=0\label{classISteamUGC_a0f54a109d4377d535459d4d1433805b2}
+
+\item 
+\hypertarget{classISteamUGC_a6ecccbfb655436c3fa0b9936da4400a7}{}virtual bool {\bfseries Get\+Query\+U\+G\+C\+Children} (U\+G\+C\+Query\+Handle\+\_\+t handle, uint32 index, Published\+File\+Id\+\_\+t $\ast$pvec\+Published\+File\+I\+D, uint32 c\+Max\+Entries)=0\label{classISteamUGC_a6ecccbfb655436c3fa0b9936da4400a7}
+
+\item 
+\hypertarget{classISteamUGC_a5f22be04a931ce56a4fc4028869dc1fe}{}virtual bool {\bfseries Get\+Query\+U\+G\+C\+Statistic} (U\+G\+C\+Query\+Handle\+\_\+t handle, uint32 index, E\+Item\+Statistic e\+Stat\+Type, uint32 $\ast$p\+Stat\+Value)=0\label{classISteamUGC_a5f22be04a931ce56a4fc4028869dc1fe}
+
+\item 
+\hypertarget{classISteamUGC_ae12da428d261f099499b3bb4d2db1178}{}virtual uint32 {\bfseries Get\+Query\+U\+G\+C\+Num\+Additional\+Previews} (U\+G\+C\+Query\+Handle\+\_\+t handle, uint32 index)=0\label{classISteamUGC_ae12da428d261f099499b3bb4d2db1178}
+
+\item 
+\hypertarget{classISteamUGC_a8fbe0b4398f0d6360dae9c36940d5c82}{}virtual bool {\bfseries Get\+Query\+U\+G\+C\+Additional\+Preview} (U\+G\+C\+Query\+Handle\+\_\+t handle, uint32 index, uint32 preview\+Index, char $\ast$pch\+U\+R\+L\+Or\+Video\+I\+D, uint32 cch\+U\+R\+L\+Size, bool $\ast$pb\+Is\+Image)=0\label{classISteamUGC_a8fbe0b4398f0d6360dae9c36940d5c82}
+
+\item 
+\hypertarget{classISteamUGC_a0c8db5d658fadb17321dd4ee1d225ff4}{}virtual uint32 {\bfseries Get\+Query\+U\+G\+C\+Num\+Key\+Value\+Tags} (U\+G\+C\+Query\+Handle\+\_\+t handle, uint32 index)=0\label{classISteamUGC_a0c8db5d658fadb17321dd4ee1d225ff4}
+
+\item 
+\hypertarget{classISteamUGC_ad4661a1f97453b8691c179ac8584cea6}{}virtual bool {\bfseries Get\+Query\+U\+G\+C\+Key\+Value\+Tag} (U\+G\+C\+Query\+Handle\+\_\+t handle, uint32 index, uint32 key\+Value\+Tag\+Index, char $\ast$pch\+Key, uint32 cch\+Key\+Size, char $\ast$pch\+Value, uint32 cch\+Value\+Size)=0\label{classISteamUGC_ad4661a1f97453b8691c179ac8584cea6}
+
+\item 
+\hypertarget{classISteamUGC_a4157e9b5ce82b0abfd436675c6fe3ba6}{}virtual bool {\bfseries Release\+Query\+U\+G\+C\+Request} (U\+G\+C\+Query\+Handle\+\_\+t handle)=0\label{classISteamUGC_a4157e9b5ce82b0abfd436675c6fe3ba6}
+
+\item 
+\hypertarget{classISteamUGC_a9eb0d974840e25ea042ca8f78e0f27d8}{}virtual bool {\bfseries Add\+Required\+Tag} (U\+G\+C\+Query\+Handle\+\_\+t handle, const char $\ast$p\+Tag\+Name)=0\label{classISteamUGC_a9eb0d974840e25ea042ca8f78e0f27d8}
+
+\item 
+\hypertarget{classISteamUGC_acfb8abf198a2c05c40e83f117275f7b7}{}virtual bool {\bfseries Add\+Excluded\+Tag} (U\+G\+C\+Query\+Handle\+\_\+t handle, const char $\ast$p\+Tag\+Name)=0\label{classISteamUGC_acfb8abf198a2c05c40e83f117275f7b7}
+
+\item 
+\hypertarget{classISteamUGC_a1f8271d5968ab5657ec7b43a0b8a3903}{}virtual bool {\bfseries Set\+Return\+Key\+Value\+Tags} (U\+G\+C\+Query\+Handle\+\_\+t handle, bool b\+Return\+Key\+Value\+Tags)=0\label{classISteamUGC_a1f8271d5968ab5657ec7b43a0b8a3903}
+
+\item 
+\hypertarget{classISteamUGC_ac8502ab719c8b08d73c2eed384900eeb}{}virtual bool {\bfseries Set\+Return\+Long\+Description} (U\+G\+C\+Query\+Handle\+\_\+t handle, bool b\+Return\+Long\+Description)=0\label{classISteamUGC_ac8502ab719c8b08d73c2eed384900eeb}
+
+\item 
+\hypertarget{classISteamUGC_a88451713f55c82c7c105fc841243195a}{}virtual bool {\bfseries Set\+Return\+Metadata} (U\+G\+C\+Query\+Handle\+\_\+t handle, bool b\+Return\+Metadata)=0\label{classISteamUGC_a88451713f55c82c7c105fc841243195a}
+
+\item 
+\hypertarget{classISteamUGC_abf26bae1e891aacc62f24791c8ba4544}{}virtual bool {\bfseries Set\+Return\+Children} (U\+G\+C\+Query\+Handle\+\_\+t handle, bool b\+Return\+Children)=0\label{classISteamUGC_abf26bae1e891aacc62f24791c8ba4544}
+
+\item 
+\hypertarget{classISteamUGC_af98edfb1b11036ac2fff38b8b3df0fed}{}virtual bool {\bfseries Set\+Return\+Additional\+Previews} (U\+G\+C\+Query\+Handle\+\_\+t handle, bool b\+Return\+Additional\+Previews)=0\label{classISteamUGC_af98edfb1b11036ac2fff38b8b3df0fed}
+
+\item 
+\hypertarget{classISteamUGC_a15c09b0b9caa320897080ae9eb624275}{}virtual bool {\bfseries Set\+Return\+Total\+Only} (U\+G\+C\+Query\+Handle\+\_\+t handle, bool b\+Return\+Total\+Only)=0\label{classISteamUGC_a15c09b0b9caa320897080ae9eb624275}
+
+\item 
+\hypertarget{classISteamUGC_aea7606518df5ea1f1a94755b23849821}{}virtual bool {\bfseries Set\+Language} (U\+G\+C\+Query\+Handle\+\_\+t handle, const char $\ast$pch\+Language)=0\label{classISteamUGC_aea7606518df5ea1f1a94755b23849821}
+
+\item 
+\hypertarget{classISteamUGC_af213273049e39eb92cbaf633c3467afe}{}virtual bool {\bfseries Set\+Allow\+Cached\+Response} (U\+G\+C\+Query\+Handle\+\_\+t handle, uint32 un\+Max\+Age\+Seconds)=0\label{classISteamUGC_af213273049e39eb92cbaf633c3467afe}
+
+\item 
+\hypertarget{classISteamUGC_adee0967c96cc09064eb1a385cb7183cf}{}virtual bool {\bfseries Set\+Cloud\+File\+Name\+Filter} (U\+G\+C\+Query\+Handle\+\_\+t handle, const char $\ast$p\+Match\+Cloud\+File\+Name)=0\label{classISteamUGC_adee0967c96cc09064eb1a385cb7183cf}
+
+\item 
+\hypertarget{classISteamUGC_a2c2ff75b522ef2a757bf62cabf02dd15}{}virtual bool {\bfseries Set\+Match\+Any\+Tag} (U\+G\+C\+Query\+Handle\+\_\+t handle, bool b\+Match\+Any\+Tag)=0\label{classISteamUGC_a2c2ff75b522ef2a757bf62cabf02dd15}
+
+\item 
+\hypertarget{classISteamUGC_a199a70a52fdec017d9a4eed2cc692c11}{}virtual bool {\bfseries Set\+Search\+Text} (U\+G\+C\+Query\+Handle\+\_\+t handle, const char $\ast$p\+Search\+Text)=0\label{classISteamUGC_a199a70a52fdec017d9a4eed2cc692c11}
+
+\item 
+\hypertarget{classISteamUGC_a63ed9c33d52cfb5c837d2194c0b16906}{}virtual bool {\bfseries Set\+Ranked\+By\+Trend\+Days} (U\+G\+C\+Query\+Handle\+\_\+t handle, uint32 un\+Days)=0\label{classISteamUGC_a63ed9c33d52cfb5c837d2194c0b16906}
+
+\item 
+\hypertarget{classISteamUGC_a098d945a167df04b1d718022931da4ab}{}virtual bool {\bfseries Add\+Required\+Key\+Value\+Tag} (U\+G\+C\+Query\+Handle\+\_\+t handle, const char $\ast$p\+Key, const char $\ast$p\+Value)=0\label{classISteamUGC_a098d945a167df04b1d718022931da4ab}
+
+\item 
+\hypertarget{classISteamUGC_a698c7277cc2467648d014843de80ccd3}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Request\+U\+G\+C\+Details} (Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D, uint32 un\+Max\+Age\+Seconds)=0\label{classISteamUGC_a698c7277cc2467648d014843de80ccd3}
+
+\item 
+\hypertarget{classISteamUGC_a501c538bdc46dc9a4c3ce164b4ddba1a}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Create\+Item} (App\+Id\+\_\+t n\+Consumer\+App\+Id, E\+Workshop\+File\+Type e\+File\+Type)=0\label{classISteamUGC_a501c538bdc46dc9a4c3ce164b4ddba1a}
+
+\item 
+\hypertarget{classISteamUGC_af7efa15bc718952a9074331781bebbf4}{}virtual U\+G\+C\+Update\+Handle\+\_\+t {\bfseries Start\+Item\+Update} (App\+Id\+\_\+t n\+Consumer\+App\+Id, Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D)=0\label{classISteamUGC_af7efa15bc718952a9074331781bebbf4}
+
+\item 
+\hypertarget{classISteamUGC_ac20d93253d30f8e637d9fa822ce16a01}{}virtual bool {\bfseries Set\+Item\+Title} (U\+G\+C\+Update\+Handle\+\_\+t handle, const char $\ast$pch\+Title)=0\label{classISteamUGC_ac20d93253d30f8e637d9fa822ce16a01}
+
+\item 
+\hypertarget{classISteamUGC_a840f9a6a2406dee5e845629f15f21d90}{}virtual bool {\bfseries Set\+Item\+Description} (U\+G\+C\+Update\+Handle\+\_\+t handle, const char $\ast$pch\+Description)=0\label{classISteamUGC_a840f9a6a2406dee5e845629f15f21d90}
+
+\item 
+\hypertarget{classISteamUGC_ab0b8ecba7aa766f44fd613eb23b40a01}{}virtual bool {\bfseries Set\+Item\+Update\+Language} (U\+G\+C\+Update\+Handle\+\_\+t handle, const char $\ast$pch\+Language)=0\label{classISteamUGC_ab0b8ecba7aa766f44fd613eb23b40a01}
+
+\item 
+\hypertarget{classISteamUGC_ae82eb81e46d10ee16600eb013af3d55c}{}virtual bool {\bfseries Set\+Item\+Metadata} (U\+G\+C\+Update\+Handle\+\_\+t handle, const char $\ast$pch\+Meta\+Data)=0\label{classISteamUGC_ae82eb81e46d10ee16600eb013af3d55c}
+
+\item 
+\hypertarget{classISteamUGC_ad65383e36e6edf374e55273b2740d69b}{}virtual bool {\bfseries Set\+Item\+Visibility} (U\+G\+C\+Update\+Handle\+\_\+t handle, E\+Remote\+Storage\+Published\+File\+Visibility e\+Visibility)=0\label{classISteamUGC_ad65383e36e6edf374e55273b2740d69b}
+
+\item 
+\hypertarget{classISteamUGC_af98a34b764aba2d012d9274edfda6af2}{}virtual bool {\bfseries Set\+Item\+Tags} (U\+G\+C\+Update\+Handle\+\_\+t update\+Handle, const \hyperlink{structSteamParamStringArray__t}{Steam\+Param\+String\+Array\+\_\+t} $\ast$p\+Tags)=0\label{classISteamUGC_af98a34b764aba2d012d9274edfda6af2}
+
+\item 
+\hypertarget{classISteamUGC_a50d65b55db7f4760117c23758c235bed}{}virtual bool {\bfseries Set\+Item\+Content} (U\+G\+C\+Update\+Handle\+\_\+t handle, const char $\ast$psz\+Content\+Folder)=0\label{classISteamUGC_a50d65b55db7f4760117c23758c235bed}
+
+\item 
+\hypertarget{classISteamUGC_a316f5f47e820ae4ec8fd2746e42f9f53}{}virtual bool {\bfseries Set\+Item\+Preview} (U\+G\+C\+Update\+Handle\+\_\+t handle, const char $\ast$psz\+Preview\+File)=0\label{classISteamUGC_a316f5f47e820ae4ec8fd2746e42f9f53}
+
+\item 
+\hypertarget{classISteamUGC_a59f019cc186039c09fc1a3505d9444bf}{}virtual bool {\bfseries Remove\+Item\+Key\+Value\+Tags} (U\+G\+C\+Update\+Handle\+\_\+t handle, const char $\ast$pch\+Key)=0\label{classISteamUGC_a59f019cc186039c09fc1a3505d9444bf}
+
+\item 
+\hypertarget{classISteamUGC_aec583220da9bc8e2465daaa5e5ec372b}{}virtual bool {\bfseries Add\+Item\+Key\+Value\+Tag} (U\+G\+C\+Update\+Handle\+\_\+t handle, const char $\ast$pch\+Key, const char $\ast$pch\+Value)=0\label{classISteamUGC_aec583220da9bc8e2465daaa5e5ec372b}
+
+\item 
+\hypertarget{classISteamUGC_af7949cf8d026feae9345c54a90aeaaa8}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Submit\+Item\+Update} (U\+G\+C\+Update\+Handle\+\_\+t handle, const char $\ast$pch\+Change\+Note)=0\label{classISteamUGC_af7949cf8d026feae9345c54a90aeaaa8}
+
+\item 
+\hypertarget{classISteamUGC_ac422eb210329fc081c0f8d440f26ac96}{}virtual E\+Item\+Update\+Status {\bfseries Get\+Item\+Update\+Progress} (U\+G\+C\+Update\+Handle\+\_\+t handle, uint64 $\ast$pun\+Bytes\+Processed, uint64 $\ast$pun\+Bytes\+Total)=0\label{classISteamUGC_ac422eb210329fc081c0f8d440f26ac96}
+
+\item 
+\hypertarget{classISteamUGC_a3533f018be34c76fc0163b286b904ce0}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Set\+User\+Item\+Vote} (Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D, bool b\+Vote\+Up)=0\label{classISteamUGC_a3533f018be34c76fc0163b286b904ce0}
+
+\item 
+\hypertarget{classISteamUGC_a6621517b2fe7a1b95744209c6e39203f}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Get\+User\+Item\+Vote} (Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D)=0\label{classISteamUGC_a6621517b2fe7a1b95744209c6e39203f}
+
+\item 
+\hypertarget{classISteamUGC_aee72d92d194438dea2c5e83bd1927456}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Add\+Item\+To\+Favorites} (App\+Id\+\_\+t n\+App\+Id, Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D)=0\label{classISteamUGC_aee72d92d194438dea2c5e83bd1927456}
+
+\item 
+\hypertarget{classISteamUGC_a1f90c626d5d0802690b9c8433a4da0b5}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Remove\+Item\+From\+Favorites} (App\+Id\+\_\+t n\+App\+Id, Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D)=0\label{classISteamUGC_a1f90c626d5d0802690b9c8433a4da0b5}
+
+\item 
+\hypertarget{classISteamUGC_a6f02df346f7288bef0118a10d3800ce5}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Subscribe\+Item} (Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D)=0\label{classISteamUGC_a6f02df346f7288bef0118a10d3800ce5}
+
+\item 
+\hypertarget{classISteamUGC_a26fff1983afe3e772774708e601080ba}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Unsubscribe\+Item} (Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D)=0\label{classISteamUGC_a26fff1983afe3e772774708e601080ba}
+
+\item 
+\hypertarget{classISteamUGC_af95c6733e546b88cb9164e6407ebd502}{}virtual uint32 {\bfseries Get\+Num\+Subscribed\+Items} ()=0\label{classISteamUGC_af95c6733e546b88cb9164e6407ebd502}
+
+\item 
+\hypertarget{classISteamUGC_a1de3ae29c325cc376cc4eb636a22e3d9}{}virtual uint32 {\bfseries Get\+Subscribed\+Items} (Published\+File\+Id\+\_\+t $\ast$pvec\+Published\+File\+I\+D, uint32 c\+Max\+Entries)=0\label{classISteamUGC_a1de3ae29c325cc376cc4eb636a22e3d9}
+
+\item 
+\hypertarget{classISteamUGC_abae9114b1aa2460e5f4241b218f51329}{}virtual uint32 {\bfseries Get\+Item\+State} (Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D)=0\label{classISteamUGC_abae9114b1aa2460e5f4241b218f51329}
+
+\item 
+\hypertarget{classISteamUGC_a30a19c997a1b95af49174750ce36c998}{}virtual bool {\bfseries Get\+Item\+Install\+Info} (Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D, uint64 $\ast$pun\+Size\+On\+Disk, char $\ast$pch\+Folder, uint32 cch\+Folder\+Size, uint32 $\ast$pun\+Time\+Stamp)=0\label{classISteamUGC_a30a19c997a1b95af49174750ce36c998}
+
+\item 
+\hypertarget{classISteamUGC_a0ef7718b82b39ff366f42900d0ab84c8}{}virtual bool {\bfseries Get\+Item\+Download\+Info} (Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D, uint64 $\ast$pun\+Bytes\+Downloaded, uint64 $\ast$pun\+Bytes\+Total)=0\label{classISteamUGC_a0ef7718b82b39ff366f42900d0ab84c8}
+
+\item 
+\hypertarget{classISteamUGC_a462e4a1a9ae99b51eb2458fe4b5c415b}{}virtual bool {\bfseries Download\+Item} (Published\+File\+Id\+\_\+t n\+Published\+File\+I\+D, bool b\+High\+Priority)=0\label{classISteamUGC_a462e4a1a9ae99b51eb2458fe4b5c415b}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+Steamworks/isteamugc.\+h\end{DoxyCompactItemize}

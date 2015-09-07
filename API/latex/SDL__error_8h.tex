@@ -1,0 +1,47 @@
+\hypertarget{SDL__error_8h}{}\section{D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+S\+D\+L2/\+S\+D\+L\+\_\+error.h File Reference}
+\label{SDL__error_8h}\index{D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+S\+D\+L2/\+S\+D\+L\+\_\+error.\+h@{D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+S\+D\+L2/\+S\+D\+L\+\_\+error.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{SDL__error_8h_aca3d54a0ead3ce489dae449d652f6b30}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Set\+Error} (const char $\ast$fmt,...)\label{SDL__error_8h_aca3d54a0ead3ce489dae449d652f6b30}
+
+\item 
+\hypertarget{SDL__error_8h_ac88e1aa404a8f94aaee4ad6b94547647}{}D\+E\+C\+L\+S\+P\+E\+C const char $\ast$S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Get\+Error} (\hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void})\label{SDL__error_8h_ac88e1aa404a8f94aaee4ad6b94547647}
+
+\item 
+\hypertarget{SDL__error_8h_a007ed517953a99a46e46be567ef5609e}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Clear\+Error} (\hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void})\label{SDL__error_8h_a007ed517953a99a46e46be567ef5609e}
+
+\end{DoxyCompactItemize}
+\subsection*{Internal error functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{SDL__error_8h_ad54751924527159a6f39428502009fdf}{}\#define {\bfseries S\+D\+L\+\_\+\+Out\+Of\+Memory}()  ~S\+D\+L\+\_\+\+Error(S\+D\+L\+\_\+\+E\+N\+O\+M\+E\+M)\label{SDL__error_8h_ad54751924527159a6f39428502009fdf}
+
+\item 
+\hypertarget{SDL__error_8h_a814057c930e0bd0dbfb322fbc2457c17}{}\#define {\bfseries S\+D\+L\+\_\+\+Unsupported}()  ~S\+D\+L\+\_\+\+Error(S\+D\+L\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D)\label{SDL__error_8h_a814057c930e0bd0dbfb322fbc2457c17}
+
+\item 
+\hypertarget{SDL__error_8h_aa73dc173ef690fdba4aefafca27fef05}{}\#define {\bfseries S\+D\+L\+\_\+\+Invalid\+Param\+Error}(param)    ~S\+D\+L\+\_\+\+Set\+Error(\char`\"{}Parameter \textquotesingle{}\%s\textquotesingle{} is invalid\char`\"{}, (param))\label{SDL__error_8h_aa73dc173ef690fdba4aefafca27fef05}
+
+\item 
+\hypertarget{SDL__error_8h_a5c417ba725f086b33390a5e5d5dabfe1}{}enum {\bfseries S\+D\+L\+\_\+errorcode} \{ \\*
+{\bfseries S\+D\+L\+\_\+\+E\+N\+O\+M\+E\+M}, 
+{\bfseries S\+D\+L\+\_\+\+E\+F\+R\+E\+A\+D}, 
+{\bfseries S\+D\+L\+\_\+\+E\+F\+W\+R\+I\+T\+E}, 
+{\bfseries S\+D\+L\+\_\+\+E\+F\+S\+E\+E\+K}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D}, 
+{\bfseries S\+D\+L\+\_\+\+L\+A\+S\+T\+E\+R\+R\+O\+R}
+ \}\label{SDL__error_8h_a5c417ba725f086b33390a5e5d5dabfe1}
+
+\item 
+\hypertarget{SDL__error_8h_a0ec05915c315049ed2ab74cfe1ff980f}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Error} (S\+D\+L\+\_\+errorcode code)\label{SDL__error_8h_a0ec05915c315049ed2ab74cfe1ff980f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple error message routines for S\+D\+L. 

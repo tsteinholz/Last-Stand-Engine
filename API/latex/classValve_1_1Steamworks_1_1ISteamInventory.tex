@@ -1,0 +1,85 @@
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory}{}\section{Valve.\+Steamworks.\+I\+Steam\+Inventory Class Reference}
+\label{classValve_1_1Steamworks_1_1ISteamInventory}\index{Valve.\+Steamworks.\+I\+Steam\+Inventory@{Valve.\+Steamworks.\+I\+Steam\+Inventory}}
+Inheritance diagram for Valve.\+Steamworks.\+I\+Steam\+Inventory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classValve_1_1Steamworks_1_1ISteamInventory}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a945c0ad486580f85db879b8d16079bdc}{}abstract Int\+Ptr {\bfseries Get\+Int\+Ptr} ()\label{classValve_1_1Steamworks_1_1ISteamInventory_a945c0ad486580f85db879b8d16079bdc}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a7f9e72b9a89e2837586905c84e01835c}{}abstract uint {\bfseries Get\+Result\+Status} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} result\+Handle)\label{classValve_1_1Steamworks_1_1ISteamInventory_a7f9e72b9a89e2837586905c84e01835c}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_ab7afe612ae7df5f31c54952e27fb589d}{}abstract bool {\bfseries Get\+Result\+Items} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} result\+Handle, out \hyperlink{structValve_1_1Steamworks_1_1SteamItemDetails__t}{Steam\+Item\+Details\+\_\+t}\mbox{[}$\,$\mbox{]} p\+Out\+Items\+Array)\label{classValve_1_1Steamworks_1_1ISteamInventory_ab7afe612ae7df5f31c54952e27fb589d}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a3a049b0eed5bc583c6ae781e8ec675e2}{}abstract uint {\bfseries Get\+Result\+Timestamp} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} result\+Handle)\label{classValve_1_1Steamworks_1_1ISteamInventory_a3a049b0eed5bc583c6ae781e8ec675e2}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a8628cff2db1fe3ef51c90e3b8164e4a8}{}abstract bool {\bfseries Check\+Result\+Steam\+I\+D} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} result\+Handle, ulong steam\+I\+D\+Expected)\label{classValve_1_1Steamworks_1_1ISteamInventory_a8628cff2db1fe3ef51c90e3b8164e4a8}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a1b119a6fe54631f08f5e7b19444274e9}{}abstract \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Destroy\+Result} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} result\+Handle)\label{classValve_1_1Steamworks_1_1ISteamInventory_a1b119a6fe54631f08f5e7b19444274e9}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a291f8f29df629f31eaf885ce8835f664}{}abstract bool {\bfseries Get\+All\+Items} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Result\+Handle)\label{classValve_1_1Steamworks_1_1ISteamInventory_a291f8f29df629f31eaf885ce8835f664}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a029cc1eeb474203a35441de0bebe8e73}{}abstract bool {\bfseries Get\+Items\+By\+I\+D} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Result\+Handle, ulong\mbox{[}$\,$\mbox{]} p\+Instance\+I\+Ds)\label{classValve_1_1Steamworks_1_1ISteamInventory_a029cc1eeb474203a35441de0bebe8e73}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a04372cad5c10418482108963e8bfbcbb}{}abstract bool {\bfseries Serialize\+Result} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} result\+Handle, Int\+Ptr p\+Out\+Buffer, ref uint pun\+Out\+Buffer\+Size)\label{classValve_1_1Steamworks_1_1ISteamInventory_a04372cad5c10418482108963e8bfbcbb}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a564b0e694f5893ce6909bada77fa7396}{}abstract bool {\bfseries Deserialize\+Result} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Out\+Result\+Handle, Int\+Ptr p\+Buffer, uint un\+Buffer\+Size, bool b\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+F\+A\+L\+S\+E)\label{classValve_1_1Steamworks_1_1ISteamInventory_a564b0e694f5893ce6909bada77fa7396}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_abd7ad5fb853eb11443b5d4a0f37f08cc}{}abstract bool {\bfseries Generate\+Items} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Result\+Handle, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int}\mbox{[}$\,$\mbox{]} p\+Array\+Item\+Defs, uint\mbox{[}$\,$\mbox{]} pun\+Array\+Quantity)\label{classValve_1_1Steamworks_1_1ISteamInventory_abd7ad5fb853eb11443b5d4a0f37f08cc}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a7ad0b246a8de397929482a982bcb47ee}{}abstract bool {\bfseries Grant\+Promo\+Items} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Result\+Handle)\label{classValve_1_1Steamworks_1_1ISteamInventory_a7ad0b246a8de397929482a982bcb47ee}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a0b3533ad6195af2bfff5c0ce5845aee1}{}abstract bool {\bfseries Add\+Promo\+Item} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Result\+Handle, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} item\+Def)\label{classValve_1_1Steamworks_1_1ISteamInventory_a0b3533ad6195af2bfff5c0ce5845aee1}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_adfac90a327c23bb410251e0a3072ae65}{}abstract bool {\bfseries Add\+Promo\+Items} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Result\+Handle, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int}\mbox{[}$\,$\mbox{]} p\+Array\+Item\+Defs)\label{classValve_1_1Steamworks_1_1ISteamInventory_adfac90a327c23bb410251e0a3072ae65}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_aa1bbee3e122211c0fbcc38a670302cfc}{}abstract bool {\bfseries Consume\+Item} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Result\+Handle, ulong item\+Consume, uint un\+Quantity)\label{classValve_1_1Steamworks_1_1ISteamInventory_aa1bbee3e122211c0fbcc38a670302cfc}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a4eca29ea3864941b825210fc434c2ee2}{}abstract bool {\bfseries Exchange\+Items} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Result\+Handle, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int}\mbox{[}$\,$\mbox{]} p\+Array\+Generate, uint\mbox{[}$\,$\mbox{]} pun\+Array\+Generate\+Quantity, ulong\mbox{[}$\,$\mbox{]} p\+Array\+Destroy, uint\mbox{[}$\,$\mbox{]} pun\+Array\+Destroy\+Quantity)\label{classValve_1_1Steamworks_1_1ISteamInventory_a4eca29ea3864941b825210fc434c2ee2}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a6e441bcfc7be7f59d496b8f024257243}{}abstract bool {\bfseries Transfer\+Item\+Quantity} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Result\+Handle, ulong item\+Id\+Source, uint un\+Quantity, ulong item\+Id\+Dest)\label{classValve_1_1Steamworks_1_1ISteamInventory_a6e441bcfc7be7f59d496b8f024257243}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_af631ad216b43fc6da71113939e2e0fb6}{}abstract \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Send\+Item\+Drop\+Heartbeat} ()\label{classValve_1_1Steamworks_1_1ISteamInventory_af631ad216b43fc6da71113939e2e0fb6}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_ad464aae9677e1161f9d97e1321c34cf4}{}abstract bool {\bfseries Trigger\+Item\+Drop} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Result\+Handle, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} drop\+List\+Definition)\label{classValve_1_1Steamworks_1_1ISteamInventory_ad464aae9677e1161f9d97e1321c34cf4}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a84ce05ce4e83b1de05d1208c8fa13ee7}{}abstract bool {\bfseries Trade\+Items} (ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} p\+Result\+Handle, ulong steam\+I\+D\+Trade\+Partner, ulong\mbox{[}$\,$\mbox{]} p\+Array\+Give, uint\mbox{[}$\,$\mbox{]} p\+Array\+Give\+Quantity, ulong\mbox{[}$\,$\mbox{]} p\+Array\+Get, uint\mbox{[}$\,$\mbox{]} p\+Array\+Get\+Quantity)\label{classValve_1_1Steamworks_1_1ISteamInventory_a84ce05ce4e83b1de05d1208c8fa13ee7}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a1043e65d28eeeb09412520b9c63df01d}{}abstract bool {\bfseries Load\+Item\+Definitions} ()\label{classValve_1_1Steamworks_1_1ISteamInventory_a1043e65d28eeeb09412520b9c63df01d}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a35fe8728f2f79c4ecf18e9f8dcab1c2f}{}abstract bool {\bfseries Get\+Item\+Definition\+I\+Ds} (out \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int}\mbox{[}$\,$\mbox{]} p\+Item\+Def\+I\+Ds)\label{classValve_1_1Steamworks_1_1ISteamInventory_a35fe8728f2f79c4ecf18e9f8dcab1c2f}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamInventory_a5cf9b78e30909bd1502cc78d490ae487}{}abstract bool {\bfseries Get\+Item\+Definition\+Property} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} i\+Definition, string pch\+Property\+Name, out string pch\+Value\+Buffer)\label{classValve_1_1Steamworks_1_1ISteamInventory_a5cf9b78e30909bd1502cc78d490ae487}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+Steamworks/steam\+\_\+api\+\_\+interop.\+cs\end{DoxyCompactItemize}

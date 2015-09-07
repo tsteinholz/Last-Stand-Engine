@@ -1,0 +1,82 @@
+\hypertarget{classISteamApps}{}\section{I\+Steam\+Apps Class Reference}
+\label{classISteamApps}\index{I\+Steam\+Apps@{I\+Steam\+Apps}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classISteamApps_a46b1314886cad0fc36b86a2e417c1932}{}virtual bool {\bfseries B\+Is\+Subscribed} ()=0\label{classISteamApps_a46b1314886cad0fc36b86a2e417c1932}
+
+\item 
+\hypertarget{classISteamApps_abf824c3b654c953f11518de5afc2e6ab}{}virtual bool {\bfseries B\+Is\+Low\+Violence} ()=0\label{classISteamApps_abf824c3b654c953f11518de5afc2e6ab}
+
+\item 
+\hypertarget{classISteamApps_a3c090ea4660143a30c76ee3571122afa}{}virtual bool {\bfseries B\+Is\+Cybercafe} ()=0\label{classISteamApps_a3c090ea4660143a30c76ee3571122afa}
+
+\item 
+\hypertarget{classISteamApps_a0a3eeb3fbc774390d8652605527dadac}{}virtual bool {\bfseries B\+Is\+V\+A\+C\+Banned} ()=0\label{classISteamApps_a0a3eeb3fbc774390d8652605527dadac}
+
+\item 
+\hypertarget{classISteamApps_ada18d64c49d8139f85f00ee5cfc03d1b}{}virtual const char $\ast$ {\bfseries Get\+Current\+Game\+Language} ()=0\label{classISteamApps_ada18d64c49d8139f85f00ee5cfc03d1b}
+
+\item 
+\hypertarget{classISteamApps_a3ecdf69a129d1f58d8d1e11b38e534eb}{}virtual const char $\ast$ {\bfseries Get\+Available\+Game\+Languages} ()=0\label{classISteamApps_a3ecdf69a129d1f58d8d1e11b38e534eb}
+
+\item 
+\hypertarget{classISteamApps_a08d3b10f8c23035283448541211e9774}{}virtual bool {\bfseries B\+Is\+Subscribed\+App} (App\+Id\+\_\+t app\+I\+D)=0\label{classISteamApps_a08d3b10f8c23035283448541211e9774}
+
+\item 
+\hypertarget{classISteamApps_a183d85a7b9c38ec921e980d2ecce2dac}{}virtual bool {\bfseries B\+Is\+Dlc\+Installed} (App\+Id\+\_\+t app\+I\+D)=0\label{classISteamApps_a183d85a7b9c38ec921e980d2ecce2dac}
+
+\item 
+\hypertarget{classISteamApps_ac1c6be2c2d7337812994ddb4d8c04bf0}{}virtual uint32 {\bfseries Get\+Earliest\+Purchase\+Unix\+Time} (App\+Id\+\_\+t n\+App\+I\+D)=0\label{classISteamApps_ac1c6be2c2d7337812994ddb4d8c04bf0}
+
+\item 
+\hypertarget{classISteamApps_a513d6e5bb54c2885557f104279c02672}{}virtual bool {\bfseries B\+Is\+Subscribed\+From\+Free\+Weekend} ()=0\label{classISteamApps_a513d6e5bb54c2885557f104279c02672}
+
+\item 
+\hypertarget{classISteamApps_ac8002fc5232fc1d28d88a95b925e2a72}{}virtual \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Get\+D\+L\+C\+Count} ()=0\label{classISteamApps_ac8002fc5232fc1d28d88a95b925e2a72}
+
+\item 
+\hypertarget{classISteamApps_a5ec35d2fc8a3966d003cc653c3fe8c4a}{}virtual bool {\bfseries B\+Get\+D\+L\+C\+Data\+By\+Index} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} i\+D\+L\+C, App\+Id\+\_\+t $\ast$p\+App\+I\+D, bool $\ast$pb\+Available, char $\ast$pch\+Name, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cch\+Name\+Buffer\+Size)=0\label{classISteamApps_a5ec35d2fc8a3966d003cc653c3fe8c4a}
+
+\item 
+\hypertarget{classISteamApps_a534d0b9be923296863471570cab33ba1}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Install\+D\+L\+C} (App\+Id\+\_\+t n\+App\+I\+D)=0\label{classISteamApps_a534d0b9be923296863471570cab33ba1}
+
+\item 
+\hypertarget{classISteamApps_abf17987da1339b115f719a29020cefdb}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Uninstall\+D\+L\+C} (App\+Id\+\_\+t n\+App\+I\+D)=0\label{classISteamApps_abf17987da1339b115f719a29020cefdb}
+
+\item 
+\hypertarget{classISteamApps_a0d2c29431c950b9b0dc3ee7749b65e4e}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Request\+App\+Proof\+Of\+Purchase\+Key} (App\+Id\+\_\+t n\+App\+I\+D)=0\label{classISteamApps_a0d2c29431c950b9b0dc3ee7749b65e4e}
+
+\item 
+\hypertarget{classISteamApps_a22f4f5850142d0db3f2c897863cbeead}{}virtual bool {\bfseries Get\+Current\+Beta\+Name} (char $\ast$pch\+Name, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cch\+Name\+Buffer\+Size)=0\label{classISteamApps_a22f4f5850142d0db3f2c897863cbeead}
+
+\item 
+\hypertarget{classISteamApps_ac9b871437aa6525bfc09913962fd4ac9}{}virtual bool {\bfseries Mark\+Content\+Corrupt} (bool b\+Missing\+Files\+Only)=0\label{classISteamApps_ac9b871437aa6525bfc09913962fd4ac9}
+
+\item 
+\hypertarget{classISteamApps_ad99e47bcc0d1901f9b48ceb9fa3e5817}{}virtual uint32 {\bfseries Get\+Installed\+Depots} (App\+Id\+\_\+t app\+I\+D, Depot\+Id\+\_\+t $\ast$pvec\+Depots, uint32 c\+Max\+Depots)=0\label{classISteamApps_ad99e47bcc0d1901f9b48ceb9fa3e5817}
+
+\item 
+\hypertarget{classISteamApps_a86c5be43cca3fa093e598eb57b42597f}{}virtual uint32 {\bfseries Get\+App\+Install\+Dir} (App\+Id\+\_\+t app\+I\+D, char $\ast$pch\+Folder, uint32 cch\+Folder\+Buffer\+Size)=0\label{classISteamApps_a86c5be43cca3fa093e598eb57b42597f}
+
+\item 
+\hypertarget{classISteamApps_afb81b0d67c2922fd2b873d9e5b5d14b3}{}virtual bool {\bfseries B\+Is\+App\+Installed} (App\+Id\+\_\+t app\+I\+D)=0\label{classISteamApps_afb81b0d67c2922fd2b873d9e5b5d14b3}
+
+\item 
+\hypertarget{classISteamApps_ae0a88dea59c107a672a6f094bd0d4918}{}virtual \hyperlink{classCSteamID}{C\+Steam\+I\+D} {\bfseries Get\+App\+Owner} ()=0\label{classISteamApps_ae0a88dea59c107a672a6f094bd0d4918}
+
+\item 
+\hypertarget{classISteamApps_a1059376db03a5a9770261c9f84673bab}{}virtual const char $\ast$ {\bfseries Get\+Launch\+Query\+Param} (const char $\ast$pch\+Key)=0\label{classISteamApps_a1059376db03a5a9770261c9f84673bab}
+
+\item 
+\hypertarget{classISteamApps_acc1761598473891e65deecd0d0ec504c}{}virtual bool {\bfseries Get\+Dlc\+Download\+Progress} (App\+Id\+\_\+t n\+App\+I\+D, uint64 $\ast$pun\+Bytes\+Downloaded, uint64 $\ast$pun\+Bytes\+Total)=0\label{classISteamApps_acc1761598473891e65deecd0d0ec504c}
+
+\item 
+\hypertarget{classISteamApps_a0216a1584a17fd771bddc64a453052b8}{}virtual \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Get\+App\+Build\+Id} ()=0\label{classISteamApps_a0216a1584a17fd771bddc64a453052b8}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+Steamworks/isteamapps.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,85 @@
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking}{}\section{Valve.\+Steamworks.\+I\+Steam\+Networking Class Reference}
+\label{classValve_1_1Steamworks_1_1ISteamNetworking}\index{Valve.\+Steamworks.\+I\+Steam\+Networking@{Valve.\+Steamworks.\+I\+Steam\+Networking}}
+Inheritance diagram for Valve.\+Steamworks.\+I\+Steam\+Networking\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classValve_1_1Steamworks_1_1ISteamNetworking}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a3a4a43c494702182e2176cdaa1e7552f}{}abstract Int\+Ptr {\bfseries Get\+Int\+Ptr} ()\label{classValve_1_1Steamworks_1_1ISteamNetworking_a3a4a43c494702182e2176cdaa1e7552f}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_ae87925e76d6f39b23a722ff476e29800}{}abstract bool {\bfseries Send\+P2\+P\+Packet} (ulong steam\+I\+D\+Remote, Int\+Ptr pub\+Data, uint cub\+Data, uint e\+P2\+P\+Send\+Type, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Channel)\label{classValve_1_1Steamworks_1_1ISteamNetworking_ae87925e76d6f39b23a722ff476e29800}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a9d7a294dcb7754ca0d44a715ccee36f7}{}abstract bool {\bfseries Is\+P2\+P\+Packet\+Available} (ref uint pcub\+Msg\+Size, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Channel)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a9d7a294dcb7754ca0d44a715ccee36f7}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_ac55ed4a4f96a23f5a9a01d31781614b7}{}abstract bool {\bfseries Read\+P2\+P\+Packet} (Int\+Ptr pub\+Dest, uint cub\+Dest, ref uint pcub\+Msg\+Size, ref \hyperlink{structValve_1_1Steamworks_1_1CSteamID}{C\+Steam\+I\+D} psteam\+I\+D\+Remote, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Channel)\label{classValve_1_1Steamworks_1_1ISteamNetworking_ac55ed4a4f96a23f5a9a01d31781614b7}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a64aeaddce0b3a7957cf90a54d1e95f25}{}abstract bool {\bfseries Accept\+P2\+P\+Session\+With\+User} (ulong steam\+I\+D\+Remote)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a64aeaddce0b3a7957cf90a54d1e95f25}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a7960ee3d85348e4b49fb98447aef7762}{}abstract bool {\bfseries Close\+P2\+P\+Session\+With\+User} (ulong steam\+I\+D\+Remote)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a7960ee3d85348e4b49fb98447aef7762}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a8b782572a8c89ee220008042c6d77a7e}{}abstract bool {\bfseries Close\+P2\+P\+Channel\+With\+User} (ulong steam\+I\+D\+Remote, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Channel)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a8b782572a8c89ee220008042c6d77a7e}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a80398c441c26657f7ac4f0e2173b6c31}{}abstract bool {\bfseries Get\+P2\+P\+Session\+State} (ulong steam\+I\+D\+Remote, ref \hyperlink{structValve_1_1Steamworks_1_1P2PSessionState__t}{P2\+P\+Session\+State\+\_\+t} p\+Connection\+State)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a80398c441c26657f7ac4f0e2173b6c31}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_adc1e5d85e029e4a55042f218d963108f}{}abstract bool {\bfseries Allow\+P2\+P\+Packet\+Relay} (bool b\+Allow)\label{classValve_1_1Steamworks_1_1ISteamNetworking_adc1e5d85e029e4a55042f218d963108f}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a0ddc9d2254967d89c9838857de5ad243}{}abstract uint {\bfseries Create\+Listen\+Socket} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Virtual\+P2\+P\+Port, uint n\+I\+P, char n\+Port, bool b\+Allow\+Use\+Of\+Packet\+Relay)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a0ddc9d2254967d89c9838857de5ad243}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a1cd6430a404879d28e7c0b9c4ca706cd}{}abstract uint {\bfseries Create\+P2\+P\+Connection\+Socket} (ulong steam\+I\+D\+Target, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Virtual\+Port, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Timeout\+Sec, bool b\+Allow\+Use\+Of\+Packet\+Relay)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a1cd6430a404879d28e7c0b9c4ca706cd}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a2eb17da3d3d3d423cdcd20d8bc2b788a}{}abstract uint {\bfseries Create\+Connection\+Socket} (uint n\+I\+P, char n\+Port, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Timeout\+Sec)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a2eb17da3d3d3d423cdcd20d8bc2b788a}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a7f98a6261ed4cdd20deadb65082133da}{}abstract bool {\bfseries Destroy\+Socket} (uint h\+Socket, bool b\+Notify\+Remote\+End)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a7f98a6261ed4cdd20deadb65082133da}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_aa20e814e8d0ecd4aa6d8521da91a7e81}{}abstract bool {\bfseries Destroy\+Listen\+Socket} (uint h\+Socket, bool b\+Notify\+Remote\+End)\label{classValve_1_1Steamworks_1_1ISteamNetworking_aa20e814e8d0ecd4aa6d8521da91a7e81}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_aa1aac13d1eb9eae81245a1900810dfbe}{}abstract bool {\bfseries Send\+Data\+On\+Socket} (uint h\+Socket, Int\+Ptr pub\+Data, uint cub\+Data, bool b\+Reliable)\label{classValve_1_1Steamworks_1_1ISteamNetworking_aa1aac13d1eb9eae81245a1900810dfbe}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_aab9b9f7aadee3e0b75543ca3900faf81}{}abstract bool {\bfseries Is\+Data\+Available\+On\+Socket} (uint h\+Socket, ref uint pcub\+Msg\+Size)\label{classValve_1_1Steamworks_1_1ISteamNetworking_aab9b9f7aadee3e0b75543ca3900faf81}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a24987cc5c67199978d17c3163d0d8794}{}abstract bool {\bfseries Retrieve\+Data\+From\+Socket} (uint h\+Socket, Int\+Ptr pub\+Dest, uint cub\+Dest, ref uint pcub\+Msg\+Size)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a24987cc5c67199978d17c3163d0d8794}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a27e910ec24b1cf1c919f10e193a8678a}{}abstract bool {\bfseries Is\+Data\+Available} (uint h\+Listen\+Socket, ref uint pcub\+Msg\+Size, ref uint ph\+Socket)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a27e910ec24b1cf1c919f10e193a8678a}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_ab576bae8fa03d0d64f61ec850a28037d}{}abstract bool {\bfseries Retrieve\+Data} (uint h\+Listen\+Socket, Int\+Ptr pub\+Dest, uint cub\+Dest, ref uint pcub\+Msg\+Size, ref uint ph\+Socket)\label{classValve_1_1Steamworks_1_1ISteamNetworking_ab576bae8fa03d0d64f61ec850a28037d}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_af80f899fa36d4d26e4e24e0dc4e724a4}{}abstract bool {\bfseries Get\+Socket\+Info} (uint h\+Socket, ref \hyperlink{structValve_1_1Steamworks_1_1CSteamID}{C\+Steam\+I\+D} p\+Steam\+I\+D\+Remote, ref \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} pe\+Socket\+Status, ref uint pun\+I\+P\+Remote, ref char pun\+Port\+Remote)\label{classValve_1_1Steamworks_1_1ISteamNetworking_af80f899fa36d4d26e4e24e0dc4e724a4}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a5408b0cd6273dfc1fcee5b41d948b0db}{}abstract bool {\bfseries Get\+Listen\+Socket\+Info} (uint h\+Listen\+Socket, ref uint pn\+I\+P, ref char pn\+Port)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a5408b0cd6273dfc1fcee5b41d948b0db}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_a2cbc391ec97ebae45b154fa601402fcc}{}abstract uint {\bfseries Get\+Socket\+Connection\+Type} (uint h\+Socket)\label{classValve_1_1Steamworks_1_1ISteamNetworking_a2cbc391ec97ebae45b154fa601402fcc}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamNetworking_aaac1d1d16b568da50ecc71de2c2e5afb}{}abstract \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Get\+Max\+Packet\+Size} (uint h\+Socket)\label{classValve_1_1Steamworks_1_1ISteamNetworking_aaac1d1d16b568da50ecc71de2c2e5afb}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+Steamworks/steam\+\_\+api\+\_\+interop.\+cs\end{DoxyCompactItemize}

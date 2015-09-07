@@ -1,0 +1,118 @@
+\hypertarget{classISteamClient}{}\section{I\+Steam\+Client Class Reference}
+\label{classISteamClient}\index{I\+Steam\+Client@{I\+Steam\+Client}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classISteamClient_af1a132da5595a07c840d0d9bb64fd1d0}{}virtual H\+Steam\+Pipe {\bfseries Create\+Steam\+Pipe} ()=0\label{classISteamClient_af1a132da5595a07c840d0d9bb64fd1d0}
+
+\item 
+\hypertarget{classISteamClient_a0e01d600680fc53fc8d853abb2e5127c}{}virtual bool {\bfseries B\+Release\+Steam\+Pipe} (H\+Steam\+Pipe h\+Steam\+Pipe)=0\label{classISteamClient_a0e01d600680fc53fc8d853abb2e5127c}
+
+\item 
+\hypertarget{classISteamClient_a0555d20dc6895a73e4720f9cc600785a}{}virtual H\+Steam\+User {\bfseries Connect\+To\+Global\+User} (H\+Steam\+Pipe h\+Steam\+Pipe)=0\label{classISteamClient_a0555d20dc6895a73e4720f9cc600785a}
+
+\item 
+\hypertarget{classISteamClient_a193afd8a8935c529fc858f915501e4ea}{}virtual H\+Steam\+User {\bfseries Create\+Local\+User} (H\+Steam\+Pipe $\ast$ph\+Steam\+Pipe, E\+Account\+Type e\+Account\+Type)=0\label{classISteamClient_a193afd8a8935c529fc858f915501e4ea}
+
+\item 
+\hypertarget{classISteamClient_a2b7b04158cd24d62c20c90cb6a15012e}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Release\+User} (H\+Steam\+Pipe h\+Steam\+Pipe, H\+Steam\+User h\+User)=0\label{classISteamClient_a2b7b04158cd24d62c20c90cb6a15012e}
+
+\item 
+\hypertarget{classISteamClient_acb544ee18aa49b7437a0ab41d5daa172}{}virtual \hyperlink{classISteamUser}{I\+Steam\+User} $\ast$ {\bfseries Get\+I\+Steam\+User} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_acb544ee18aa49b7437a0ab41d5daa172}
+
+\item 
+\hypertarget{classISteamClient_a2bbffcddb8783778ab163d0c1f382d68}{}virtual \hyperlink{classISteamGameServer}{I\+Steam\+Game\+Server} $\ast$ {\bfseries Get\+I\+Steam\+Game\+Server} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a2bbffcddb8783778ab163d0c1f382d68}
+
+\item 
+\hypertarget{classISteamClient_acaee3078223ff010a46fbe5bee6a7881}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Set\+Local\+I\+P\+Binding} (uint32 un\+I\+P, uint16 us\+Port)=0\label{classISteamClient_acaee3078223ff010a46fbe5bee6a7881}
+
+\item 
+\hypertarget{classISteamClient_a1eb67def9a75c7cf14074603e4b44c7f}{}virtual \hyperlink{classISteamFriends}{I\+Steam\+Friends} $\ast$ {\bfseries Get\+I\+Steam\+Friends} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a1eb67def9a75c7cf14074603e4b44c7f}
+
+\item 
+\hypertarget{classISteamClient_a3c523da8128b20dddde198d356ace3d7}{}virtual \hyperlink{classISteamUtils}{I\+Steam\+Utils} $\ast$ {\bfseries Get\+I\+Steam\+Utils} (H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a3c523da8128b20dddde198d356ace3d7}
+
+\item 
+\hypertarget{classISteamClient_a8d9bed8c5c37dace44183b979787b413}{}virtual \hyperlink{classISteamMatchmaking}{I\+Steam\+Matchmaking} $\ast$ {\bfseries Get\+I\+Steam\+Matchmaking} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a8d9bed8c5c37dace44183b979787b413}
+
+\item 
+\hypertarget{classISteamClient_a1d0ed3637f3ae4676b17e7f8c97ffd11}{}virtual \hyperlink{classISteamMatchmakingServers}{I\+Steam\+Matchmaking\+Servers} $\ast$ {\bfseries Get\+I\+Steam\+Matchmaking\+Servers} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a1d0ed3637f3ae4676b17e7f8c97ffd11}
+
+\item 
+\hypertarget{classISteamClient_aad3b43b98208df31ed17b1f25eaf851e}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} $\ast$ {\bfseries Get\+I\+Steam\+Generic\+Interface} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_aad3b43b98208df31ed17b1f25eaf851e}
+
+\item 
+\hypertarget{classISteamClient_a9de6d0cc891d7d7b197030008c2760e0}{}virtual \hyperlink{classISteamUserStats}{I\+Steam\+User\+Stats} $\ast$ {\bfseries Get\+I\+Steam\+User\+Stats} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a9de6d0cc891d7d7b197030008c2760e0}
+
+\item 
+\hypertarget{classISteamClient_a6316ed5714844a65a4ad92d12c935a91}{}virtual \hyperlink{classISteamGameServerStats}{I\+Steam\+Game\+Server\+Stats} $\ast$ {\bfseries Get\+I\+Steam\+Game\+Server\+Stats} (H\+Steam\+User h\+Steamuser, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a6316ed5714844a65a4ad92d12c935a91}
+
+\item 
+\hypertarget{classISteamClient_a24f3e6244221d1c0a88b012cb559431d}{}virtual \hyperlink{classISteamApps}{I\+Steam\+Apps} $\ast$ {\bfseries Get\+I\+Steam\+Apps} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a24f3e6244221d1c0a88b012cb559431d}
+
+\item 
+\hypertarget{classISteamClient_a5b6ec0445c5d2b201c1e288e4c3cce0f}{}virtual \hyperlink{classISteamNetworking}{I\+Steam\+Networking} $\ast$ {\bfseries Get\+I\+Steam\+Networking} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a5b6ec0445c5d2b201c1e288e4c3cce0f}
+
+\item 
+\hypertarget{classISteamClient_ae8f418face2268f97d3cc8bf3c218b3e}{}virtual \hyperlink{classISteamRemoteStorage}{I\+Steam\+Remote\+Storage} $\ast$ {\bfseries Get\+I\+Steam\+Remote\+Storage} (H\+Steam\+User h\+Steamuser, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_ae8f418face2268f97d3cc8bf3c218b3e}
+
+\item 
+\hypertarget{classISteamClient_a49f324188e527bf77ec96550e3fed294}{}virtual \hyperlink{classISteamScreenshots}{I\+Steam\+Screenshots} $\ast$ {\bfseries Get\+I\+Steam\+Screenshots} (H\+Steam\+User h\+Steamuser, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a49f324188e527bf77ec96550e3fed294}
+
+\item 
+\hypertarget{classISteamClient_a6aff221d1b97839ebfc77a37709b34a8}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Run\+Frame} ()=0\label{classISteamClient_a6aff221d1b97839ebfc77a37709b34a8}
+
+\item 
+\hypertarget{classISteamClient_a65968ceb6cde78ac0f661d2560a71c1d}{}virtual uint32 {\bfseries Get\+I\+P\+C\+Call\+Count} ()=0\label{classISteamClient_a65968ceb6cde78ac0f661d2560a71c1d}
+
+\item 
+\hypertarget{classISteamClient_a3ed1292f4e10c9817a7f58d78661979d}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Set\+Warning\+Message\+Hook} (Steam\+A\+P\+I\+Warning\+Message\+Hook\+\_\+t p\+Function)=0\label{classISteamClient_a3ed1292f4e10c9817a7f58d78661979d}
+
+\item 
+\hypertarget{classISteamClient_a17835d1bba0fc6b9ca901034159538ff}{}virtual bool {\bfseries B\+Shutdown\+If\+All\+Pipes\+Closed} ()=0\label{classISteamClient_a17835d1bba0fc6b9ca901034159538ff}
+
+\item 
+\hypertarget{classISteamClient_ab2d3f0ac0c549a30446281b1540373e6}{}virtual \hyperlink{classISteamHTTP}{I\+Steam\+H\+T\+T\+P} $\ast$ {\bfseries Get\+I\+Steam\+H\+T\+T\+P} (H\+Steam\+User h\+Steamuser, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_ab2d3f0ac0c549a30446281b1540373e6}
+
+\item 
+\hypertarget{classISteamClient_a0bab727a7193d47e93c2927405ccbd06}{}virtual \hyperlink{classISteamUnifiedMessages}{I\+Steam\+Unified\+Messages} $\ast$ {\bfseries Get\+I\+Steam\+Unified\+Messages} (H\+Steam\+User h\+Steamuser, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a0bab727a7193d47e93c2927405ccbd06}
+
+\item 
+\hypertarget{classISteamClient_a0531bd3d6001a10c041d15accaf17f5b}{}virtual \hyperlink{classISteamController}{I\+Steam\+Controller} $\ast$ {\bfseries Get\+I\+Steam\+Controller} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a0531bd3d6001a10c041d15accaf17f5b}
+
+\item 
+\hypertarget{classISteamClient_a8c10ba747f7bd892506f8c1bf198552c}{}virtual \hyperlink{classISteamUGC}{I\+Steam\+U\+G\+C} $\ast$ {\bfseries Get\+I\+Steam\+U\+G\+C} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a8c10ba747f7bd892506f8c1bf198552c}
+
+\item 
+\hypertarget{classISteamClient_a2de12d3b253767a74b0112b542c7e7b1}{}virtual \hyperlink{classISteamAppList}{I\+Steam\+App\+List} $\ast$ {\bfseries Get\+I\+Steam\+App\+List} (H\+Steam\+User h\+Steam\+User, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a2de12d3b253767a74b0112b542c7e7b1}
+
+\item 
+\hypertarget{classISteamClient_ab5580f6c84a63c879ca5685180775632}{}virtual \hyperlink{classISteamMusic}{I\+Steam\+Music} $\ast$ {\bfseries Get\+I\+Steam\+Music} (H\+Steam\+User h\+Steamuser, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_ab5580f6c84a63c879ca5685180775632}
+
+\item 
+\hypertarget{classISteamClient_aff68d261527fd710c0787736f1e5e75b}{}virtual \hyperlink{classISteamMusicRemote}{I\+Steam\+Music\+Remote} $\ast$ {\bfseries Get\+I\+Steam\+Music\+Remote} (H\+Steam\+User h\+Steamuser, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_aff68d261527fd710c0787736f1e5e75b}
+
+\item 
+\hypertarget{classISteamClient_a6a1eb108665dc05f2ce7916944ddf2a1}{}virtual \hyperlink{classISteamHTMLSurface}{I\+Steam\+H\+T\+M\+L\+Surface} $\ast$ {\bfseries Get\+I\+Steam\+H\+T\+M\+L\+Surface} (H\+Steam\+User h\+Steamuser, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a6a1eb108665dc05f2ce7916944ddf2a1}
+
+\item 
+\hypertarget{classISteamClient_a3b756103e24ca04a96d877c0e7e36bf9}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Set\+\_\+\+Steam\+A\+P\+I\+\_\+\+C\+Post\+A\+P\+I\+Result\+In\+Process} (Steam\+A\+P\+I\+\_\+\+Post\+A\+P\+I\+Result\+In\+Process\+\_\+t func)=0\label{classISteamClient_a3b756103e24ca04a96d877c0e7e36bf9}
+
+\item 
+\hypertarget{classISteamClient_ac794eda1c21a3e43ff049f3343b119ad}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Remove\+\_\+\+Steam\+A\+P\+I\+\_\+\+C\+Post\+A\+P\+I\+Result\+In\+Process} (Steam\+A\+P\+I\+\_\+\+Post\+A\+P\+I\+Result\+In\+Process\+\_\+t func)=0\label{classISteamClient_ac794eda1c21a3e43ff049f3343b119ad}
+
+\item 
+\hypertarget{classISteamClient_ad1601470ace7e54208d4e1c77dbb4cb2}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Set\+\_\+\+Steam\+A\+P\+I\+\_\+\+C\+Check\+Callback\+Registered\+In\+Process} (Steam\+A\+P\+I\+\_\+\+Check\+Callback\+Registered\+\_\+t func)=0\label{classISteamClient_ad1601470ace7e54208d4e1c77dbb4cb2}
+
+\item 
+\hypertarget{classISteamClient_a19f151e23cab90e10a7a87f88488dd3b}{}virtual \hyperlink{classISteamInventory}{I\+Steam\+Inventory} $\ast$ {\bfseries Get\+I\+Steam\+Inventory} (H\+Steam\+User h\+Steamuser, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a19f151e23cab90e10a7a87f88488dd3b}
+
+\item 
+\hypertarget{classISteamClient_a977b955b16685e80756acbe20ecfe277}{}virtual \hyperlink{classISteamVideo}{I\+Steam\+Video} $\ast$ {\bfseries Get\+I\+Steam\+Video} (H\+Steam\+User h\+Steamuser, H\+Steam\+Pipe h\+Steam\+Pipe, const char $\ast$pch\+Version)=0\label{classISteamClient_a977b955b16685e80756acbe20ecfe277}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+Steamworks/isteamclient.\+h\end{DoxyCompactItemize}

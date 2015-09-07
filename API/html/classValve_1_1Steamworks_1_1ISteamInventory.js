@@ -1,0 +1,26 @@
+var classValve_1_1Steamworks_1_1ISteamInventory =
+[
+    [ "AddPromoItem", "classValve_1_1Steamworks_1_1ISteamInventory.html#a0b3533ad6195af2bfff5c0ce5845aee1", null ],
+    [ "AddPromoItems", "classValve_1_1Steamworks_1_1ISteamInventory.html#adfac90a327c23bb410251e0a3072ae65", null ],
+    [ "CheckResultSteamID", "classValve_1_1Steamworks_1_1ISteamInventory.html#a8628cff2db1fe3ef51c90e3b8164e4a8", null ],
+    [ "ConsumeItem", "classValve_1_1Steamworks_1_1ISteamInventory.html#aa1bbee3e122211c0fbcc38a670302cfc", null ],
+    [ "DeserializeResult", "classValve_1_1Steamworks_1_1ISteamInventory.html#a564b0e694f5893ce6909bada77fa7396", null ],
+    [ "DestroyResult", "classValve_1_1Steamworks_1_1ISteamInventory.html#a1b119a6fe54631f08f5e7b19444274e9", null ],
+    [ "ExchangeItems", "classValve_1_1Steamworks_1_1ISteamInventory.html#a4eca29ea3864941b825210fc434c2ee2", null ],
+    [ "GenerateItems", "classValve_1_1Steamworks_1_1ISteamInventory.html#abd7ad5fb853eb11443b5d4a0f37f08cc", null ],
+    [ "GetAllItems", "classValve_1_1Steamworks_1_1ISteamInventory.html#a291f8f29df629f31eaf885ce8835f664", null ],
+    [ "GetIntPtr", "classValve_1_1Steamworks_1_1ISteamInventory.html#a945c0ad486580f85db879b8d16079bdc", null ],
+    [ "GetItemDefinitionIDs", "classValve_1_1Steamworks_1_1ISteamInventory.html#a35fe8728f2f79c4ecf18e9f8dcab1c2f", null ],
+    [ "GetItemDefinitionProperty", "classValve_1_1Steamworks_1_1ISteamInventory.html#a5cf9b78e30909bd1502cc78d490ae487", null ],
+    [ "GetItemsByID", "classValve_1_1Steamworks_1_1ISteamInventory.html#a029cc1eeb474203a35441de0bebe8e73", null ],
+    [ "GetResultItems", "classValve_1_1Steamworks_1_1ISteamInventory.html#ab7afe612ae7df5f31c54952e27fb589d", null ],
+    [ "GetResultStatus", "classValve_1_1Steamworks_1_1ISteamInventory.html#a7f9e72b9a89e2837586905c84e01835c", null ],
+    [ "GetResultTimestamp", "classValve_1_1Steamworks_1_1ISteamInventory.html#a3a049b0eed5bc583c6ae781e8ec675e2", null ],
+    [ "GrantPromoItems", "classValve_1_1Steamworks_1_1ISteamInventory.html#a7ad0b246a8de397929482a982bcb47ee", null ],
+    [ "LoadItemDefinitions", "classValve_1_1Steamworks_1_1ISteamInventory.html#a1043e65d28eeeb09412520b9c63df01d", null ],
+    [ "SendItemDropHeartbeat", "classValve_1_1Steamworks_1_1ISteamInventory.html#af631ad216b43fc6da71113939e2e0fb6", null ],
+    [ "SerializeResult", "classValve_1_1Steamworks_1_1ISteamInventory.html#a04372cad5c10418482108963e8bfbcbb", null ],
+    [ "TradeItems", "classValve_1_1Steamworks_1_1ISteamInventory.html#a84ce05ce4e83b1de05d1208c8fa13ee7", null ],
+    [ "TransferItemQuantity", "classValve_1_1Steamworks_1_1ISteamInventory.html#a6e441bcfc7be7f59d496b8f024257243", null ],
+    [ "TriggerItemDrop", "classValve_1_1Steamworks_1_1ISteamInventory.html#ad464aae9677e1161f9d97e1321c34cf4", null ]
+];

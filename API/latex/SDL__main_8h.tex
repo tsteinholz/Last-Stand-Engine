@@ -1,0 +1,47 @@
+\hypertarget{SDL__main_8h}{}\section{D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+S\+D\+L2/\+S\+D\+L\+\_\+main.h File Reference}
+\label{SDL__main_8h}\index{D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+S\+D\+L2/\+S\+D\+L\+\_\+main.\+h@{D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+S\+D\+L2/\+S\+D\+L\+\_\+main.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+C\+\_\+\+L\+I\+N\+K\+A\+G\+E \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} \hyperlink{SDL__main_8h_abebe82923d88787c3718e201b3e62295}{S\+D\+L\+\_\+main} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} S\+D\+L\+C\+A\+L\+L \hyperlink{SDL__main_8h_a6a4bb5ffb489bf0956bc1b813397306d}{S\+D\+L\+\_\+\+Set\+Main\+Ready} (\hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Redefine main() on some platforms so that it is called by S\+D\+L.
+
+The application\textquotesingle{}s main() function must be called with C linkage, and should be declared like this\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#ifdef \_\_cplusplus}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"}
+\textcolor{preprocessor}{#endif}
+\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])
+\{
+\}
+\end{DoxyCode}
+ 
+
+\subsection{Function Documentation}
+\hypertarget{SDL__main_8h_abebe82923d88787c3718e201b3e62295}{}\index{S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}!S\+D\+L\+\_\+main@{S\+D\+L\+\_\+main}}
+\index{S\+D\+L\+\_\+main@{S\+D\+L\+\_\+main}!S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}}
+\subsubsection[{S\+D\+L\+\_\+main(int argc, char $\ast$argv[])}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+L\+I\+N\+K\+A\+G\+E {\bf int} S\+D\+L\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{SDL__main_8h_abebe82923d88787c3718e201b3e62295}
+The prototype for the application\textquotesingle{}s main() function \hypertarget{SDL__main_8h_a6a4bb5ffb489bf0956bc1b813397306d}{}\index{S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}!S\+D\+L\+\_\+\+Set\+Main\+Ready@{S\+D\+L\+\_\+\+Set\+Main\+Ready}}
+\index{S\+D\+L\+\_\+\+Set\+Main\+Ready@{S\+D\+L\+\_\+\+Set\+Main\+Ready}!S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Main\+Ready(void)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf void} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Set\+Main\+Ready (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{SDL__main_8h_a6a4bb5ffb489bf0956bc1b813397306d}
+This is called by the real S\+D\+L main function to let the rest of the library know that initialization was done properly.
+
+Calling this yourself without knowing what you\textquotesingle{}re doing can cause crashes and hard to diagnose problems with your application. 

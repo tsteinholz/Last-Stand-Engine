@@ -1,0 +1,124 @@
+\hypertarget{classISteamMatchmaking}{}\section{I\+Steam\+Matchmaking Class Reference}
+\label{classISteamMatchmaking}\index{I\+Steam\+Matchmaking@{I\+Steam\+Matchmaking}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classISteamMatchmaking_a6be9442319d642a4d73270b81db845f8}{}virtual \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Get\+Favorite\+Game\+Count} ()=0\label{classISteamMatchmaking_a6be9442319d642a4d73270b81db845f8}
+
+\item 
+\hypertarget{classISteamMatchmaking_a81aa9e83108de1baa3944f24a470e96e}{}virtual bool {\bfseries Get\+Favorite\+Game} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} i\+Game, App\+Id\+\_\+t $\ast$pn\+App\+I\+D, uint32 $\ast$pn\+I\+P, uint16 $\ast$pn\+Conn\+Port, uint16 $\ast$pn\+Query\+Port, uint32 $\ast$pun\+Flags, uint32 $\ast$p\+R\+Time32\+Last\+Played\+On\+Server)=0\label{classISteamMatchmaking_a81aa9e83108de1baa3944f24a470e96e}
+
+\item 
+\hypertarget{classISteamMatchmaking_aedae56e457b44270b6bc3a1e8558fee7}{}virtual \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Add\+Favorite\+Game} (App\+Id\+\_\+t n\+App\+I\+D, uint32 n\+I\+P, uint16 n\+Conn\+Port, uint16 n\+Query\+Port, uint32 un\+Flags, uint32 r\+Time32\+Last\+Played\+On\+Server)=0\label{classISteamMatchmaking_aedae56e457b44270b6bc3a1e8558fee7}
+
+\item 
+\hypertarget{classISteamMatchmaking_a598b028a11268947068416171fec6181}{}virtual bool {\bfseries Remove\+Favorite\+Game} (App\+Id\+\_\+t n\+App\+I\+D, uint32 n\+I\+P, uint16 n\+Conn\+Port, uint16 n\+Query\+Port, uint32 un\+Flags)=0\label{classISteamMatchmaking_a598b028a11268947068416171fec6181}
+
+\item 
+\hypertarget{classISteamMatchmaking_ab11d5a805d6b00605fa60f28d1a6de4b}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Request\+Lobby\+List} ()=0\label{classISteamMatchmaking_ab11d5a805d6b00605fa60f28d1a6de4b}
+
+\item 
+\hypertarget{classISteamMatchmaking_aa001d585efefb54852f5569726232947}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Add\+Request\+Lobby\+List\+String\+Filter} (const char $\ast$pch\+Key\+To\+Match, const char $\ast$pch\+Value\+To\+Match, E\+Lobby\+Comparison e\+Comparison\+Type)=0\label{classISteamMatchmaking_aa001d585efefb54852f5569726232947}
+
+\item 
+\hypertarget{classISteamMatchmaking_a9b3409ec2ef08baaeb025009def84acd}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Add\+Request\+Lobby\+List\+Numerical\+Filter} (const char $\ast$pch\+Key\+To\+Match, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Value\+To\+Match, E\+Lobby\+Comparison e\+Comparison\+Type)=0\label{classISteamMatchmaking_a9b3409ec2ef08baaeb025009def84acd}
+
+\item 
+\hypertarget{classISteamMatchmaking_a6977bdd1ce695749985c61668c3e4758}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Add\+Request\+Lobby\+List\+Near\+Value\+Filter} (const char $\ast$pch\+Key\+To\+Match, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Value\+To\+Be\+Close\+To)=0\label{classISteamMatchmaking_a6977bdd1ce695749985c61668c3e4758}
+
+\item 
+\hypertarget{classISteamMatchmaking_a9575334e8b8368a4d4ac15174bc251ca}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Add\+Request\+Lobby\+List\+Filter\+Slots\+Available} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Slots\+Available)=0\label{classISteamMatchmaking_a9575334e8b8368a4d4ac15174bc251ca}
+
+\item 
+\hypertarget{classISteamMatchmaking_a3531dd34afff30653f000770a8b5ba67}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Add\+Request\+Lobby\+List\+Distance\+Filter} (E\+Lobby\+Distance\+Filter e\+Lobby\+Distance\+Filter)=0\label{classISteamMatchmaking_a3531dd34afff30653f000770a8b5ba67}
+
+\item 
+\hypertarget{classISteamMatchmaking_a7af4082331b6a35ceee7450c7b00f21f}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Add\+Request\+Lobby\+List\+Result\+Count\+Filter} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} c\+Max\+Results)=0\label{classISteamMatchmaking_a7af4082331b6a35ceee7450c7b00f21f}
+
+\item 
+\hypertarget{classISteamMatchmaking_aa2bcffc943566ee3c03b593cca4e0a22}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Add\+Request\+Lobby\+List\+Compatible\+Members\+Filter} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby)=0\label{classISteamMatchmaking_aa2bcffc943566ee3c03b593cca4e0a22}
+
+\item 
+\hypertarget{classISteamMatchmaking_ae22f461db3ff301594791b0171ed3631}{}virtual \hyperlink{classCSteamID}{C\+Steam\+I\+D} {\bfseries Get\+Lobby\+By\+Index} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} i\+Lobby)=0\label{classISteamMatchmaking_ae22f461db3ff301594791b0171ed3631}
+
+\item 
+\hypertarget{classISteamMatchmaking_a2c291ead7d67a5df0cceb77a88a6d0a9}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Create\+Lobby} (E\+Lobby\+Type e\+Lobby\+Type, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} c\+Max\+Members)=0\label{classISteamMatchmaking_a2c291ead7d67a5df0cceb77a88a6d0a9}
+
+\item 
+\hypertarget{classISteamMatchmaking_a8dc517d730ddaa8311816244ceeac287}{}virtual Steam\+A\+P\+I\+Call\+\_\+t {\bfseries Join\+Lobby} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby)=0\label{classISteamMatchmaking_a8dc517d730ddaa8311816244ceeac287}
+
+\item 
+\hypertarget{classISteamMatchmaking_a2a13b13352f6df85977dff74c4ddcd5d}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Leave\+Lobby} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby)=0\label{classISteamMatchmaking_a2a13b13352f6df85977dff74c4ddcd5d}
+
+\item 
+\hypertarget{classISteamMatchmaking_a08c063280445302f22b028986f51cb24}{}virtual bool {\bfseries Invite\+User\+To\+Lobby} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, \hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Invitee)=0\label{classISteamMatchmaking_a08c063280445302f22b028986f51cb24}
+
+\item 
+\hypertarget{classISteamMatchmaking_aac140a79a6024335b3779cfd68f6d925}{}virtual \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Get\+Num\+Lobby\+Members} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby)=0\label{classISteamMatchmaking_aac140a79a6024335b3779cfd68f6d925}
+
+\item 
+\hypertarget{classISteamMatchmaking_af482f04ee3661cce04ad736b596cd0bd}{}virtual \hyperlink{classCSteamID}{C\+Steam\+I\+D} {\bfseries Get\+Lobby\+Member\+By\+Index} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} i\+Member)=0\label{classISteamMatchmaking_af482f04ee3661cce04ad736b596cd0bd}
+
+\item 
+\hypertarget{classISteamMatchmaking_a4a06e468689eae616b1d7c42a7a974e1}{}virtual const char $\ast$ {\bfseries Get\+Lobby\+Data} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, const char $\ast$pch\+Key)=0\label{classISteamMatchmaking_a4a06e468689eae616b1d7c42a7a974e1}
+
+\item 
+\hypertarget{classISteamMatchmaking_a70674d1431d8213b0401ac85b0e9ff12}{}virtual bool {\bfseries Set\+Lobby\+Data} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, const char $\ast$pch\+Key, const char $\ast$pch\+Value)=0\label{classISteamMatchmaking_a70674d1431d8213b0401ac85b0e9ff12}
+
+\item 
+\hypertarget{classISteamMatchmaking_ab97a7c5766d3b6d412ac472b21aef311}{}virtual \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Get\+Lobby\+Data\+Count} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby)=0\label{classISteamMatchmaking_ab97a7c5766d3b6d412ac472b21aef311}
+
+\item 
+\hypertarget{classISteamMatchmaking_a023c45bec3f3aec3934254440b87b1ed}{}virtual bool {\bfseries Get\+Lobby\+Data\+By\+Index} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} i\+Lobby\+Data, char $\ast$pch\+Key, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cch\+Key\+Buffer\+Size, char $\ast$pch\+Value, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cch\+Value\+Buffer\+Size)=0\label{classISteamMatchmaking_a023c45bec3f3aec3934254440b87b1ed}
+
+\item 
+\hypertarget{classISteamMatchmaking_a1cfc86681d82aee096417445c3c267f9}{}virtual bool {\bfseries Delete\+Lobby\+Data} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, const char $\ast$pch\+Key)=0\label{classISteamMatchmaking_a1cfc86681d82aee096417445c3c267f9}
+
+\item 
+\hypertarget{classISteamMatchmaking_abb257e70af749cd2f0df597bb42a524b}{}virtual const char $\ast$ {\bfseries Get\+Lobby\+Member\+Data} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, \hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+User, const char $\ast$pch\+Key)=0\label{classISteamMatchmaking_abb257e70af749cd2f0df597bb42a524b}
+
+\item 
+\hypertarget{classISteamMatchmaking_ad3c5489202c48de93c220f6ed4a33984}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Set\+Lobby\+Member\+Data} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, const char $\ast$pch\+Key, const char $\ast$pch\+Value)=0\label{classISteamMatchmaking_ad3c5489202c48de93c220f6ed4a33984}
+
+\item 
+\hypertarget{classISteamMatchmaking_a2313c8f7e00721028a06fc5b02086328}{}virtual bool {\bfseries Send\+Lobby\+Chat\+Msg} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, const \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} $\ast$pv\+Msg\+Body, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cub\+Msg\+Body)=0\label{classISteamMatchmaking_a2313c8f7e00721028a06fc5b02086328}
+
+\item 
+\hypertarget{classISteamMatchmaking_ac3b95d7676fea362221864d0b351b627}{}virtual \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Get\+Lobby\+Chat\+Entry} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} i\+Chat\+I\+D, O\+U\+T\+\_\+\+S\+T\+R\+U\+C\+T() \hyperlink{classCSteamID}{C\+Steam\+I\+D} $\ast$p\+Steam\+I\+D\+User, \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} $\ast$pv\+Data, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cub\+Data, E\+Chat\+Entry\+Type $\ast$pe\+Chat\+Entry\+Type)=0\label{classISteamMatchmaking_ac3b95d7676fea362221864d0b351b627}
+
+\item 
+\hypertarget{classISteamMatchmaking_ac2a3833252fac7c6104697d0cbf3b55a}{}virtual bool {\bfseries Request\+Lobby\+Data} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby)=0\label{classISteamMatchmaking_ac2a3833252fac7c6104697d0cbf3b55a}
+
+\item 
+\hypertarget{classISteamMatchmaking_a661394f63eb32200983d537e3d5c0053}{}virtual \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Set\+Lobby\+Game\+Server} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, uint32 un\+Game\+Server\+I\+P, uint16 un\+Game\+Server\+Port, \hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Game\+Server)=0\label{classISteamMatchmaking_a661394f63eb32200983d537e3d5c0053}
+
+\item 
+\hypertarget{classISteamMatchmaking_a07494e80748d60c2ff2e42b360c07037}{}virtual bool {\bfseries Get\+Lobby\+Game\+Server} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, uint32 $\ast$pun\+Game\+Server\+I\+P, uint16 $\ast$pun\+Game\+Server\+Port, O\+U\+T\+\_\+\+S\+T\+R\+U\+C\+T() \hyperlink{classCSteamID}{C\+Steam\+I\+D} $\ast$psteam\+I\+D\+Game\+Server)=0\label{classISteamMatchmaking_a07494e80748d60c2ff2e42b360c07037}
+
+\item 
+\hypertarget{classISteamMatchmaking_a94cdc2b5934ac9d9ef1e46cff99567b6}{}virtual bool {\bfseries Set\+Lobby\+Member\+Limit} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} c\+Max\+Members)=0\label{classISteamMatchmaking_a94cdc2b5934ac9d9ef1e46cff99567b6}
+
+\item 
+\hypertarget{classISteamMatchmaking_a3960497e79085ce68298e1ca4df3db8b}{}virtual \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Get\+Lobby\+Member\+Limit} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby)=0\label{classISteamMatchmaking_a3960497e79085ce68298e1ca4df3db8b}
+
+\item 
+\hypertarget{classISteamMatchmaking_a9d85958d0c5e4b297ddfc5e1002f7c71}{}virtual bool {\bfseries Set\+Lobby\+Type} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, E\+Lobby\+Type e\+Lobby\+Type)=0\label{classISteamMatchmaking_a9d85958d0c5e4b297ddfc5e1002f7c71}
+
+\item 
+\hypertarget{classISteamMatchmaking_a129730d6f22fa5846353eb6ef9b0884b}{}virtual bool {\bfseries Set\+Lobby\+Joinable} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, bool b\+Lobby\+Joinable)=0\label{classISteamMatchmaking_a129730d6f22fa5846353eb6ef9b0884b}
+
+\item 
+\hypertarget{classISteamMatchmaking_a265ce1a6914a06cb686fd03c2cbca392}{}virtual \hyperlink{classCSteamID}{C\+Steam\+I\+D} {\bfseries Get\+Lobby\+Owner} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby)=0\label{classISteamMatchmaking_a265ce1a6914a06cb686fd03c2cbca392}
+
+\item 
+\hypertarget{classISteamMatchmaking_a48d0d64252c77988d56230ebc592d4b9}{}virtual bool {\bfseries Set\+Lobby\+Owner} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, \hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+New\+Owner)=0\label{classISteamMatchmaking_a48d0d64252c77988d56230ebc592d4b9}
+
+\item 
+\hypertarget{classISteamMatchmaking_a0d78ede35fb2a3faffa229d69ac3dadc}{}virtual bool {\bfseries Set\+Linked\+Lobby} (\hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby, \hyperlink{classCSteamID}{C\+Steam\+I\+D} steam\+I\+D\+Lobby\+Dependent)=0\label{classISteamMatchmaking_a0d78ede35fb2a3faffa229d69ac3dadc}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+Steamworks/isteammatchmaking.\+h\end{DoxyCompactItemize}

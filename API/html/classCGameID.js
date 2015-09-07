@@ -1,0 +1,26 @@
+var classCGameID =
+[
+    [ "CGameID", "classCGameID.html#a2f2d7800ae718bc0f55d5cc43fd83f14", null ],
+    [ "CGameID", "classCGameID.html#a3f833c2bd97da350cdb77fa264b3c9e2", null ],
+    [ "CGameID", "classCGameID.html#a96e5600addc687e432945d102591b61d", null ],
+    [ "CGameID", "classCGameID.html#a7845bba8193c37dcf1bb2c1bff8bba7a", null ],
+    [ "CGameID", "classCGameID.html#a198b763a13ab6406b07d529ea6071d19", null ],
+    [ "CGameID", "classCGameID.html#a0955f9635e905aa9e249ce5067c00ce4", null ],
+    [ "AppID", "classCGameID.html#a331ea93af4d6ff0e24913f39b92467fe", null ],
+    [ "GetUint64Ptr", "classCGameID.html#a2af52420d7023920dc5114b763b53fad", null ],
+    [ "IsMod", "classCGameID.html#ab008a82b9cc3ac17d74343077a9c22c1", null ],
+    [ "IsP2PFile", "classCGameID.html#adb9ccd1964e1307101532f2e1245f63f", null ],
+    [ "IsShortcut", "classCGameID.html#adf682a287d4b8a7e75ab2bb5b0af8a49", null ],
+    [ "IsSteamApp", "classCGameID.html#a9f69a4a43a53608ac6c376d2e6ec27c4", null ],
+    [ "IsValid", "classCGameID.html#ad5a03abe7b45695e0834f1820a376839", null ],
+    [ "ModID", "classCGameID.html#abbd2340fd4e8c237264be18b6a98f6fb", null ],
+    [ "operator!=", "classCGameID.html#a1d75dfbe7c0496413860df614d631796", null ],
+    [ "operator<", "classCGameID.html#a6b07e2ed5932d0617ad466fa67f62c83", null ],
+    [ "operator==", "classCGameID.html#a69684f6ac11ff6a41446cff82beaa022", null ],
+    [ "Render", "classCGameID.html#ae2ca56798d448fb48535ddd07ccf1ae4", null ],
+    [ "Reset", "classCGameID.html#aa9cc9ed21dcbcaa0d353d606e29d08ab", null ],
+    [ "Set", "classCGameID.html#a0d3c64046047f1924be71178ac96fde1", null ],
+    [ "ToUint64", "classCGameID.html#adc416d14b03b0736c758c32b1ebb3472", null ],
+    [ "m_gameID", "classCGameID.html#a832e099f2748b934bd0a5e964a211c3d", null ],
+    [ "m_ulGameID", "classCGameID.html#aa625d19eb8e366c0dac57412f64f419e", null ]
+];

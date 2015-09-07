@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['p2psessionconnectfail_5ft',['P2PSessionConnectFail_t',['../structP2PSessionConnectFail__t.html',1,'']]],
+  ['p2psessionconnectfail_5ft',['P2PSessionConnectFail_t',['../structValve_1_1Steamworks_1_1P2PSessionConnectFail__t.html',1,'Valve::Steamworks']]],
+  ['p2psessionrequest_5ft',['P2PSessionRequest_t',['../structValve_1_1Steamworks_1_1P2PSessionRequest__t.html',1,'Valve::Steamworks']]],
+  ['p2psessionrequest_5ft',['P2PSessionRequest_t',['../structP2PSessionRequest__t.html',1,'']]],
+  ['p2psessionstate_5ft',['P2PSessionState_t',['../structP2PSessionState__t.html',1,'']]],
+  ['p2psessionstate_5ft',['P2PSessionState_t',['../structValve_1_1Steamworks_1_1P2PSessionState__t.html',1,'Valve::Steamworks']]],
+  ['personastatechange_5ft',['PersonaStateChange_t',['../structPersonaStateChange__t.html',1,'']]],
+  ['personastatechange_5ft',['PersonaStateChange_t',['../structValve_1_1Steamworks_1_1PersonaStateChange__t.html',1,'Valve::Steamworks']]],
+  ['ps3jpginit_5ft',['Ps3jpgInit_t',['../structSteamPS3Params__t_1_1Ps3jpgInit__t.html',1,'SteamPS3Params_t']]],
+  ['ps3netinit_5ft',['Ps3netInit_t',['../structSteamPS3Params__t_1_1Ps3netInit__t.html',1,'SteamPS3Params_t']]],
+  ['ps3pnginit_5ft',['Ps3pngInit_t',['../structSteamPS3Params__t_1_1Ps3pngInit__t.html',1,'SteamPS3Params_t']]],
+  ['ps3sysutiluserinfo_5ft',['Ps3sysutilUserInfo_t',['../structSteamPS3Params__t_1_1Ps3sysutilUserInfo__t.html',1,'SteamPS3Params_t']]],
+  ['ps3trophiesinstalled_5ft',['PS3TrophiesInstalled_t',['../structValve_1_1Steamworks_1_1PS3TrophiesInstalled__t.html',1,'Valve::Steamworks']]],
+  ['ps3trophiesinstalled_5ft',['PS3TrophiesInstalled_t',['../structPS3TrophiesInstalled__t.html',1,'']]],
+  ['psngamebootinviteresult_5ft',['PSNGameBootInviteResult_t',['../structPSNGameBootInviteResult__t.html',1,'']]],
+  ['psngamebootinviteresult_5ft',['PSNGameBootInviteResult_t',['../structValve_1_1Steamworks_1_1PSNGameBootInviteResult__t.html',1,'Valve::Steamworks']]]
+];

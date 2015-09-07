@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['favoriteslistaccountsupdated_5ft',['FavoritesListAccountsUpdated_t',['../structFavoritesListAccountsUpdated__t.html',1,'']]],
+  ['favoriteslistaccountsupdated_5ft',['FavoritesListAccountsUpdated_t',['../structValve_1_1Steamworks_1_1FavoritesListAccountsUpdated__t.html',1,'Valve::Steamworks']]],
+  ['favoriteslistchanged_5ft',['FavoritesListChanged_t',['../structValve_1_1Steamworks_1_1FavoritesListChanged__t.html',1,'Valve::Steamworks']]],
+  ['favoriteslistchanged_5ft',['FavoritesListChanged_t',['../structFavoritesListChanged__t.html',1,'']]],
+  ['friendgameinfo_5ft',['FriendGameInfo_t',['../structValve_1_1Steamworks_1_1FriendGameInfo__t.html',1,'Valve::Steamworks']]],
+  ['friendgameinfo_5ft',['FriendGameInfo_t',['../structFriendGameInfo__t.html',1,'']]],
+  ['friendrichpresenceupdate_5ft',['FriendRichPresenceUpdate_t',['../structFriendRichPresenceUpdate__t.html',1,'']]],
+  ['friendrichpresenceupdate_5ft',['FriendRichPresenceUpdate_t',['../structValve_1_1Steamworks_1_1FriendRichPresenceUpdate__t.html',1,'Valve::Steamworks']]],
+  ['friendsenumeratefollowinglist_5ft',['FriendsEnumerateFollowingList_t',['../structValve_1_1Steamworks_1_1FriendsEnumerateFollowingList__t.html',1,'Valve::Steamworks']]],
+  ['friendsenumeratefollowinglist_5ft',['FriendsEnumerateFollowingList_t',['../structFriendsEnumerateFollowingList__t.html',1,'']]],
+  ['friendsessionstateinfo_5ft',['FriendSessionStateInfo_t',['../structValve_1_1Steamworks_1_1FriendSessionStateInfo__t.html',1,'Valve::Steamworks']]],
+  ['friendsessionstateinfo_5ft',['FriendSessionStateInfo_t',['../structFriendSessionStateInfo__t.html',1,'']]],
+  ['friendsgetfollowercount_5ft',['FriendsGetFollowerCount_t',['../structValve_1_1Steamworks_1_1FriendsGetFollowerCount__t.html',1,'Valve::Steamworks']]],
+  ['friendsgetfollowercount_5ft',['FriendsGetFollowerCount_t',['../structFriendsGetFollowerCount__t.html',1,'']]],
+  ['friendsisfollowing_5ft',['FriendsIsFollowing_t',['../structValve_1_1Steamworks_1_1FriendsIsFollowing__t.html',1,'Valve::Steamworks']]],
+  ['friendsisfollowing_5ft',['FriendsIsFollowing_t',['../structFriendsIsFollowing__t.html',1,'']]]
+];

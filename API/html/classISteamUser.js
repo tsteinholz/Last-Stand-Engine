@@ -1,0 +1,28 @@
+var classISteamUser =
+[
+    [ "AdvertiseGame", "classISteamUser.html#a07f6db96869e033a13b13e54f7ce2235", null ],
+    [ "BeginAuthSession", "classISteamUser.html#a43f76c4da6eda398d1838a58f1ec4374", null ],
+    [ "BIsBehindNAT", "classISteamUser.html#acb4dd088859b733337936c9766f7790f", null ],
+    [ "BLoggedOn", "classISteamUser.html#a29e4a5e59dee5867f60732311fad2c4e", null ],
+    [ "CancelAuthTicket", "classISteamUser.html#a6c278ab86639cc929816d8f3b7a17a77", null ],
+    [ "DecompressVoice", "classISteamUser.html#ae351f90e7f95f945baeef5d7cf7c6760", null ],
+    [ "EndAuthSession", "classISteamUser.html#adc1f5a4bb8630ee630a09625e1abdba1", null ],
+    [ "GetAuthSessionTicket", "classISteamUser.html#a5ffd1e0131e3a74d961f6014a823a4cc", null ],
+    [ "GetAvailableVoice", "classISteamUser.html#ac8b5ce5ab977e11631f1865e116f7def", null ],
+    [ "GetEncryptedAppTicket", "classISteamUser.html#a4c5ea66df88fd0527d1a51179638d44a", null ],
+    [ "GetGameBadgeLevel", "classISteamUser.html#afceb88c7b3241d23d3279650543d5d13", null ],
+    [ "GetHSteamUser", "classISteamUser.html#a17e683a53cb649d324d0614bece5a539", null ],
+    [ "GetPlayerSteamLevel", "classISteamUser.html#ae4b393de52cb73b353f8edba83838864", null ],
+    [ "GetSteamID", "classISteamUser.html#a5a7659a6147a7bd3c0acf4065c3bed36", null ],
+    [ "GetUserDataFolder", "classISteamUser.html#ad9338e70287a15571c8ffc998e49d338", null ],
+    [ "GetVoice", "classISteamUser.html#a250ed50e33e6f8ae39229e0e1f440e1b", null ],
+    [ "GetVoiceOptimalSampleRate", "classISteamUser.html#a7f0b1a2069a471b88559995432ed5a01", null ],
+    [ "InitiateGameConnection", "classISteamUser.html#ab243e44f96ea3070d7973deaa013afbd", null ],
+    [ "RequestEncryptedAppTicket", "classISteamUser.html#a1ac14d72bff3350b59605826992fc176", null ],
+    [ "RequestStoreAuthURL", "classISteamUser.html#a8e4441998c39deed78c78f14a9ef29b7", null ],
+    [ "StartVoiceRecording", "classISteamUser.html#a7f2e7fa09cf2fc1da25ff8601b917978", null ],
+    [ "StopVoiceRecording", "classISteamUser.html#a8c66f7f9a4b5c81ae16e1db7be286bff", null ],
+    [ "TerminateGameConnection", "classISteamUser.html#a67de2694f5b1abb4b22612ea3a43e46c", null ],
+    [ "TrackAppUsageEvent", "classISteamUser.html#a4f8099764ca59d6557a6a6174faa3883", null ],
+    [ "UserHasLicenseForApp", "classISteamUser.html#a925dc981e305be647259d138cfd362f6", null ]
+];

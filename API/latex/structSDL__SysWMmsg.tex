@@ -1,0 +1,52 @@
+\hypertarget{structSDL__SysWMmsg}{}\section{S\+D\+L\+\_\+\+Sys\+W\+Mmsg Struct Reference}
+\label{structSDL__SysWMmsg}\index{S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+syswm.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structSDL__SysWMmsg_a95f9aae58d18ee8fac556416b322a5fb}{}\hyperlink{structSDL__version}{S\+D\+L\+\_\+version} {\bfseries version}\label{structSDL__SysWMmsg_a95f9aae58d18ee8fac556416b322a5fb}
+
+\item 
+\hypertarget{structSDL__SysWMmsg_a7c3900af5ea797f1318fc77ee0ecd11b}{}\hyperlink{SDL__syswm_8h_a064c26598287280fff2a00d6758ac4f7}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+P\+E} {\bfseries subsystem}\label{structSDL__SysWMmsg_a7c3900af5ea797f1318fc77ee0ecd11b}
+
+\item 
+\hypertarget{structSDL__SysWMmsg_a8890abd547a386afa3a822f15568c162}{}\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>HWND \hyperlink{structSDL__SysWMmsg_a55cf9583b5eddfe60a5c9851f9cce457}{hwnd}\\
+\>\>UINT \hyperlink{structSDL__SysWMmsg_a74894ed060d5508ab06aac584154d61e}{msg}\\
+\>\>WPARAM \hyperlink{structSDL__SysWMmsg_a7463730478d90ebc031d83098f3f74fc}{wParam}\\
+\>\>LPARAM \hyperlink{structSDL__SysWMmsg_a24c1e4c3cb8d9781d34e5d99df66ac36}{lParam}\\
+\>\} {\bfseries win}\\
+\>\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries dummy}\\
+\} {\bfseries msg}\label{structSDL__SysWMmsg_a8890abd547a386afa3a822f15568c162}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The custom event structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structSDL__SysWMmsg_a55cf9583b5eddfe60a5c9851f9cce457}{}\index{S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}!hwnd@{hwnd}}
+\index{hwnd@{hwnd}!S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}
+\subsubsection[{hwnd}]{\setlength{\rightskip}{0pt plus 5cm}H\+W\+N\+D S\+D\+L\+\_\+\+Sys\+W\+Mmsg\+::hwnd}\label{structSDL__SysWMmsg_a55cf9583b5eddfe60a5c9851f9cce457}
+The window for the message \hypertarget{structSDL__SysWMmsg_a24c1e4c3cb8d9781d34e5d99df66ac36}{}\index{S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}!l\+Param@{l\+Param}}
+\index{l\+Param@{l\+Param}!S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}
+\subsubsection[{l\+Param}]{\setlength{\rightskip}{0pt plus 5cm}L\+P\+A\+R\+A\+M S\+D\+L\+\_\+\+Sys\+W\+Mmsg\+::l\+Param}\label{structSDL__SysWMmsg_a24c1e4c3cb8d9781d34e5d99df66ac36}
+L\+O\+N\+G message parameter \hypertarget{structSDL__SysWMmsg_a74894ed060d5508ab06aac584154d61e}{}\index{S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}!msg@{msg}}
+\index{msg@{msg}!S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}
+\subsubsection[{msg}]{\setlength{\rightskip}{0pt plus 5cm}U\+I\+N\+T S\+D\+L\+\_\+\+Sys\+W\+Mmsg\+::msg}\label{structSDL__SysWMmsg_a74894ed060d5508ab06aac584154d61e}
+The type of message \hypertarget{structSDL__SysWMmsg_a7463730478d90ebc031d83098f3f74fc}{}\index{S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}!w\+Param@{w\+Param}}
+\index{w\+Param@{w\+Param}!S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}
+\subsubsection[{w\+Param}]{\setlength{\rightskip}{0pt plus 5cm}W\+P\+A\+R\+A\+M S\+D\+L\+\_\+\+Sys\+W\+Mmsg\+::w\+Param}\label{structSDL__SysWMmsg_a7463730478d90ebc031d83098f3f74fc}
+W\+O\+R\+D message parameter 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+S\+D\+L2/\hyperlink{SDL__syswm_8h}{S\+D\+L\+\_\+syswm.\+h}\end{DoxyCompactItemize}

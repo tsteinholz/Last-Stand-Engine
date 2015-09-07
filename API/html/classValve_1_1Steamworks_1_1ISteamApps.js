@@ -1,0 +1,28 @@
+var classValve_1_1Steamworks_1_1ISteamApps =
+[
+    [ "BGetDLCDataByIndex", "classValve_1_1Steamworks_1_1ISteamApps.html#afad40d11887aa32e67ff4299db15a285", null ],
+    [ "BIsAppInstalled", "classValve_1_1Steamworks_1_1ISteamApps.html#ac8d7a107007a69f3a295d9001c590473", null ],
+    [ "BIsCybercafe", "classValve_1_1Steamworks_1_1ISteamApps.html#a2727f519a4b5bae152fa8dc192f1f4aa", null ],
+    [ "BIsDlcInstalled", "classValve_1_1Steamworks_1_1ISteamApps.html#a3370c53a6d5ca6c7d07a5898bf121eab", null ],
+    [ "BIsLowViolence", "classValve_1_1Steamworks_1_1ISteamApps.html#af724ff28ff5eaf5693068449c75ae5a7", null ],
+    [ "BIsSubscribed", "classValve_1_1Steamworks_1_1ISteamApps.html#a4ed56e234f93ea00d1822e2f0e539067", null ],
+    [ "BIsSubscribedApp", "classValve_1_1Steamworks_1_1ISteamApps.html#a7f9a199ed73c765ebf51986d5018e72c", null ],
+    [ "BIsSubscribedFromFreeWeekend", "classValve_1_1Steamworks_1_1ISteamApps.html#acafdd68163f6fbc25f5e84033f478904", null ],
+    [ "BIsVACBanned", "classValve_1_1Steamworks_1_1ISteamApps.html#a9711a5e73dd48935807993064ab4fb1f", null ],
+    [ "GetAppBuildId", "classValve_1_1Steamworks_1_1ISteamApps.html#a44931c736316a7ea15879d888872b2aa", null ],
+    [ "GetAppInstallDir", "classValve_1_1Steamworks_1_1ISteamApps.html#aa57cfb5a8f19dada66cde96db63db625", null ],
+    [ "GetAppOwner", "classValve_1_1Steamworks_1_1ISteamApps.html#a4a2f5c9fba081170757ed6e9a9d08bc7", null ],
+    [ "GetAvailableGameLanguages", "classValve_1_1Steamworks_1_1ISteamApps.html#ab932bba41dd284858909876ba1ea7738", null ],
+    [ "GetCurrentBetaName", "classValve_1_1Steamworks_1_1ISteamApps.html#a24ee7b2dc681f3706d5228066a6140df", null ],
+    [ "GetCurrentGameLanguage", "classValve_1_1Steamworks_1_1ISteamApps.html#a74fe7f58fe008b4000fde86a5464779b", null ],
+    [ "GetDLCCount", "classValve_1_1Steamworks_1_1ISteamApps.html#a8601df8475470561c923c528eef34c1f", null ],
+    [ "GetDlcDownloadProgress", "classValve_1_1Steamworks_1_1ISteamApps.html#acd2ca6d039e750934907100279ff166f", null ],
+    [ "GetEarliestPurchaseUnixTime", "classValve_1_1Steamworks_1_1ISteamApps.html#ab4d33dc6402b631a9556a02f34787d78", null ],
+    [ "GetInstalledDepots", "classValve_1_1Steamworks_1_1ISteamApps.html#a83c93fe07db04f0e56b86e91c1366a23", null ],
+    [ "GetIntPtr", "classValve_1_1Steamworks_1_1ISteamApps.html#a21606a4a3470f5c65dce5702c8d68799", null ],
+    [ "GetLaunchQueryParam", "classValve_1_1Steamworks_1_1ISteamApps.html#a0b6a32da2410f10420b9c5341473026f", null ],
+    [ "InstallDLC", "classValve_1_1Steamworks_1_1ISteamApps.html#aa400ca6418a5e97d5e191880c7e43177", null ],
+    [ "MarkContentCorrupt", "classValve_1_1Steamworks_1_1ISteamApps.html#ad01716209399450a37f52b3db03e8fc0", null ],
+    [ "RequestAppProofOfPurchaseKey", "classValve_1_1Steamworks_1_1ISteamApps.html#ab4cc69cc377927e9908586bace00619b", null ],
+    [ "UninstallDLC", "classValve_1_1Steamworks_1_1ISteamApps.html#aa7ccd1307aaf66986efea6861232dce7", null ]
+];

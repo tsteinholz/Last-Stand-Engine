@@ -1,0 +1,94 @@
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP}{}\section{Valve.\+Steamworks.\+I\+Steam\+H\+T\+T\+P Class Reference}
+\label{classValve_1_1Steamworks_1_1ISteamHTTP}\index{Valve.\+Steamworks.\+I\+Steam\+H\+T\+T\+P@{Valve.\+Steamworks.\+I\+Steam\+H\+T\+T\+P}}
+Inheritance diagram for Valve.\+Steamworks.\+I\+Steam\+H\+T\+T\+P\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classValve_1_1Steamworks_1_1ISteamHTTP}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a4860af724b6982ddc4e2a6bbacb333e5}{}abstract Int\+Ptr {\bfseries Get\+Int\+Ptr} ()\label{classValve_1_1Steamworks_1_1ISteamHTTP_a4860af724b6982ddc4e2a6bbacb333e5}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a2e886d1dc6b51b8dcf7824d30dd5d526}{}abstract uint {\bfseries Create\+H\+T\+T\+P\+Request} (uint e\+H\+T\+T\+P\+Request\+Method, string pch\+Absolute\+U\+R\+L)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a2e886d1dc6b51b8dcf7824d30dd5d526}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a99579808fe80cd66dad111dafc9db130}{}abstract bool {\bfseries Set\+H\+T\+T\+P\+Request\+Context\+Value} (uint h\+Request, ulong ul\+Context\+Value)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a99579808fe80cd66dad111dafc9db130}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_ad0a025bbb725a139e6ca38a690a92984}{}abstract bool {\bfseries Set\+H\+T\+T\+P\+Request\+Network\+Activity\+Timeout} (uint h\+Request, uint un\+Timeout\+Seconds)\label{classValve_1_1Steamworks_1_1ISteamHTTP_ad0a025bbb725a139e6ca38a690a92984}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_aa39cf6a78678862ed3ffb8ca55293b6e}{}abstract bool {\bfseries Set\+H\+T\+T\+P\+Request\+Header\+Value} (uint h\+Request, string pch\+Header\+Name, string pch\+Header\+Value)\label{classValve_1_1Steamworks_1_1ISteamHTTP_aa39cf6a78678862ed3ffb8ca55293b6e}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a34772dec6721b108e289be06be296ad8}{}abstract bool {\bfseries Set\+H\+T\+T\+P\+Request\+Get\+Or\+Post\+Parameter} (uint h\+Request, string pch\+Param\+Name, string pch\+Param\+Value)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a34772dec6721b108e289be06be296ad8}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_aea9cbcd6efb34f5fd8aa1da317fa4356}{}abstract bool {\bfseries Send\+H\+T\+T\+P\+Request} (uint h\+Request, ref ulong p\+Call\+Handle)\label{classValve_1_1Steamworks_1_1ISteamHTTP_aea9cbcd6efb34f5fd8aa1da317fa4356}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a648a5e8e58125e9e31a1ebb5bb08506c}{}abstract bool {\bfseries Send\+H\+T\+T\+P\+Request\+And\+Stream\+Response} (uint h\+Request, ref ulong p\+Call\+Handle)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a648a5e8e58125e9e31a1ebb5bb08506c}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_aeedc029de0626593c1642723eb697110}{}abstract bool {\bfseries Defer\+H\+T\+T\+P\+Request} (uint h\+Request)\label{classValve_1_1Steamworks_1_1ISteamHTTP_aeedc029de0626593c1642723eb697110}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_ab851e87f31ac556fe562813f56a0d23c}{}abstract bool {\bfseries Prioritize\+H\+T\+T\+P\+Request} (uint h\+Request)\label{classValve_1_1Steamworks_1_1ISteamHTTP_ab851e87f31ac556fe562813f56a0d23c}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_adbf0dbd3e35ffc691d3dda06ccac00a6}{}abstract bool {\bfseries Get\+H\+T\+T\+P\+Response\+Header\+Size} (uint h\+Request, string pch\+Header\+Name, ref uint un\+Response\+Header\+Size)\label{classValve_1_1Steamworks_1_1ISteamHTTP_adbf0dbd3e35ffc691d3dda06ccac00a6}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_af39c4cde56d629cfce6fbe2aaefd224e}{}abstract bool {\bfseries Get\+H\+T\+T\+P\+Response\+Header\+Value} (uint h\+Request, string pch\+Header\+Name, Int\+Ptr p\+Header\+Value\+Buffer, uint un\+Buffer\+Size)\label{classValve_1_1Steamworks_1_1ISteamHTTP_af39c4cde56d629cfce6fbe2aaefd224e}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a11ef4ed524479aebd51eda1f51f7eaae}{}abstract bool {\bfseries Get\+H\+T\+T\+P\+Response\+Body\+Size} (uint h\+Request, ref uint un\+Body\+Size)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a11ef4ed524479aebd51eda1f51f7eaae}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_ae6bce94268b0487f9e27c5d1de6859c7}{}abstract bool {\bfseries Get\+H\+T\+T\+P\+Response\+Body\+Data} (uint h\+Request, Int\+Ptr p\+Body\+Data\+Buffer, uint un\+Buffer\+Size)\label{classValve_1_1Steamworks_1_1ISteamHTTP_ae6bce94268b0487f9e27c5d1de6859c7}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_afab00e3e6e32350ac2266271fa18ca49}{}abstract bool {\bfseries Get\+H\+T\+T\+P\+Streaming\+Response\+Body\+Data} (uint h\+Request, uint c\+Offset, Int\+Ptr p\+Body\+Data\+Buffer, uint un\+Buffer\+Size)\label{classValve_1_1Steamworks_1_1ISteamHTTP_afab00e3e6e32350ac2266271fa18ca49}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a06a078758d648454c8cc789c199976b9}{}abstract bool {\bfseries Release\+H\+T\+T\+P\+Request} (uint h\+Request)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a06a078758d648454c8cc789c199976b9}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a468e5fcaebdf637f301b398ab617c189}{}abstract bool {\bfseries Get\+H\+T\+T\+P\+Download\+Progress\+Pct} (uint h\+Request, ref float pfl\+Percent\+Out)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a468e5fcaebdf637f301b398ab617c189}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a8e337468e847388bed731a172f63ef4b}{}abstract bool {\bfseries Set\+H\+T\+T\+P\+Request\+Raw\+Post\+Body} (uint h\+Request, string pch\+Content\+Type, Int\+Ptr pub\+Body, uint un\+Body\+Len)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a8e337468e847388bed731a172f63ef4b}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a4dee39a058db0d38f41569591ef1387e}{}abstract uint {\bfseries Create\+Cookie\+Container} (bool b\+Allow\+Responses\+To\+Modify)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a4dee39a058db0d38f41569591ef1387e}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_aae333bc60a83754bb18b5c1d15514ab0}{}abstract bool {\bfseries Release\+Cookie\+Container} (uint h\+Cookie\+Container)\label{classValve_1_1Steamworks_1_1ISteamHTTP_aae333bc60a83754bb18b5c1d15514ab0}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_aab78173a82cbfd0a989e7457c6d1632c}{}abstract bool {\bfseries Set\+Cookie} (uint h\+Cookie\+Container, string pch\+Host, string pch\+Url, string pch\+Cookie)\label{classValve_1_1Steamworks_1_1ISteamHTTP_aab78173a82cbfd0a989e7457c6d1632c}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a6633d485f3eb8d28a04fb114ab3ece6d}{}abstract bool {\bfseries Set\+H\+T\+T\+P\+Request\+Cookie\+Container} (uint h\+Request, uint h\+Cookie\+Container)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a6633d485f3eb8d28a04fb114ab3ece6d}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_af4d1e0c5b5a9ebe1bfcf67687a0a8fb2}{}abstract bool {\bfseries Set\+H\+T\+T\+P\+Request\+User\+Agent\+Info} (uint h\+Request, string pch\+User\+Agent\+Info)\label{classValve_1_1Steamworks_1_1ISteamHTTP_af4d1e0c5b5a9ebe1bfcf67687a0a8fb2}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a86be9aa92c1c154b8ad8060a2ef18e74}{}abstract bool {\bfseries Set\+H\+T\+T\+P\+Request\+Requires\+Verified\+Certificate} (uint h\+Request, bool b\+Require\+Verified\+Certificate)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a86be9aa92c1c154b8ad8060a2ef18e74}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_aa9a51b12b02d224c5bcbd09754f8801a}{}abstract bool {\bfseries Set\+H\+T\+T\+P\+Request\+Absolute\+Timeout\+M\+S} (uint h\+Request, uint un\+Milliseconds)\label{classValve_1_1Steamworks_1_1ISteamHTTP_aa9a51b12b02d224c5bcbd09754f8801a}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamHTTP_a38784cab3c8be214ee6e835fea17c3f5}{}abstract bool {\bfseries Get\+H\+T\+T\+P\+Request\+Was\+Timed\+Out} (uint h\+Request, ref bool pb\+Was\+Timed\+Out)\label{classValve_1_1Steamworks_1_1ISteamHTTP_a38784cab3c8be214ee6e835fea17c3f5}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+Steamworks/steam\+\_\+api\+\_\+interop.\+cs\end{DoxyCompactItemize}

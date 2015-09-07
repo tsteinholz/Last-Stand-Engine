@@ -1,0 +1,94 @@
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser}{}\section{Valve.\+Steamworks.\+I\+Steam\+User Class Reference}
+\label{classValve_1_1Steamworks_1_1ISteamUser}\index{Valve.\+Steamworks.\+I\+Steam\+User@{Valve.\+Steamworks.\+I\+Steam\+User}}
+Inheritance diagram for Valve.\+Steamworks.\+I\+Steam\+User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classValve_1_1Steamworks_1_1ISteamUser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a03641087a3e87977882fff5e28ad488f}{}abstract Int\+Ptr {\bfseries Get\+Int\+Ptr} ()\label{classValve_1_1Steamworks_1_1ISteamUser_a03641087a3e87977882fff5e28ad488f}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a6fd30c4f036297a6070b7e210de236d7}{}abstract uint {\bfseries Get\+H\+Steam\+User} ()\label{classValve_1_1Steamworks_1_1ISteamUser_a6fd30c4f036297a6070b7e210de236d7}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a639e4ff98c9e00e663a45c23b7a1caa5}{}abstract bool {\bfseries B\+Logged\+On} ()\label{classValve_1_1Steamworks_1_1ISteamUser_a639e4ff98c9e00e663a45c23b7a1caa5}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a05257ca98d7900a7b6534649dec57b30}{}abstract ulong {\bfseries Get\+Steam\+I\+D} ()\label{classValve_1_1Steamworks_1_1ISteamUser_a05257ca98d7900a7b6534649dec57b30}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a6000129518ef947cf80f6f92b8e710b4}{}abstract \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Initiate\+Game\+Connection} (Int\+Ptr p\+Auth\+Blob, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cb\+Max\+Auth\+Blob, ulong steam\+I\+D\+Game\+Server, uint un\+I\+P\+Server, char us\+Port\+Server, bool b\+Secure)\label{classValve_1_1Steamworks_1_1ISteamUser_a6000129518ef947cf80f6f92b8e710b4}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_afe59b3cee1c0cbbd3e084f70e1e83d4e}{}abstract \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Terminate\+Game\+Connection} (uint un\+I\+P\+Server, char us\+Port\+Server)\label{classValve_1_1Steamworks_1_1ISteamUser_afe59b3cee1c0cbbd3e084f70e1e83d4e}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a224d42cb17ee31d1b7c7051c2b7ba9cc}{}abstract \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Track\+App\+Usage\+Event} (ulong game\+I\+D, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} e\+App\+Usage\+Event, string pch\+Extra\+Info)\label{classValve_1_1Steamworks_1_1ISteamUser_a224d42cb17ee31d1b7c7051c2b7ba9cc}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a57163b1abae9de4e23dbb2de9ac82954}{}abstract bool {\bfseries Get\+User\+Data\+Folder} (string pch\+Buffer, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cub\+Buffer)\label{classValve_1_1Steamworks_1_1ISteamUser_a57163b1abae9de4e23dbb2de9ac82954}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a06b25883eaf14b74baac82a5cc1267ba}{}abstract \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Start\+Voice\+Recording} ()\label{classValve_1_1Steamworks_1_1ISteamUser_a06b25883eaf14b74baac82a5cc1267ba}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a5dda1c2673d924716fe8a7ba4546ce32}{}abstract \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Stop\+Voice\+Recording} ()\label{classValve_1_1Steamworks_1_1ISteamUser_a5dda1c2673d924716fe8a7ba4546ce32}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a39875c4b7af7092ce5cc3b741253fb62}{}abstract uint {\bfseries Get\+Available\+Voice} (ref uint pcb\+Compressed, ref uint pcb\+Uncompressed, uint n\+Uncompressed\+Voice\+Desired\+Sample\+Rate)\label{classValve_1_1Steamworks_1_1ISteamUser_a39875c4b7af7092ce5cc3b741253fb62}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a4f59a157dd72b2c7d1f0d768b4ce3fdf}{}abstract uint {\bfseries Get\+Voice} (bool b\+Want\+Compressed, Int\+Ptr p\+Dest\+Buffer, uint cb\+Dest\+Buffer\+Size, ref uint n\+Bytes\+Written, bool b\+Want\+Uncompressed, Int\+Ptr p\+Uncompressed\+Dest\+Buffer, uint cb\+Uncompressed\+Dest\+Buffer\+Size, ref uint n\+Uncompress\+Bytes\+Written, uint n\+Uncompressed\+Voice\+Desired\+Sample\+Rate)\label{classValve_1_1Steamworks_1_1ISteamUser_a4f59a157dd72b2c7d1f0d768b4ce3fdf}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_ac9b710ab3abc47b2ef716bba4b3a70cd}{}abstract uint {\bfseries Decompress\+Voice} (Int\+Ptr p\+Compressed, uint cb\+Compressed, Int\+Ptr p\+Dest\+Buffer, uint cb\+Dest\+Buffer\+Size, ref uint n\+Bytes\+Written, uint n\+Desired\+Sample\+Rate)\label{classValve_1_1Steamworks_1_1ISteamUser_ac9b710ab3abc47b2ef716bba4b3a70cd}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a76dc681a9b91fb29726b302763edfe04}{}abstract uint {\bfseries Get\+Voice\+Optimal\+Sample\+Rate} ()\label{classValve_1_1Steamworks_1_1ISteamUser_a76dc681a9b91fb29726b302763edfe04}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a3e56f6ab9c27dd10b6f79b04f63fe0ad}{}abstract uint {\bfseries Get\+Auth\+Session\+Ticket} (Int\+Ptr p\+Ticket, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cb\+Max\+Ticket, ref uint pcb\+Ticket)\label{classValve_1_1Steamworks_1_1ISteamUser_a3e56f6ab9c27dd10b6f79b04f63fe0ad}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a00e59ade00702761d6ad9f7a832c883d}{}abstract uint {\bfseries Begin\+Auth\+Session} (Int\+Ptr p\+Auth\+Ticket, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cb\+Auth\+Ticket, ulong steam\+I\+D)\label{classValve_1_1Steamworks_1_1ISteamUser_a00e59ade00702761d6ad9f7a832c883d}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a75f85dac08cc323a2c3fe3d1f2f4a92c}{}abstract \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries End\+Auth\+Session} (ulong steam\+I\+D)\label{classValve_1_1Steamworks_1_1ISteamUser_a75f85dac08cc323a2c3fe3d1f2f4a92c}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_ac64cf98166f7679bc0e15bb4b1869598}{}abstract \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Cancel\+Auth\+Ticket} (uint h\+Auth\+Ticket)\label{classValve_1_1Steamworks_1_1ISteamUser_ac64cf98166f7679bc0e15bb4b1869598}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a4985bd96456f31e7f89a0637a2f3a366}{}abstract uint {\bfseries User\+Has\+License\+For\+App} (ulong steam\+I\+D, uint app\+I\+D)\label{classValve_1_1Steamworks_1_1ISteamUser_a4985bd96456f31e7f89a0637a2f3a366}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_ae0b7d38f71c0287b4910f70f1275bd1b}{}abstract bool {\bfseries B\+Is\+Behind\+N\+A\+T} ()\label{classValve_1_1Steamworks_1_1ISteamUser_ae0b7d38f71c0287b4910f70f1275bd1b}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a384df64decb0e3a8cd98379850c75cfc}{}abstract \hyperlink{SDL__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries Advertise\+Game} (ulong steam\+I\+D\+Game\+Server, uint un\+I\+P\+Server, char us\+Port\+Server)\label{classValve_1_1Steamworks_1_1ISteamUser_a384df64decb0e3a8cd98379850c75cfc}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_af2541afb349130a094e77774a7745534}{}abstract ulong {\bfseries Request\+Encrypted\+App\+Ticket} (Int\+Ptr p\+Data\+To\+Include, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cb\+Data\+To\+Include)\label{classValve_1_1Steamworks_1_1ISteamUser_af2541afb349130a094e77774a7745534}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_a7060ed868197c2b1bb0afe51b3bda0a6}{}abstract bool {\bfseries Get\+Encrypted\+App\+Ticket} (Int\+Ptr p\+Ticket, \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} cb\+Max\+Ticket, ref uint pcb\+Ticket)\label{classValve_1_1Steamworks_1_1ISteamUser_a7060ed868197c2b1bb0afe51b3bda0a6}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_ae64cf51b62da6a2ff243c359db757dea}{}abstract \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Get\+Game\+Badge\+Level} (\hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} n\+Series, bool b\+Foil)\label{classValve_1_1Steamworks_1_1ISteamUser_ae64cf51b62da6a2ff243c359db757dea}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_ab48894c7ab54ad8f4e1721e5379ac36a}{}abstract \hyperlink{SDL__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries Get\+Player\+Steam\+Level} ()\label{classValve_1_1Steamworks_1_1ISteamUser_ab48894c7ab54ad8f4e1721e5379ac36a}
+
+\item 
+\hypertarget{classValve_1_1Steamworks_1_1ISteamUser_ae5e14eb42ccd9cfce1ac88f7c68b0a75}{}abstract ulong {\bfseries Request\+Store\+Auth\+U\+R\+L} (string pch\+Redirect\+U\+R\+L)\label{classValve_1_1Steamworks_1_1ISteamUser_ae5e14eb42ccd9cfce1ac88f7c68b0a75}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/\+Thomas/\+Documents/\+Development/\+C++/\+Last\+Stand\+Studio/last-\/stand-\/engine/\+Source/\+Include/\+Steamworks/steam\+\_\+api\+\_\+interop.\+cs\end{DoxyCompactItemize}
