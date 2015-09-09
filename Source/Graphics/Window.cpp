@@ -65,7 +65,7 @@ namespace LSEngine
     void Window::Create()
     {
         LoadSettings();
-        auto log = spdlog::get("Somnia");
+        //auto log = spdlog::get("Somnia");
         SDLWindow = SDL_CreateWindow(
             Title.c_str(),
             SDL_WINDOWPOS_CENTERED,
@@ -74,10 +74,10 @@ namespace LSEngine
             Height,
             SDLFlags
             );
-        if (!SDLWindow) { log->critical(SDL_GetError()); }
+        //if (!SDLWindow) { log->critical(SDL_GetError()); }
 
         SDLRenderer = SDL_CreateRenderer(SDLWindow, -1, SDLRenFlags);
-        if (!SDLRenderer) { log->critical(SDL_GetError()); }
+        //if (!SDLRenderer) { log->critical(SDL_GetError()); }
 
         LSEngine::Color bg = LSEngine::Color(0x7F141F);
         SDL_SetRenderDrawColor(SDLRenderer, bg.R(), bg.G(), bg.B(), bg.A());
@@ -121,8 +121,8 @@ namespace LSEngine
         SDL_Surface* ico = IMG_Load(file.c_str());
         if (!ico) 
         {
-            auto log = spdlog::get("Somnia");
-            log->error(IMG_GetError());
+            //auto log = spdlog::get("Somnia");
+            //log->error(IMG_GetError());
         }
 
         SDL_SetWindowIcon(SDLWindow, ico);

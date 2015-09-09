@@ -65,9 +65,6 @@ set(SOURCE_FILES
         Networking/Server.h
         Networking/Server.cpp
 
-        Utils/json/json.h
-        Utils/json/json-forwards.h
-        Utils/jsoncpp.cpp
 )
 
 #add_executable(LSEngine ${SOURCE_FILES})

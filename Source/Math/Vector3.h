@@ -32,11 +32,19 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
+#pragma once
 #ifndef LAST_STAND_ENGINE_VECTOR3_H
 #define LAST_STAND_ENGINE_VECTOR3_H
 
-namespace LastStandEngine {
+namespace LastStandEngine
+{
+    namespace Math
+    {
+        struct Vector3
+        {
 
+        };
+    }
 }
 
 #endif //LAST_STAND_ENGINE_VECTOR3_H

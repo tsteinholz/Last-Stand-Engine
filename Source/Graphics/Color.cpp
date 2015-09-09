@@ -47,7 +47,7 @@ namespace LSEngine
 
     Color::Color() :
 	    x_Red(255), x_Green(255), x_Blue(255), x_Alpha(255)
-    {}
+    { }
 
     Color::Color(uint8_t r, uint8_t g, uint8_t b, uint8_t a) 
     {
@@ -69,33 +69,25 @@ namespace LSEngine
     }
 
     Color::Color(int hex) :
-	    x_Red((hex >> 16) & 0xFF),
-	    x_Green((hex >> 8) & 0xFF),
-	    x_Blue(hex & 0xFF),
+	    x_Red((uint8_t) ((hex >> 16) & 0xFF)),
+	    x_Green((uint8_t) ((hex >> 8) & 0xFF)),
+	    x_Blue((uint8_t) (hex & 0xFF)),
 	    x_Alpha(255)
-    {}
+    { }
 
     uint8_t Color::R()
-    {
-	    return x_Red;
-    }
+    { return x_Red; }
 
     uint8_t Color::G()
-    {
-	    return x_Green;
-    }
+    { return x_Green; }
 
     uint8_t Color::B()
-    {
-    	return x_Blue;
-    }
+    { return x_Blue; }
 
     uint8_t Color::A()
-    {
-	    return x_Alpha;
-    }
+    { return x_Alpha; }
 
-    Color::~Color() {}
+    Color::~Color() { }
 
     Color Color::operator+(const Color& color) const
     {
@@ -155,14 +147,14 @@ namespace LSEngine
     {
 	    return ((this->x_Red == color.x_Red) &&
 		    (this->x_Green == color.x_Green) &&
-		    (this->x_Blue == color.x_Blue) &&
+		    (this->x_Blue == color.x_Blue)   &&
 		    (this->x_Alpha == color.x_Alpha));
     }
     bool Color::operator!=(const Color& color) const
     {
 	    return ((this->x_Red != color.x_Red) &&
 		    (this->x_Green != color.x_Green) &&
-		    (this->x_Blue != color.x_Blue) &&
+		    (this->x_Blue != color.x_Blue)   &&
 	    	(this->x_Alpha != color.x_Alpha));
     }
 }

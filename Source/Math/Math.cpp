@@ -32,7 +32,7 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#include "Math.h"
+#include <Math/Math.h>
 
 namespace LSEngine
 {
@@ -56,9 +56,104 @@ namespace LSEngine
 
         const float Math::Epsilon = 0.000001f;
 
+        template<typename T>
+        T Math::Abs(T val)
+        {
+            return val >= 0 ? val : -val;
+        }
+
+        template<typename T>
+        T Math::Max(T value1, T value2)
+        {
+            return value1 > value2 ? value1 : value2;
+        }
+
+        template<typename T>
+        T Math::Min(T value1, T value2)
+        {
+            return value1 < value2 ? value1 : value2;
+        }
+
+        template<typename T>
+        T Math::Distance(T value1, T value2)
+        {
+            return Abs(value1 - value2);
+        }
+
+        template<typename T>
+        T Math::Lerp(T value1, T value2, float amount)
+        {
+            return T(value1 + ((T) (value2 - value1) * amount));
+        }
+
+        template<typename T>
+        T Math::SmoothStep(T value1, T value2, float amount)
+        {
+            float num = Clamp(amount, 0.0f, 1.0f);
+            return Lerp(value1, value2, (num * num) * (3.0f - (2.0f * num)));
+        }
+
+        int Math::Clamp(int value, int min, int max)
+        {
+            return Max(min, Min(max, value));
+        }
+
+        float Math::Clamp(float value, float min, float max)
+        {
+            return Max(min, Min(max, value));
+        }
+
+        double Math::Clamp(double value, double min, double max)
+        {
+            return Max(min, Min(max, value));
+        }
+
+        // TODO : Function Implementation
         float Math::ToDegrees(float radians)
         {
             return 0;
+        }
+
+        // TODO : Function Implementation
+        float Math::ToRadians(float degrees)
+        {
+            return 0;
+        }
+
+        // TODO : Function Implementation
+        int Math::RoundInt(double x)
+        {
+            return 0;
+        }
+
+        // TODO : Function Implementation
+        int Math::RandomInt(int maximum)
+        {
+            return rand() % maximum;
+        }
+
+        // TODO : Function Implementation
+        int Math::RandomInt(int min, int max)
+        {
+            return rand() % (max-min) + min;
+        }
+
+        // TODO : Function Implementation
+        float Math::RandomFloat(float maximum)
+        {
+            return 0;
+        }
+
+        // TODO : Function Implementation
+        float Math::RandomFloat(float min, float max)
+        {
+            return 0;
+        }
+
+        // TODO : Function Implementation
+        bool Math::RandomBool()
+        {
+            return (bool)(rand() % 2);
         }
     }
 }

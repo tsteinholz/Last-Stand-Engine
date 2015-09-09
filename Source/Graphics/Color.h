@@ -33,8 +33,8 @@
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
 #pragma once
-#ifndef SOMNIA_ENGINE_GRAPHICS_COLOR_H
-#define SOMNIA_ENGINE_GRAPHICS_COLOR_H
+#ifndef LSENGINE_GRAPHICS_COLOR_H
+#define LSENGINE_GRAPHICS_COLOR_H
 
 #include <stdint.h>
 
@@ -94,4 +94,4 @@ namespace LSEngine
 
     };
 }
-#endif //SOMNIA_ENGINE_GRAPHICS_COLOR_H
+#endif // LSENGINE_GRAPHICS_COLOR_H

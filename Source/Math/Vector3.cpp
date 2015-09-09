@@ -32,8 +32,12 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#include "Vector3.h"
+#include <Math/Vector3.h>
 
-namespace LastStandEngine {
+namespace LastStandEngine
+{
+    namespace Math
+    {
 
+    }
 }

@@ -32,10 +32,13 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
+#pragma once
 #ifndef LSENGINE_MATH_MATH_H
 #define LSENGINE_MATH_MATH_H
 
-#include "Vector2.h"
+#include <stdlib.h>
+
+#include <Math/Vector2.h>
 
 namespace LSEngine
 {
@@ -52,134 +55,84 @@ namespace LSEngine
 
         public:
 
-            /**
-            *
-            */
+            /**  */
             static const float E;
 
-            /**
-            *
-            */
+            /** */
             static const float Log10E;
 
-            /**
-            *
-            */
+            /** */
             static const float Log2E;
 
-            /**
-            *
-            */
+            /** */
             static const float Pi;
 
-            /**
-            *
-            */
-            static const float TwoPi;
-
-            /**
-            *
-            */
+            /** */
             static const float MaxFloat;
 
-            /**
-            *
-            */
+            /** */
             static const float MinFloat;
 
-            /**
-            *
-            */
+            /** */
             static const int MaxInt;
 
-            /**
-            *
-            */
+            /** */
             static const int MinInt;
 
-            /**
-            *
-            */
+            /** */
             static const float Epsilon;
 
             /**
             *
             */
             template<typename T>
-            static T Abs(T val)
-            {
-                return val >= 0 ? val : -val;
-            }
+            static T Abs(T val);
 
             /**
             *
             */
             template<typename T>
-            static T Max(T value1, T value2)
-            {
-                return value1 > value2 ? value1 : value2;
-            }
+            static T Max(T value1, T value2);
 
             /**
             *
             */
             template<typename T>
-            static T Min(T value1, T value2)
-            {
-                return value1 < value2 ? value1 : value2;
-            }
+            static T Min(T value1, T value2);
 
             /**
             *
             */
             template<typename T>
-            static T Distance(T value1, T value2)
-            {
-                return Abs(value1 - value2);
-            }
+            static T Distance(T value1, T value2);
 
             /**
             *
             */
             template<typename T>
-            static T Lerp(T value1, T value2, float amount)
-            {
-                return T(value1 + ((T) (value2 - value1) * amount));
-            }
+            static T Lerp(T value1, T value2, float amount);
+
 
             /**
             *
             */
             template<typename T>
-            static T SmoothStep(T value1, T value2, float amount)
-            {
-                float num = Clamp(amount, 0.0f, 1.0f);
-                return Lerp(value1, value2, (num * num) * (3.0f - (2.0f * num)));
-            }
+            static T SmoothStep(T value1, T value2, float amount);
 
             /**
             *
             */
-            static int Clamp(int value, int min, int max)
-            {
-                return Max(min, Min(max, value));
-            }
+            static int Clamp(int value, int min, int max);
 
             /**
             *
             */
-            static float Clamp(float value, float min, float max)
-            {
-                return Max(min, Min(max, value));
-            }
+            static float Clamp(float value, float min, float max);
 
             /**
             *
             */
-            static double Clamp(double value, double min, double max)
-            {
-                return Max(min, Min(max, value));
-            }
+            static double Clamp(double value, double min, double max);
 
             /**
             *

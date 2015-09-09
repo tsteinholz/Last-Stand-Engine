@@ -32,8 +32,8 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#ifndef SOMNIA_MATH_VECTOR2_H
-#define SOMNIA_MATH_VECTOR2_H
+#ifndef LSENGINE_MATH_VECTOR2_H
+#define LSENGINE_MATH_VECTOR2_H
 
 #include <vector>
 
@@ -251,4 +251,4 @@ namespace LSEngine
         };
     }
 }
-#endif //SOMNIA_MATH_VECTOR2_H
+#endif //LSENGINE_MATH_VECTOR2_H

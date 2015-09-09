@@ -11,7 +11,7 @@
 #include <SDL2/SDL_net.h>
 #include <SDL2/SDL_ttf.h>
 
-#include <spdlog/spdlog.h>
+//#include <spdlog/spdlog.h>
 
 //#include <Steam/steam_api.h>
 
