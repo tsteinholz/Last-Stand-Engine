@@ -43,34 +43,41 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 set(SOURCE_FILES
 
-        LSEngine.h
-        Engine.cpp
-        Engine.h
+        # Public Source Files
+        Public/LSEngine.h
+        Public/Engine.h
 
-        Core/Component.h
-        Core/Entity.h
+        Public/Core/Component.h
+        Public/Core/Entity.h
 
-        Graphics/Color.h
-        Graphics/Color.cpp
-        Graphics/Window.h
-        Graphics/Window.cpp
+        Public/Graphics/Color.h
+        Public/Graphics/Window.h
 
-        Math/Math.h
-        Math/Math.cpp
-        Math/Vector2.h
-        Math/Vector2.cpp
-        Math/Vector3.h
-        Math/Vector3.cpp
+        Public/Math/Math.h
+        Public/Math/Vector2.h
+        Public/Math/Vector3.h
 
-        Networking/Packets/Packet.h
-        Networking/Packets/Packet.cpp
-        Networking/Server.h
-        Networking/Server.cpp
+        Public/Networking/Packets/Packet.h
+        Public/Networking/Server.h
+
+
+        #Private Source Files
+        Private/Engine.cpp
+
+        Private/Graphics/Color.cpp
+        Private/Graphics/Window.cpp
+
+        Private/Math/Math.cpp
+        Private/Math/Vector2.cpp
+        Private/Math/Vector3.cpp
+
+        Private/Networking/Packets/Packet.cpp
+        Private/Networking/Server.cpp
 )
 
 add_library(LSEngine ${SOURCE_FILES})
 
-include_directories(${CMAKE_SOURCE_DIR} ../Include)
+include_directories(Public)
 
 ########################################################################################################################
 # Link Libraries                                                                                                       #
