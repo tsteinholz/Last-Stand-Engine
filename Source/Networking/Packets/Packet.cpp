@@ -31,3 +31,16 @@
 /*/                                                                                                                 /*/
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
+
+#include <Networking/Packets/Packet.h>
+
+namespace LSEngine
+{
+    namespace Networking
+    {
+        namespace Packets
+        {
+
+        }
+    }
+}

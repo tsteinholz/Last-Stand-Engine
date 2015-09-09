@@ -31,3 +31,23 @@
 /*/                                                                                                                 /*/
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
+
+#pragma once
+#ifndef LSENGINE_NETWORKING_PACKETS_PACKET_H
+#define LSENGINE_NETWORKING_PACKETS_PACKET_H
+
+namespace LSEngine
+{
+    namespace Networking
+    {
+        namespace Packets
+        {
+            class Packet
+            {
+
+            };
+        }
+    }
+}
+
+#endif // LSENGINE_NETWORKING_PACKETS_PACKET_H

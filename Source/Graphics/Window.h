@@ -33,8 +33,8 @@
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
 #pragma once
-#ifndef SOMNIA_ENGINE_GRAPHICS_WINDOW_H
-#define SOMNIA_ENGINE_GRAPHICS_WINDOW_H
+#ifndef LSENGINE_GRAPHICS_WINDOW_H
+#define LSENGINE_GRAPHICS_WINDOW_H
 
 #include <Graphics/Color.h>
 //#include <Utils/Settings.h>
@@ -83,4 +83,4 @@ namespace LSEngine
     };
 }
 
-#endif //SOMNIA_ENGINE_GRAPHICS_WINDOW_H
+#endif // LSENGINE_GRAPHICS_WINDOW_H

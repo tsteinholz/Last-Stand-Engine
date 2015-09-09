@@ -32,6 +32,7 @@
 ##/                                                                                                                 /##
 ##/-----------------------------------------------------------------------------------------------------------------/##
 
+# -m32 for x86 bit compile
 
 cmake_minimum_required(VERSION 3.3)
 project(LSEngine)
@@ -41,6 +42,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -std=c++11")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 set(SOURCE_FILES
+
         LSEngine.h
         Engine.cpp
         Engine.h
@@ -64,10 +66,8 @@ set(SOURCE_FILES
         Networking/Packets/Packet.cpp
         Networking/Server.h
         Networking/Server.cpp
-
 )
 
-#add_executable(LSEngine ${SOURCE_FILES})
 add_library(LSEngine ${SOURCE_FILES})
 
 include_directories(${CMAKE_SOURCE_DIR} ../Include)

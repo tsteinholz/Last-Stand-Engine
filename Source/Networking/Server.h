@@ -32,8 +32,9 @@
 /*/                                                                                                                 /*/
 /*/-----------------------------------------------------------------------------------------------------------------/*/
 
-#ifndef SOMNIA_ENGINE_SERVER_H
-#define SOMNIA_ENGINE_SERVER_H
+#pragma once
+#ifndef LSENGINE_NETWORKING_SERVER_H
+#define LSENGINE_NETOWRKING_SERVER_H
 
 #define SERVER LSEngine::Networking::Server::GetInstance()
 
@@ -56,5 +57,4 @@ namespace LSEngine
     }
 }
 
-
-#endif
+#endif // LSENGINE_NETWORKING_SERVER_H

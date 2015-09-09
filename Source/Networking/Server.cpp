@@ -34,19 +34,28 @@
 
 #include <Networking/Server.h>
 
-namespace LSEngine {
-    namespace Networking {
+namespace LSEngine
+{
+    namespace Networking
+    {
         Server& Server::GetInstance() {
             static Server instance;
             return instance;
         }
 
-        Server::Server(){
+        Server::Server()
+        {
 
         }
 
-        Server::~Server() {
+        Server::~Server()
+        {
 
+        }
+
+        bool Server::InitializeServer()
+        {
+            return false;
         }
     }
 }
