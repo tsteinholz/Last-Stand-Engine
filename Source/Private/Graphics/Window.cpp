@@ -91,12 +91,12 @@ namespace LSEngine
         if (SDLRenderer)
         {
             SDL_DestroyRenderer(SDLRenderer);
-            SDLRenderer = nullptr;
+            SDLRenderer = 0;
         }
         if (SDLWindow)
         {
             SDL_DestroyWindow(SDLWindow);
-            SDLWindow = nullptr;
+            SDLWindow = 0;
         }
     }
 

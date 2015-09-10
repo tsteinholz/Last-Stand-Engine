@@ -1,6 +1,9 @@
 # Clion Files
 .idea/
 
+# Build Directories
+build/
+
 # Compiled Object files
 *.slo
 *.lo
