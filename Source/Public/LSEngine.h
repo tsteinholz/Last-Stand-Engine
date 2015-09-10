@@ -13,5 +13,6 @@
 // Side Stuff
 // TODO : Upgrade Home MinGW to 64bit
 // TODO : Add Docs for how to set-up clion on Linux & Windows
+// TODO : Improve Build Script
 
 #endif //LSENGINE_LSENGINE_H

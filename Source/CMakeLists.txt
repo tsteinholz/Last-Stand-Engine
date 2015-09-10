@@ -139,10 +139,6 @@ add_library(LSEngine ${SOURCE_FILES})
 
 include_directories(Public)
 
-########################################################################################################################
-# Link Libraries                                                                                                       #
-########################################################################################################################
-
 include(FindPkgConfig)
 
 pkg_search_module(SDL2 REQUIRED sdl2>=2.0.0)
@@ -165,11 +161,3 @@ target_link_libraries(LSEngine
         ${SDL2TTF_LIBRARIES}
 #        ${STEAMWORKS_LIBRARY}
 )
-
-if (WIN32) # Windows
-
-elseif(UNIX AND NOT APPLE) # Linux
-
-elseif(APPLE) # OSX
-
-endif ()
