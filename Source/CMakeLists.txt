@@ -37,9 +37,28 @@
 cmake_minimum_required(VERSION 3.3)
 project(LSEngine)
 
+set(LSEngine)
+
+set(LSEngine_MAJOR_VERSION 0)
+set(LSEngine_MINOR_VERSION 0)
+set(LSEngine_PATCH_VERSION 2)
+set(LSEngine_VERSION ${LSEngine_MAJOR_VERSION}.${LSEngine_MINOR_VERSION}.${LSEngine_PATCH_VERSION})
+
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -std=c++11")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -std=c++11")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+
+set(LSEngine_Build_Dir ${CMAKE_SOURCE_DIR}../Build/)
+
+if (CMAKE_SIZEOF_VOID_P EQUAL 8)
+    message("64 bit compiler detected!")
+    set(EX_PLATFORM 64)
+    set(EX_PLATFORM_NAME "x64")
+else (CMAKE_SIZEOF_VOID_P EQUAL 8)
+    message("32 bit compiler detected!")
+    set(EX_PLATFORM 32)
+    set(EX_PLATFORM_NAME "x86")
+endif (CMAKE_SIZEOF_VOID_P EQUAL 8)
 
 set(SOURCE_FILES
 
@@ -74,6 +93,47 @@ set(SOURCE_FILES
         Private/Networking/Packets/Packet.cpp
         Private/Networking/Server.cpp
 )
+
+if (EX_PLATFORM EQUAL 64)
+    message ("Outputting to lib64 and bin64")
+
+    set (CMAKE_LIBRARY_OUTPUT_DIRECTORY
+            ${LSEngine_Build_Dir}/lib64
+            CACHE PATH
+            "Single Directory for all Libraries"
+    )
+
+    set (CMAKE_RUNTIME_OUTPUT_DIRECTORY
+            ${LSEngine_Build_Dir}/bin64
+            CACHE PATH
+            "Single Directory for all Executables."
+    )
+
+    set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY
+            ${LSEngine_Build_Dir}/lib64
+            CACHE PATH
+            "Single Directory for all static libraries."
+    )
+else (EX_PLATFORM EQUAL 64)
+
+    set (CMAKE_LIBRARY_OUTPUT_DIRECTORY
+            ${LSEngine_Build_Dir}/lib
+            CACHE PATH
+            "Single Directory for all Libraries"
+    )
+
+    set (CMAKE_RUNTIME_OUTPUT_DIRECTORY
+            ${LSEngine_Build_Dir}/bin
+            CACHE PATH
+            "Single Directory for all Executables."
+    )
+
+    set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY
+            ${LSEngine_Build_Dir}/lib
+            CACHE PATH
+            "Single Directory for all static libraries."
+    )
+endif (EX_PLATFORM EQUAL 64)
 
 add_library(LSEngine ${SOURCE_FILES})
 
