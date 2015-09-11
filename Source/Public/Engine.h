@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SOMNIA_ENGINE_ENGINE_H
-#define SOMNIA_ENGINE_ENGINE_H
+#ifndef LSENGINE_ENGINE_H
+#define LSENGINE_ENGINE_H
 
 #include <Graphics/Window.h>
 //#include <Language/Language.h>
@@ -46,4 +46,4 @@ namespace LSEngine
     };
 }
 
-#endif //SOMNIA_ENGINE_ENGINE_H
+#endif // LSENGINE_ENGINE_H
