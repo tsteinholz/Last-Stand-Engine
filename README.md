@@ -1,4 +1,4 @@
-# Last Stand Engine
+# Last Stand Engine [![Build Status](https://javabilities.com/jenkins/job/Last%20Stand%20Engine/badge/icon)](https://javabilities.com/jenkins/job/Last%20Stand%20Engine/)
 
 Last stand engine is a C++ Game Engine targeted for SteamOS (Linux) with Windows/OSX support. The engine will be written in mostly C/C++, compiled with cmake while supporting lua scripting. We expect to have an editor made by v2 of the engine. Everything we have planned is on our [Team Trello Page](https://trello.com/b/t2C62QjU/LSEngine-c), Trello is our planning board for everything. The wikis are being created and will be the main way to learn how to use this engine if interested. At this moment the engine is not at a stable state for game development, the engine is undergowing very heavy development and will have very many major changes made before release of v1. To keep up-to-date with this repo please "star" and "watch" this repository from GitHub as well as check out the [Last Stand Studios Website](http://laststandstudio.com). There you can find our social media and everything else.
 
