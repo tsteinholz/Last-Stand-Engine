@@ -73,10 +73,6 @@ set(SOURCE_FILES
         Public/Graphics/Color.h
         Public/Graphics/Window.h
 
-        Public/Math/Math.h
-        Public/Math/Vector2.h
-        Public/Math/Vector3.h
-
         Public/Networking/Packets/Packet.h
         Public/Networking/Server.h
 
@@ -87,16 +83,12 @@ set(SOURCE_FILES
         Private/Graphics/Color.cpp
         Private/Graphics/Window.cpp
 
-        Private/Math/Math.cpp
-        Private/Math/Vector2.cpp
-        Private/Math/Vector3.cpp
-
         Private/Networking/Packets/Packet.cpp
         Private/Networking/Server.cpp
 )
 
 # Build Library
-add_library(LSEngine ${SOURCE_FILES})
+add_library(LSEngine SHARED ${SOURCE_FILES})
 
 # Include Directories and Pacakages
 include_directories(Public ../Include)
