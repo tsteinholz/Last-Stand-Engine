@@ -43,7 +43,7 @@ elif [ -f etc/debian_version ]; then
 
 	echo  [*] Debian Based Distro Detected!
 	OS=Debian
-	apt-get install libsdl2-dev libsdl2_image-dev libsdl2_mixer-dev libsdl2_gfx-dev  libsdl2_ttf-dev
+	apt-get install libsdl2-dev libsdl2_image-dev libsdl2_mixer-dev libsdl2_net-dev  libsdl2_ttf-dev liblua5.3-dev
 
 elif [ -f /etc/redhat-release ]; then
 
