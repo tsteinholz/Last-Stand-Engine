@@ -56,7 +56,7 @@ endif (CMAKE_SIZEOF_VOID_P EQUAL 8)
 set(CompileArch -m32) # Override Options: (-m32)/(-m64)
 
 # Set Compile Flags
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 ${CompileArch}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ${CompileArch}")
 # Set CMake Module Path for the other libraries (LUA)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
