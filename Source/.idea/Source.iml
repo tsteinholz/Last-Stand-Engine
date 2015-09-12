@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Private/Engine.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Private/Graphics/Color.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Private/Graphics/Window.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Private/Networking/Packets/Packet.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Private/Networking/Server.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Private/Utils/Log.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Private/Utils/Settings.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Public/Utils/Settings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Public/Core/Component.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Public/Core/Entity.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Public/Engine.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Public/Graphics/Color.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Public/Graphics/Window.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Public/LSEngine.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Public/Networking/Packets/Packet.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Public/Networking/Server.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Public/Utils/Log.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cmake/Modules/FindLua.cmake" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
