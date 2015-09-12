@@ -53,7 +53,7 @@ else (CMAKE_SIZEOF_VOID_P EQUAL 8)
     set(LS_PLATFORM 32)
     set(LS_PLATFORM_NAME "x86")
 endif (CMAKE_SIZEOF_VOID_P EQUAL 8)
-#set(CompileArch -m32) # Override Options: (-m32)/(-m64)
+set(CompileArch -m32) # Override Options: (-m32)/(-m64)
 
 # Set Compile Flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ${CompileArch}")
