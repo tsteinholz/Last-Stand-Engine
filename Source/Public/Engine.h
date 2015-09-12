@@ -11,8 +11,6 @@
 #include <SDL2/SDL_net.h>
 #include <SDL2/SDL_ttf.h>
 
-//#include <Steam/steam_api.h>
-
 #define ENGINE LSEngine::Engine::GetInstance()
 
 namespace LSEngine
