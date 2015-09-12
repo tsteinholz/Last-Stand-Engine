@@ -76,6 +76,8 @@ set(SOURCE_FILES
         Public/Networking/Packets/Packet.h
         Public/Networking/Server.h
 
+        Public/Utils/Log.h
+        Public/Utils/Settings.h
 
         #Private Source Files
         Private/Engine.cpp
@@ -85,6 +87,9 @@ set(SOURCE_FILES
 
         Private/Networking/Packets/Packet.cpp
         Private/Networking/Server.cpp
+
+        Private/Utils/Log.cpp
+        Private/Utils/Settings.cpp
 )
 
 # Build Library
