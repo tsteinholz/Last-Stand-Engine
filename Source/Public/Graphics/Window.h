@@ -36,7 +36,7 @@
 #ifndef LSENGINE_GRAPHICS_WINDOW_H
 #define LSENGINE_GRAPHICS_WINDOW_H
 
-#include <Graphics/Color.h>
+#include "Graphics/Color.h"
 //#include <Utils/Settings.h>
 
 #include <string>
