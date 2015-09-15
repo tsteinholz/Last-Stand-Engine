@@ -34,31 +34,29 @@
 
 #include "Graphics/Window.h"
 
-namespace LSEngine
-{
-    Window::Window(const std::string& title, uint32_t width, uint32_t height, bool border)
-    : Title(title), Width(width), Height(height), Border(border)
+namespace LSEngine {
+
+    Window::Window(const std::string &title, uint32_t width, uint32_t height, Uint8 SDLFlags)
+            : Title(title), Width(width), Height(height), SDLFlags(SDLFlags)
     { Create(); }
 
-    Window::~Window() 
-    { Destroy(); }
+    Window::~Window() { Destroy(); }
 
     void Window::LoadSettings()
     {
+
         //SETTINGS.Load();
-        if (Border)
-        {
+        /*if (Border) {
             FullScreen = false;
             SDLFlags = SDL_WINDOW_BORDERLESS;
         }
-        else
-        {
+        else {
             //FullScreen = SETTINGS.GetFullscreen();
             SDLFlags = FullScreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN;
             //Width = SETTINGS.GetWidth();
             //Height = SETTINGS.GetHeight();
         }
-        //Antialiasing = SETTINGS.GetAA();
+        //Antialiasing = SETTINGS.GetAA();*/
         SDLRenFlags = Antialiasing ? SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC : SDL_RENDERER_ACCELERATED;
     }
 
@@ -67,13 +65,13 @@ namespace LSEngine
         LoadSettings();
         //auto log = spdlog::get("Somnia");
         SDLWindow = SDL_CreateWindow(
-            Title.c_str(),
-            SDL_WINDOWPOS_CENTERED,
-            SDL_WINDOWPOS_CENTERED,
-            Width,
-            Height,
-            SDLFlags
-            );
+                Title.c_str(),
+                SDL_WINDOWPOS_CENTERED,
+                SDL_WINDOWPOS_CENTERED,
+                Width,
+                Height,
+                SDLFlags
+        );
         //if (!SDLWindow) { log->critical(SDL_GetError()); }
 
         SDLRenderer = SDL_CreateRenderer(SDLWindow, -1, SDLRenFlags);
@@ -116,11 +114,10 @@ namespace LSEngine
         Create();
     }
 
-    void Window::SetIcon(const std::string & file)
+    void Window::SetIcon(const std::string &file)
     {
-        SDL_Surface* ico = IMG_Load(file.c_str());
-        if (!ico) 
-        {
+        SDL_Surface *ico = IMG_Load(file.c_str());
+        if (!ico) {
             //auto log = spdlog::get("Somnia");
             //log->error(IMG_GetError());
         }
@@ -128,4 +125,5 @@ namespace LSEngine
         SDL_SetWindowIcon(SDLWindow, ico);
         SDL_FreeSurface(ico);
     }
+
 }

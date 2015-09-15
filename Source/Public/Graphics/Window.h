@@ -44,14 +44,13 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-
 namespace LSEngine
 {
     class Window
     {
     public:
 
-        Window(const std::string& title="Somnia", uint32_t width=0, uint32_t height=0, bool border = false);
+        Window(const std::string& title="Somnia", uint32_t width=0, uint32_t height=0, Uint8 SDLFlags = SDL_WINDOW_FULLSCREEN);
         ~Window();
     
         SDL_Window* SDLWindow;
@@ -62,7 +61,6 @@ namespace LSEngine
         uint32_t Width;
         uint32_t Height;
         std::string Title;
-        bool Border;
         bool FullScreen;
         bool Antialiasing;
         Uint8 SDLFlags;
