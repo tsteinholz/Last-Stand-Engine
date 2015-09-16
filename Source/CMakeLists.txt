@@ -38,25 +38,11 @@ project(LSEngine)
 # Set Version
 set(LSEngine_MAJOR_VERSION 0)
 set(LSEngine_MINOR_VERSION 0)
-set(LSEngine_PATCH_VERSION 2)
+set(LSEngine_PATCH_VERSION 3)
 set(LSEngine_VERSION ${LSEngine_MAJOR_VERSION}.${LSEngine_MINOR_VERSION}.${LSEngine_PATCH_VERSION})
 
-# Set Compile Arch
-if (CMAKE_SIZEOF_VOID_P EQUAL 8)
-    message("64 bit compiler detected!")
-    set(CompileArch -m64)
-    set(LS_PLATFORM 64)
-    set(LS_PLATFORM_NAME "x64")
-else (CMAKE_SIZEOF_VOID_P EQUAL 8)
-    message("32 bit compiler detected!")
-    set(CompileArch -m32)
-    set(LS_PLATFORM 32)
-    set(LS_PLATFORM_NAME "x86")
-endif (CMAKE_SIZEOF_VOID_P EQUAL 8)
-#set(CompileArch -m32) # Override Options: (-m32)/(-m64)
-
 # Set Compile Flags
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ${CompileArch}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 # Set CMake Module Path for the other libraries (LUA)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
@@ -76,7 +62,6 @@ set(SOURCE_FILES
         Public/Networking/Packets/Packet.h
         Public/Networking/Server.h
 
-        Public/Utils/Log.h
         Public/Utils/Settings.h
 
         #Private Source Files
@@ -88,7 +73,6 @@ set(SOURCE_FILES
         Private/Networking/Packets/Packet.cpp
         Private/Networking/Server.cpp
 
-        Private/Utils/Log.cpp
         Private/Utils/Settings.cpp
 )
 
