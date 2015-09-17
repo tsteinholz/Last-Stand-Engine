@@ -41,12 +41,12 @@ set(LSEngine_MINOR_VERSION 0)
 set(LSEngine_PATCH_VERSION 3)
 set(LSEngine_VERSION ${LSEngine_MAJOR_VERSION}.${LSEngine_MINOR_VERSION}.${LSEngine_PATCH_VERSION})
 
+# Set Compile Flags
 if (MINGW AND WIN32)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_WIN32_WINNT=0x600")
-endif ()
+endif (MINGW AND WIN32)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
-# Set Compile Flags
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 # Set CMake Module Path for the other libraries (LUA)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
