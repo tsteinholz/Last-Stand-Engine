@@ -3,7 +3,7 @@
 #define LSENGINE_LSENGINE_H
 
 // Main TODOs
-// TODO : Write Custom Logger
+// TODO : Write Custom Logger - Ended up using spd lib again
 // TODO : Add Json lib (pos json-c?)
 // TODO : Write Custom Settings
 // TODO : Write / Edit / Fix Window Class
