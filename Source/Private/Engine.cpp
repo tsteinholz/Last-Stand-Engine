@@ -19,8 +19,8 @@ namespace LSEngine
         {
             std::vector<spdlog::sink_ptr> sinks;
             sinks.push_back(std::make_shared<spdlog::sinks::stdout_sink_st>());
-            sinks.push_back(std::make_shared<spdlog::sinks::rotating_file_sink_mt>("Somnia", "log", 1024 * 1024, 5, false));
-            auto combined_logger = std::make_shared<spdlog::logger>("Somnia", begin(sinks), end(sinks));
+            sinks.push_back(std::make_shared<spdlog::sinks::rotating_file_sink_mt>("LSEngine", "log", 1024 * 1024, 5, false));
+            auto combined_logger = std::make_shared<spdlog::logger>("LSEngine", begin(sinks), end(sinks));
             spdlog::register_logger(combined_logger);
             spdlog::set_level(spdlog::level::debug);
         }
