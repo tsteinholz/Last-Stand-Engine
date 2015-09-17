@@ -41,6 +41,10 @@ set(LSEngine_MINOR_VERSION 0)
 set(LSEngine_PATCH_VERSION 3)
 set(LSEngine_VERSION ${LSEngine_MAJOR_VERSION}.${LSEngine_MINOR_VERSION}.${LSEngine_PATCH_VERSION})
 
+if (MINGW AND WIN32)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_WIN32_WINNT=0x600")
+endif ()
+
 # Set Compile Flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 # Set CMake Module Path for the other libraries (LUA)
@@ -49,7 +53,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 # Set the Source Files to Compile
 set(SOURCE_FILES
 
-        # Public Source Files
+# Public Source Files
         Public/LSEngine.h
         Public/Engine.h
 
@@ -64,7 +68,7 @@ set(SOURCE_FILES
 
         Public/Utils/Settings.h
 
-        #Private Source Files
+#Private Source Files
         Private/Engine.cpp
 
         Private/Graphics/Color.cpp
@@ -97,12 +101,12 @@ find_package(Lua)
 
 # Link all of the Libraries
 target_link_libraries(LSEngine
-        #${FFMPEG_LIBRARIES}
+#${FFMPEG_LIBRARIES}
         ${LUA_LIBRARIES}
         ${SDL2_LIBRARIES}
         ${SDL2IMAGE_LIBRARIES}
         ${SDL2NET_LIBRARIES}
         ${SDL2MIXER_LIBRARIES}
         ${SDL2TTF_LIBRARIES}
-        #${STEAMWORKS_LIBRARY}
+#${STEAMWORKS_LIBRARY}
 )
