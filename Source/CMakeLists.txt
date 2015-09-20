@@ -68,6 +68,8 @@ set(SOURCE_FILES
         Public/Networking/Packets/Packet.h
         Public/Networking/Server.h
 
+        Public/Utils/Settings.h
+
 #Private Source Files
         Private/Engine.cpp
 
