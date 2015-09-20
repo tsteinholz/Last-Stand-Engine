@@ -2,7 +2,7 @@
 #ifndef LSENGINE_ENGINE_H
 #define LSENGINE_ENGINE_H
 
-#include <spdlog/spdlog.h>
+//#include <spdlog/spdlog.h>
 
 #include "Graphics/Window.h"
 //#include <Language/Language.h>

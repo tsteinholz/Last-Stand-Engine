@@ -15,20 +15,20 @@ namespace LSEngine
     bool Engine::Initialize()
     {
         // TODO : Initialize Loggers
-        try
+        //try
+        //{
+            //std::vector<spdlog::sink_ptr> sinks;
+            //sinks.push_back(std::make_shared<spdlog::sinks::stdout_sink_st>());
+            //sinks.push_back(std::make_shared<spdlog::sinks::rotating_file_sink_mt>("LSEngine", "log", 1024 * 1024, 5, false));
+            //auto combined_logger = std::make_shared<spdlog::logger>("LSEngine", begin(sinks), end(sinks));
+            //spdlog::register_logger(combined_logger);
+            //spdlog::set_level(spdlog::level::debug);
+        //}
+        //catch (const spdlog::spdlog_ex& ex)
         {
-            std::vector<spdlog::sink_ptr> sinks;
-            sinks.push_back(std::make_shared<spdlog::sinks::stdout_sink_st>());
-            sinks.push_back(std::make_shared<spdlog::sinks::rotating_file_sink_mt>("LSEngine", "log", 1024 * 1024, 5, false));
-            auto combined_logger = std::make_shared<spdlog::logger>("LSEngine", begin(sinks), end(sinks));
-            spdlog::register_logger(combined_logger);
-            spdlog::set_level(spdlog::level::debug);
+            //std::cout << "Log failed: " << ex.what() << std::endl;
         }
-        catch (const spdlog::spdlog_ex& ex)
-        {
-            std::cout << "Log failed: " << ex.what() << std::endl;
-        }
-        auto log = spdlog::get("Somnia");
+        //auto log = spdlog::get("Somnia");
 
         // TODO : Initialize Language
 
