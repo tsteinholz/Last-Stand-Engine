@@ -4,6 +4,9 @@
 
 #include <json/json.h>
 #include <map>
+#include <string>
+#include <fstream>
+#include <streambuf>
 
 namespace LSEngine
 {
