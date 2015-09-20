@@ -73,6 +73,7 @@ set(LSENGINE_HEADER_FILES
 
         Public/Core/Component.h
         Public/Core/Entity.h
+        Public/Core/Game.h
 
         Public/Graphics/Color.h
         Public/Graphics/Window.h
@@ -111,6 +112,7 @@ pkg_search_module(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
 pkg_search_module(SDL2NET REQUIRED SDL2_net>=2.0.0)
 pkg_search_module(SDL2MIXER REQUIRED SDL2_mixer>=2.0.0)
 pkg_search_module(SDL2TTF REQUIRED SDL2_ttf>=2.0.0)
+pkg_search_module(JSON-C REQUIRED json-c)
 
 find_package(FFMPEG)
 if (FFMPEG_FOUND)
@@ -133,6 +135,7 @@ endif (STEAMWORKS_FOUND)
 set(LSENGINE_INCLUDE_DIR
         Public
         Public/Utils/spdlog
+        ${JSON-C_INCLUDE_DIR}
         ${SDL2_INCLUDE_DIR}
         ${SDL2IMAGE_INCLUDE_DIR}
         ${SDL2NET_INCLUDE_DIR}
@@ -141,6 +144,7 @@ set(LSENGINE_INCLUDE_DIR
 )
 
 set(LSENGINE_LIBRARIES
+        ${JSON-C_LIBRARIES}
         ${SDL2_LIBRARIES}
         ${SDL2IMAGE_LIBRARIES}
         ${SDL2NET_LIBRARIES}
