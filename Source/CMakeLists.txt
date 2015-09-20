@@ -32,34 +32,24 @@
 ##/                                                                                                                 /##
 ##/-----------------------------------------------------------------------------------------------------------------/##
 
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.0)
 project(LSEngine)
 
-include(CPack)
-include(FindPkgConfig)
-include(GenerateExportHeader)
-include(InstallRequiredSystemLibraries)
-
+#  -  Set Version Here   -  #
 set(LSENGINE_MAJOR_VERSION 0)
 set(LSENGINE_MINOR_VERSION 0)
 set(LSENGINE_PATCH_VERSION 3)
+
+########################################################################################################################
+###|                                                Compile / Build                                                 |###
+########################################################################################################################
+
+include(FindPkgConfig)
+include(GenerateExportHeader)
+
 set(LSENGINE_VERSION ${LSENGINE_MAJOR_VERSION}.${LSENGINE_MINOR_VERSION}.${LSENGINE_PATCH_VERSION})
 set(COMPNAME LastStandStudio)
 set(GROUPNAME L.S.Studio)
-
-set(CMAKE_VERBOSE_MAKEFILE 0)
-set(GENERATE_DOCS 1)
-set(DOCS_OUTPUT_DIR ../Docs/out)
-set(DOCS_DIR ../Docs)
-
-set(CPACK_PACKAGE_NAME "LSEngine")
-set(CPACK_PACKAGE_VENDOR "laststandstudio.com")
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "A 2D Game Engine")
-set(CPACK_PACKAGE_VERSION ${LSENGINE_VERSION})
-set(CPACK_PACKAGE_VERSION_MAJOR ${LSENGINE_MAJOR_VERSION})
-set(CPACK_PACKAGE_VERSION_MINOR ${LSENGINE_MINOR_VERSION})
-set(CPACK_PACKAGE_VERSION_PATCH ${LSENGINE_PATCH_VERSION})
-set(CPACK_PACKAGE_INSTALL_DIRECTORY "LSEngine")
 
 if (MINGW AND WIN32)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_WIN32_WINNT=0x600")
@@ -102,10 +92,6 @@ generate_export_header(LSEngine
         EXPORT_MACRO_NAME LSEngine_EXPORT
         EXPORT_FILE_NAME LSEngine_Export.h
 )
-
-set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/../LSEngineLicense.txt")
-set(CPACK_PACKAGE_VERSION_MAJOR "${LSEngine_MAJOR_VERSION}")
-set(CPACK_PACKAGE_VERSION_MINOR "${LSEngine_MINOR_VERSION}")
 
 pkg_search_module(SDL2 REQUIRED sdl2>=2.0.0)
 pkg_search_module(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
@@ -155,6 +141,33 @@ set(LSENGINE_LIBRARIES
 include_directories(${LSENGINE_INCLUDE_DIR})
 target_link_libraries(LSEngine ${LSENGINE_LIBRARIES})
 
+########################################################################################################################
+###|                                               Install                                                          |###
+########################################################################################################################
+
+set(CPACK_PACKAGE_NAME "LSEngine")
+set(CPACK_PACKAGE_VENDOR "laststandstudio.com")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "A 2D Game Engine")
+set(CPACK_PACKAGE_VERSION ${LSENGINE_VERSION})
+set(CPACK_PACKAGE_VERSION_MAJOR ${LSENGINE_MAJOR_VERSION})
+set(CPACK_PACKAGE_VERSION_MINOR ${LSENGINE_MINOR_VERSION})
+set(CPACK_PACKAGE_VERSION_PATCH ${LSENGINE_PATCH_VERSION})
+set(CPACK_PACKAGE_INSTALL_DIRECTORY "LSEngine")
+set(CPACK_RPM_COMPONENT_INSTALL ON)
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/../LSEngineLicense.txt")
+
+# TODO : Make the package install on Win/Mac/Linux
+
+include(CPack)
+########################################################################################################################
+###|                                            Build Documentation                                                 |###
+########################################################################################################################
+
+set(DOCS_OUTPUT_DIR ../Docs/out)
+set(DOCS_DIR ../Docs)
+
+# TODO : Make Docs atcually work & Use Variables in code below
+
 add_custom_target(Docs COMMAND
         cldoc generate ${CMAKE_CXX_FLAGS}
         --
@@ -173,7 +186,7 @@ set_target_properties(Docs PROPERTIES
 )
 
 add_custom_target(Serve_Docs COMMAND
-        ${CLDOC} serve -- ${DOCS_OUTPUT_DIR}
+        cldoc serve -- ${DOCS_OUTPUT_DIR}
         WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
 )
 
@@ -183,4 +196,3 @@ set_target_properties(Docs PROPERTIES
 )
 
 add_dependencies(Serve_Docs Docs)
-
