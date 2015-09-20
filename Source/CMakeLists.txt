@@ -40,12 +40,26 @@ include(FindPkgConfig)
 include(GenerateExportHeader)
 include(InstallRequiredSystemLibraries)
 
-set(LSEngine_MAJOR_VERSION 0)
-set(LSEngine_MINOR_VERSION 0)
-set(LSEngine_PATCH_VERSION 3)
-set(LSEngine_VERSION ${LSEngine_MAJOR_VERSION}.${LSEngine_MINOR_VERSION}.${LSEngine_PATCH_VERSION})
+set(LSENGINE_MAJOR_VERSION 0)
+set(LSENGINE_MINOR_VERSION 0)
+set(LSENGINE_PATCH_VERSION 3)
+set(LSENGINE_VERSION ${LSENGINE_MAJOR_VERSION}.${LSENGINE_MINOR_VERSION}.${LSENGINE_PATCH_VERSION})
+set(COMPNAME LastStandStudio)
+set(GROUPNAME L.S.Studio)
 
 set(CMAKE_VERBOSE_MAKEFILE 0)
+set(GENERATE_DOCS 1)
+set(DOCS_OUTPUT_DIR ../Docs/out)
+set(DOCS_DIR ../Docs)
+
+set(CPACK_PACKAGE_NAME "LSEngine")
+set(CPACK_PACKAGE_VENDOR "laststandstudio.com")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "A 2D Game Engine")
+set(CPACK_PACKAGE_VERSION ${LSENGINE_VERSION})
+set(CPACK_PACKAGE_VERSION_MAJOR ${LSENGINE_MAJOR_VERSION})
+set(CPACK_PACKAGE_VERSION_MINOR ${LSENGINE_MINOR_VERSION})
+set(CPACK_PACKAGE_VERSION_PATCH ${LSENGINE_PATCH_VERSION})
+set(CPACK_PACKAGE_INSTALL_DIRECTORY "LSEngine")
 
 if (MINGW AND WIN32)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_WIN32_WINNT=0x600")
@@ -53,9 +67,7 @@ endif (MINGW AND WIN32)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")    # TODO : Change Build Server to C++14
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
-set(SOURCE_FILES
-
-# Public Source Files
+set(LSENGINE_HEADER_FILES
         Public/LSEngine.h
         Public/Engine.h
 
@@ -69,8 +81,9 @@ set(SOURCE_FILES
         Public/Networking/Server.h
 
         Public/Utils/Settings.h
+)
 
-#Private Source Files
+set(LSENGINE_SOURCE_FILES
         Private/Engine.cpp
 
         Private/Graphics/Color.cpp
@@ -82,7 +95,7 @@ set(SOURCE_FILES
         Private/Utils/Settings.cpp
 )
 
-add_library(LSEngine SHARED ${SOURCE_FILES})
+add_library(LSEngine SHARED ${LSENGINE_HEADER_FILES} ${LSENGINE_SOURCE_FILES})
 generate_export_header(LSEngine
         BASE_NAME LSEngine
         EXPORT_MACRO_NAME LSEngine_EXPORT
@@ -137,3 +150,33 @@ set(LSENGINE_LIBRARIES
 
 include_directories(${LSENGINE_INCLUDE_DIR})
 target_link_libraries(LSEngine ${LSENGINE_LIBRARIES})
+
+add_custom_target(Docs COMMAND
+        cldoc generate ${CMAKE_CXX_FLAGS}
+        --
+        --output ../Docs/out
+        --basedir .
+        --merge ../Docs
+        --report
+        ${LSENGINE_HEADER_FILES}
+        ${LSENGINE_SOURCE_FILES}
+        WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+)
+
+set_target_properties(Docs PROPERTIES
+        EXCLUDE_FROM_ALL 1
+        EXCLUDE_FROM_DEFAULT_BUILD 1
+)
+
+add_custom_target(Serve_Docs COMMAND
+        ${CLDOC} serve -- ${DOCS_OUTPUT_DIR}
+        WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+)
+
+set_target_properties(Docs PROPERTIES
+        EXCLUDE_FROM_ALL 1
+        EXCLUDE_FROM_DEFAULT_BUILD 1
+)
+
+add_dependencies(Serve_Docs Docs)
+

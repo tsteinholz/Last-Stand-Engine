@@ -40,7 +40,6 @@
 
 namespace LSEngine
 {
-
     class Color
     {
     public:
